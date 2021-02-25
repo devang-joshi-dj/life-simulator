@@ -15,10 +15,127 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Life Simulator</title>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- For Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- For Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+
+    <!-- For Navigating from one place to another -->
+    <script src="./js/navigation.js" type="module"></script>
   </head>
 
   <body>
-    <!-- <script src="./script.js"></script> -->
+    <!-- Main Container Start -->
+    <div class="container">
+      <!-- Statistics Start -->
+      <div class="statistics">
+        <div class="health">
+          <i class="fas fa-heartbeat"></i>
+          <span>Health</span>
+        </div>
+
+        <div class="happiness">
+          <i class="fas fa-smile-wink"></i>
+          <span>Happiness</span>
+        </div>
+
+        <div class="cash">
+          <i class="fas fa-wallet"></i>
+          <span>Cash</span>
+        </div>
+
+        <div class="time">
+          <i class="fas fa-clock"></i>
+          <span>Time</span>
+        </div>
+      </div>
+      <!-- Statistics End -->
+
+      <!-- Places to go for Header Section Start -->
+      <div class="places header">
+        <div class="home">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </div>
+
+        <div class="university">
+          <i class="fas fa-university"></i>
+          <span>University</span>
+        </div>
+
+        <div class="job">
+          <i class="fas fa-user-md"></i>
+          <span>Job</span>
+        </div>
+
+        <div class="bank">
+          <i class="fas fa-piggy-bank"></i>
+          <span>Bank</span>
+        </div>
+
+        <div class="Gym">
+          <i class="fas fa-dumbbell"></i>
+          <span>Gym</span>
+        </div>
+      </div>
+      <!-- Places to go for Header Section End -->
+
+      <!-- Container for Content Start -->
+      <div class="main">
+        <div class="homeContent"></div>
+        <div class="universityContent"></div>
+        <div class="jobContent"></div>
+        <div class="bankContent"></div>
+        <div class="gymContent"></div>
+        <div class="mallContent"></div>
+        <div class="worshipContent"></div>
+        <div class="clubContent"></div>
+        <div class="restaurantContent"></div>
+        <div class="spaContent"></div>
+      </div>
+      <!-- Container for Content End -->
+
+      <!-- Places to go for Footer Section Start -->
+      <div class="places footer">
+        <div class="mall">
+          <i class="fas fa-building"></i>
+          <span>Mall</span>
+        </div>
+
+        <div class="worship">
+          <i class="fas fa-praying-hands"></i>
+          <span>Worship</span>
+        </div>
+
+        <div class="club">
+          <i class="fas fa-wine-glass-alt"></i>
+          <span>Club</span>
+        </div>
+
+        <div class="restaurant">
+          <i class="fas fa-utensils"></i>
+          <span>Restaurant</span>
+        </div>
+
+        <div class="spa">
+          <i class="fas fa-spa"></i>
+          <span>Spa</span>
+        </div>
+      </div>
+      <!-- Places to go for Footer Section End -->
+    </div>
+    <!-- Main Container End -->
   </body>
 </html>

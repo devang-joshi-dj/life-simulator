@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background-image: linear-gradient(to bottom, #393e46, #929aab, #393e46);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+/* Container for Content Start */
+
+.container {
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Statistics Start */
+
+.statistics {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.statistics div {
+    cursor: pointer;
+    font-size: 2em;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+.statistics div:hover {
+    color: white;
+    background-color: #393e46;
+}
+
+/* Statistics End */
+
+/* Container for Main Content Start */
+
+.main {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+}
+
+.homeContent, .universityContent, .jobContent, .bankContent, .gymContent, .mallContent, .worshipContent, .clubContent, .restaurantContent, .spaContent {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+}
+
+.homeContent {
+    background-color: navy;
+}
+
+.universityContent {
+    background-color: blueviolet;
+}
+
+.jobContent {
+    background-color: black;
+}
+
+.bankContent {
+    background-color: darkcyan;
+}
+
+.gymContent {
+    background-color: crimson;
+}
+
+.mallContent {
+    background-color: cornflowerblue;
+}
+
+.worshipContent {
+    background-color: chartreuse;
+}
+
+.clubContent {
+    background-color: coral;
+}
+
+.restaurantContent {
+    background-color: chocolate;
+}
+
+.spaContent {
+    background-color: aquamarine;
+}
+
+/* Container for Main Content End */
+
+/* Places to go for Footer Section Start */
+
+.places {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    padding: 5px;
+    background-color: #929aab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.places div {
+    cursor: pointer;
+}
+
+.places div:hover {
+    color: white;
+}
+
+.places div {
+    font-size: 2em;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+}
+
+.places div:hover {
+    background-color: #393e46;
+}
+
+/* Places to go for Footer Section End */
+
+/* Container for Content End */
