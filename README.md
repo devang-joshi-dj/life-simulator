@@ -1,4 +1,4 @@
-# life-simulator
+# Life-simulator
 Life simulator is an online game, where a player can control his own character (human being) and virtually makes the decision of his life.
 
 
