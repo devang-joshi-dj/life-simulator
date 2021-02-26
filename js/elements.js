@@ -30,5 +30,5 @@ export const mallElement = document.querySelector('.mall')
 export const worshipElement = document.querySelector('.worship')
 export const clubElement = document.querySelector('.club')
 export const restaurantElement = document.querySelector('.restaurant')
-export const spa = document.querySelector('.spa')
+export const spaElement = document.querySelector('.spa')
 // Buttons of Header And Footer End
