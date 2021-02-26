@@ -1,3 +1,8 @@
+:root {
+    --defaultHeight: 600px;
+    --defaultFontSize: 2em;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -5,12 +10,8 @@
 html, body {
     background-image: linear-gradient(to bottom, #393e46, #929aab, #393e46);
     margin: 0;
-    width: 100%;
     height: 100%;
     user-select: none;
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
 }
 
 /* Container for Content Start */
@@ -27,16 +28,17 @@ html, body {
 .statistics {
     font-family: 'Lato', sans-serif;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
+    overflow: hidden;
+    padding: 5px 10px;
 }
 
 .statistics div {
     cursor: pointer;
-    font-size: 2em;
+    font-size: var(--defaultFontSize);
+    margin-left: 10px;
+    margin-right: 10px;
     padding-left: 10px;
     padding-right: 10px;
     background-color: white;
@@ -47,6 +49,14 @@ html, body {
     background-color: #393e46;
 }
 
+.health, .happiness, .cash {
+    float: left;
+}
+
+.time {
+    float: right;
+}
+
 /* Statistics End */
 
 /* Container for Main Content Start */
@@ -54,7 +64,7 @@ html, body {
 .main {
     font-family: 'Lato', sans-serif;
     width: 100%;
-    flex: 1;
+    height: var(--defaultHeight);
     overflow: hidden;
 }
 
@@ -62,7 +72,7 @@ html, body {
     display: none;
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: var(--defaultHeight);
 }
 
 .homeContent {
@@ -128,7 +138,7 @@ html, body {
 }
 
 .places div {
-    font-size: 2em;
+    font-size: var(--defaultFontSize);
     padding-left: 15px;
     padding-right: 15px;
     background-color: white;

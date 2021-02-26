@@ -1,1 +1,37 @@
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 770px) {
+    .container {
+        --defaultFontSize: 1.5em;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .statistics div {
+        margin: 0;
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .time {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .container {
+        --defaultFontSize: 1.4em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html, body {
+        width: 100%;
+    }
+    .container {
+        width: 600px;
+    }
+    .homeContent, .universityContent, .jobContent, .bankContent, .gymContent, .mallContent, .worshipContent, .clubContent, .restaurantContent, .spaContent {
+        width: 600px;
+    }
+}
