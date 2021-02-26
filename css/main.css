@@ -68,7 +68,7 @@ html, body {
     overflow: hidden;
 }
 
-.homeContent, .universityContent, .jobContent, .bankContent, .gymContent, .mallContent, .worshipContent, .clubContent, .restaurantContent, .spaContent {
+.main div {
     display: none;
     position: absolute;
     width: 100%;
