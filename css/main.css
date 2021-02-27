@@ -73,46 +73,52 @@ html, body {
     position: absolute;
     width: 100%;
     height: var(--defaultHeight);
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
 }
 
 .homeContent {
-    background-color: navy;
+    background-image: url("../imgs/lifesimulator_Home.svg");
 }
 
 .universityContent {
-    background-color: blueviolet;
+    background-image: url("../imgs/lifesimulator_University.svg");
 }
 
 .jobContent {
-    background-color: black;
+    background-image: url("../imgs/lifesimulator_Job.svg");
 }
 
 .bankContent {
-    background-color: darkcyan;
+    background-image: url("../imgs/lifesimulator_Bank.svg");
 }
 
 .gymContent {
-    background-color: crimson;
+    background-image: url("../imgs/lifesimulator_Gym.svg");
 }
 
 .mallContent {
-    background-color: cornflowerblue;
+    background-image: url("../imgs/lifesimulator_Mall.svg");
 }
 
 .worshipContent {
-    background-color: chartreuse;
+    background-image: url("../imgs/lifesimulator_Worship.svg");
 }
 
 .clubContent {
-    background-color: coral;
+    background-image: url("../imgs/lifesimulator_Club.svg");
 }
 
 .restaurantContent {
-    background-color: chocolate;
+    background-image: url("../imgs/lifesimulator_Restaurant.svg");
 }
 
 .spaContent {
-    background-color: aquamarine;
+    background-image: url("../imgs/lifesimulator_Spa.svg");
 }
 
 /* Container for Main Content End */
