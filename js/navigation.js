@@ -60,7 +60,6 @@ window.onload = () => {
             toggleVisibility('none', elements.spaContentElement)
         })
     if (elements.gymElement) {
-        console.log('hello')
         elements.gymElement.addEventListener('click', () => {
             toggleVisibility('none', elements.homeContentElement)
             toggleVisibility('none', elements.universityContentElement)
