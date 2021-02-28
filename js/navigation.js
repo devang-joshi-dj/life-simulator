@@ -1,141 +1,27 @@
 import * as elements from './elements.js'
 
+const navigationElements = [elements.homeElement, elements.universityElement, elements.jobElement, elements.bankElement, elements.gymElement, elements.mallElement, elements.worshipElement, elements.clubElement, elements.restaurantElement, elements.spaElement]
+
+const navigationContentElements = [elements.homeContentElement, elements.universityContentElement, elements.jobContentElement, elements.bankContentElement, elements.gymContentElement, elements.mallContentElement, elements.worshipContentElement, elements.clubContentElement, elements.restaurantContentElement, elements.spaContentElement]
+
 const toggleVisibility = (visibility, element) => {
     // function to change the visibility of element
     element.style.display = visibility;
 }
 
-window.onload = () => {
+const toggleNavigation = (element, i) => {
     // for navigation among multiple content elements by using visibility property
-    if (elements.homeElement)
-        elements.homeElement.addEventListener('click', () => {
-            toggleVisibility('block', elements.homeContentElement)
-            toggleVisibility('none', elements.universityContentElement)
-            toggleVisibility('none', elements.jobContentElement)
-            toggleVisibility('none', elements.bankContentElement)
-            toggleVisibility('none', elements.gymContentElement)
-            toggleVisibility('none', elements.mallContentElement)
-            toggleVisibility('none', elements.worshipContentElement)
-            toggleVisibility('none', elements.clubContentElement)
-            toggleVisibility('none', elements.restaurantContentElement)
-            toggleVisibility('none', elements.spaContentElement)
-        })
-    if (elements.universityElement)
-        elements.universityElement.addEventListener('click', () => {
-            toggleVisibility('none', elements.homeContentElement)
-            toggleVisibility('block', elements.universityContentElement)
-            toggleVisibility('none', elements.jobContentElement)
-            toggleVisibility('none', elements.bankContentElement)
-            toggleVisibility('none', elements.gymContentElement)
-            toggleVisibility('none', elements.mallContentElement)
-            toggleVisibility('none', elements.worshipContentElement)
-            toggleVisibility('none', elements.clubContentElement)
-            toggleVisibility('none', elements.restaurantContentElement)
-            toggleVisibility('none', elements.spaContentElement)
-        })
-    if (elements.jobElement)
-        elements.jobElement.addEventListener('click', () => {
-            toggleVisibility('none', elements.homeContentElement)
-            toggleVisibility('none', elements.universityContentElement)
-            toggleVisibility('block', elements.jobContentElement)
-            toggleVisibility('none', elements.bankContentElement)
-            toggleVisibility('none', elements.gymContentElement)
-            toggleVisibility('none', elements.mallContentElement)
-            toggleVisibility('none', elements.worshipContentElement)
-            toggleVisibility('none', elements.clubContentElement)
-            toggleVisibility('none', elements.restaurantContentElement)
-            toggleVisibility('none', elements.spaContentElement)
-        })
-    if (elements.bankElement)
-        elements.bankElement.addEventListener('click', () => {
-            toggleVisibility('none', elements.homeContentElement)
-            toggleVisibility('none', elements.universityContentElement)
-            toggleVisibility('none', elements.jobContentElement)
-            toggleVisibility('block', elements.bankContentElement)
-            toggleVisibility('none', elements.gymContentElement)
-            toggleVisibility('none', elements.mallContentElement)
-            toggleVisibility('none', elements.worshipContentElement)
-            toggleVisibility('none', elements.clubContentElement)
-            toggleVisibility('none', elements.restaurantContentElement)
-            toggleVisibility('none', elements.spaContentElement)
-        })
-    if (elements.gymElement) {
-        elements.gymElement.addEventListener('click', () => {
-            toggleVisibility('none', elements.homeContentElement)
-            toggleVisibility('none', elements.universityContentElement)
-            toggleVisibility('none', elements.jobContentElement)
-            toggleVisibility('none', elements.bankContentElement)
-            toggleVisibility('block', elements.gymContentElement)
-            toggleVisibility('none', elements.mallContentElement)
-            toggleVisibility('none', elements.worshipContentElement)
-            toggleVisibility('none', elements.clubContentElement)
-            toggleVisibility('none', elements.restaurantContentElement)
-            toggleVisibility('none', elements.spaContentElement)
+    if (navigationElements[i] === element) {
+        navigationElements[i].addEventListener('click', () => {
+            for (let j = 0; j < navigationElements.length; j++) {
+                toggleVisibility('none', navigationContentElements[j])
+            }
+            toggleVisibility('block', navigationContentElements[i])
         })
     }
-    if (elements.mallElement)
-        elements.mallElement.addEventListener('click', () => {
-            toggleVisibility('none', elements.homeContentElement)
-            toggleVisibility('none', elements.universityContentElement)
-            toggleVisibility('none', elements.jobContentElement)
-            toggleVisibility('none', elements.bankContentElement)
-            toggleVisibility('none', elements.gymContentElement)
-            toggleVisibility('block', elements.mallContentElement)
-            toggleVisibility('none', elements.worshipContentElement)
-            toggleVisibility('none', elements.clubContentElement)
-            toggleVisibility('none', elements.restaurantContentElement)
-            toggleVisibility('none', elements.spaContentElement)
-        })
-    if (elements.worshipElement)
-        elements.worshipElement.addEventListener('click', () => {
-            toggleVisibility('none', elements.homeContentElement)
-            toggleVisibility('none', elements.universityContentElement)
-            toggleVisibility('none', elements.jobContentElement)
-            toggleVisibility('none', elements.bankContentElement)
-            toggleVisibility('none', elements.gymContentElement)
-            toggleVisibility('none', elements.mallContentElement)
-            toggleVisibility('block', elements.worshipContentElement)
-            toggleVisibility('none', elements.clubContentElement)
-            toggleVisibility('none', elements.restaurantContentElement)
-            toggleVisibility('none', elements.spaContentElement)
-        })
-    if (elements.clubElement)
-        elements.clubElement.addEventListener('click', () => {
-            toggleVisibility('none', elements.homeContentElement)
-            toggleVisibility('none', elements.universityContentElement)
-            toggleVisibility('none', elements.jobContentElement)
-            toggleVisibility('none', elements.bankContentElement)
-            toggleVisibility('none', elements.gymContentElement)
-            toggleVisibility('none', elements.mallContentElement)
-            toggleVisibility('none', elements.worshipContentElement)
-            toggleVisibility('block', elements.clubContentElement)
-            toggleVisibility('none', elements.restaurantContentElement)
-            toggleVisibility('none', elements.spaContentElement)
-        })
-    if (elements.restaurantElement)
-        elements.restaurantElement.addEventListener('click', () => {
-            toggleVisibility('none', elements.homeContentElement)
-            toggleVisibility('none', elements.universityContentElement)
-            toggleVisibility('none', elements.jobContentElement)
-            toggleVisibility('none', elements.bankContentElement)
-            toggleVisibility('none', elements.gymContentElement)
-            toggleVisibility('none', elements.mallContentElement)
-            toggleVisibility('none', elements.worshipContentElement)
-            toggleVisibility('none', elements.clubContentElement)
-            toggleVisibility('block', elements.restaurantContentElement)
-            toggleVisibility('none', elements.spaContentElement)
-        })
-    if (elements.spaElement)
-        elements.spaElement.addEventListener('click', () => {
-            toggleVisibility('none', elements.homeContentElement)
-            toggleVisibility('none', elements.universityContentElement)
-            toggleVisibility('none', elements.jobContentElement)
-            toggleVisibility('none', elements.bankContentElement)
-            toggleVisibility('none', elements.gymContentElement)
-            toggleVisibility('none', elements.mallContentElement)
-            toggleVisibility('none', elements.worshipContentElement)
-            toggleVisibility('none', elements.clubContentElement)
-            toggleVisibility('none', elements.restaurantContentElement)
-            toggleVisibility('block', elements.spaContentElement)
-        })
+}
+
+for (let i = 0; i < navigationElements.length; i++) {
+    // executing toggleNavigation function on each and every navigationElements
+    toggleNavigation(navigationElements[i], i)
 }
