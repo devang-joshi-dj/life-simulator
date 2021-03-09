@@ -35,18 +35,12 @@ html, body {
 }
 
 .statistics div {
-    cursor: pointer;
     font-size: var(--defaultFontSize);
     margin-left: 10px;
     margin-right: 10px;
     padding-left: 10px;
     padding-right: 10px;
     background-color: white;
-}
-
-.statistics div:hover {
-    color: white;
-    background-color: #393e46;
 }
 
 .health, .happiness, .cash {
@@ -77,8 +71,23 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
+}
+
+div.btnGroup {
+    display: flex;
+    background: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.btnGroup button {
+    border-radius: 50px;
+    outline: none;
+    padding: 10px;
+    width: 170px;
+    margin: 5px;
+    cursor: pointer;
 }
 
 .homeContent {
