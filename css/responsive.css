@@ -18,7 +18,7 @@
     }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 630px) {
     .container {
         --defaultFontSize: 1.4em;
     }
