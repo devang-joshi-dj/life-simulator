@@ -5,6 +5,10 @@ export const placesFooterElement = document.querySelector('.footer') // Footer
 export const mainElement = document.querySelector('.main') // Main Content Container
 
 // Statistics Element Start
+export const healthValue = document.querySelector('.healthValue')
+export const happinessValue = document.querySelector('.happinessValue')
+export const cashValue = document.querySelector('.cashValue')
+export const timeValue = document.querySelector('.timeValue')
 // Statistics Element End
 
 // Main Content Container Elements Start
