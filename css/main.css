@@ -83,11 +83,17 @@ div.btnGroup {
 
 div.btnGroup button {
     border-radius: 50px;
+    border: 2px solid white;
     outline: none;
     padding: 10px;
     width: 170px;
     margin: 5px;
     cursor: pointer;
+}
+
+div.btnGroup button:active {
+    border-color: black;
+    transition: all .1s;
 }
 
 .homeContent {
