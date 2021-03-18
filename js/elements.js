@@ -1,3 +1,10 @@
+export const introElement = document.querySelector('.intro')
+export const introText1Element = document.querySelector('.introText1')
+export const introText2Element = document.querySelector('.introText2')
+export const introText3Element = document.querySelector('.introText3')
+export const introText4Element = document.querySelector('.introText4')
+export const introButton = document.querySelector('#introButton')
+
 export const containerElement = document.querySelector('.container') // Main Container
 export const statisticsElement = document.querySelector('.statistics') // Statistic
 export const placesHeaderElement = document.querySelector('.header') // Header

@@ -14,11 +14,45 @@ html, body {
     user-select: none;
 }
 
+/* Container for Intro Start */
+
+.intro {
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(189, 189, 189);
+}
+
+.introText1 {
+    font-size: 1.4em;
+}
+
+.introText2, .introText3, .introText4 {
+    font-size: 1.2em;
+}
+
+#introButton {
+    padding: 10px;
+    width: 100px;
+    background-color: #393e46;
+    color: #fff;
+}
+
+/* Container for Intro End */
+
 /* Container for Content Start */
 
 .container {
     width: 100%;
-    display: flex;
+    display: none;
     min-height: 100vh;
     flex-direction: column;
 }
