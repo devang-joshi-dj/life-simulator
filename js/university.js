@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         elements.happinessValue.innerHTML = update_happiness.toFixed(2);
 
         //cash
-        var cashVal = elements.cashhValue.innerText;
+        var cashVal = elements.cashValue.innerText;
         update_cash = Number(cashVal);
         update_cash = update_cash - update_cash * (30 / 100);
         elements.cashValue.innerHTML = update_cash.toFixed(2);
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // elements.happinessValue.innerHTML = update_happiness + 2;
 
         //cash
-        var cashVal = elements.cashhValue.innerText;
+        var cashVal = elements.cashValue.innerText;
         update_cash = Number(cashVal);
         update_cash = update_cash - update_cash * (30 / 100);
         elements.cashValue.innerHTML = update_cash.toFixed(2);
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         elements.happinessValue.innerHTML = update_happiness.toFixed(2);
 
         //cash
-        var cashVal = elements.cashhValue.innerText;
+        var cashVal = elements.cashValue.innerText;
         update_cash = Number(cashVal);
         update_cash = update_cash - update_cash * (10 / 100);
         elements.cashValue.innerHTML = update_cash.toFixed(2);
