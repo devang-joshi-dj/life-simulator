@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.mallGamingZone.addEventListener("click", GamingZone);
     elements.mallFoodCourt.addEventListener("click", FoodCourt);
 
+    var update_health = 0;
+    var update_happiness = 0;
+    var update_cash = 0;
+    
     function Shopping() {
         //health
         var healthVal = elements.healthValue.innerText;
