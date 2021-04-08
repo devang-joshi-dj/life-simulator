@@ -1,3 +1,4 @@
+// All Elements of Introduction
 export const introElement = document.querySelector('.intro')
 export const introText1Element = document.querySelector('.introText1')
 export const introText2Element = document.querySelector('.introText2')

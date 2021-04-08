@@ -1,73 +1,46 @@
 import * as elements from './elements.js'
+import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
-  var update_health = 0
-  var update_happiness = 0
-
-  // btngroup click 
-  elements.homeMeal.addEventListener("click", homemeal)
-  elements.homeRest.addEventListener("click", homerest)
-  elements.homeMeetFamily.addEventListener("click", homemeetfamily)
-  elements.homeCleanRoom.addEventListener("click", homecleanroom)
 
   // Eat Meal function
-  function homemeal() {
+  const homeMeal = () => {
     //health
-    // var update_health = 0
-    var healthVal = elements.healthValue.innerText
-    update_health = Number(healthVal)
-    update_health = update_health + update_health * (5 / 100)
-    elements.healthValue.innerHTML = update_health.toFixed(2)
+    config.updateValue(config.health, +5)
 
     //happiness
-    // var update_happiness = 0
-    var happinessVal = elements.happinessValue.innerText
-    update_happiness = Number(happinessVal)
-    update_happiness = update_happiness + update_happiness * (10 / 100)
-    elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+    config.updateValue(config.happiness, +10)
   }
 
-  function homerest() {
+  const homeRest = () => {
 
     //health
-    var healthVal = elements.healthValue.innerText
-    update_health = Number(healthVal)
-    update_health = update_health + update_health * (5 / 100)
-    elements.healthValue.innerHTML = update_health.toFixed(2)
+    config.updateValue(config.health, +5)
 
     //happiness
-    var happinessVal = elements.happinessValue.innerText
-    update_happiness = Number(happinessVal)
-    update_happiness = update_happiness + update_happiness * (10 / 100)
-    elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+    config.updateValue(config.happiness, +10)
 
   }
 
-  function homemeetfamily() {
+  const homeMeetfamily = () => {
     //health
-    var healthVal = elements.healthValue.innerText
-    update_health = Number(healthVal)
-    update_health = update_health - update_health * (5 / 100)
-    elements.healthValue.innerHTML = update_health.toFixed(2)
-
+    config.updateValue(config.health, -5)
 
     //happiness
-    var happinessVal = elements.happinessValue.innerText
-    update_happiness = Number(happinessVal)
-    update_happiness = update_happiness + update_happiness * (10 / 100)
-    elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+    config.updateValue(config.happiness, +10)
   }
-  function homecleanroom() {
+
+  function homeCleanRoom() {
     //health
-    var healthVal = elements.healthValue.innerText
-    update_health = Number(healthVal)
-    update_health = update_health - update_health * (10 / 100)
-    elements.healthValue.innerHTML = update_health.toFixed(2)
+    config.updateValue(config.health, -10)
 
     //happiness
-    var happinessVal = elements.happinessValue.innerText
-    update_happiness = Number(happinessVal)
-    update_happiness = update_happiness + update_happiness * (20 / 100)
-    elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+    config.updateValue(config.happiness, +20)
   }
+
+  // btngroup click
+  elements.homeMeal.addEventListener("click", homeMeal)
+  elements.homeRest.addEventListener("click", homeRest)
+  elements.homeMeetFamily.addEventListener("click", homeMeetfamily)
+  elements.homeCleanRoom.addEventListener("click", homeCleanRoom)
 })

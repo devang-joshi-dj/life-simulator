@@ -1,113 +1,59 @@
 import * as elements from './elements.js'
+import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 
-      elements.jobWorkOneHour.addEventListener("click", WorkOneHour)
-      elements.jobWorkThreeHours.addEventListener("click", WorkThreeHours)
-      elements.jobWorkFiveHours.addEventListener("click", WorkFiveHours)
-      elements.jobWorkNineHours.addEventListener("click", WorkNineHours)
-      elements.jobTakeBreak.addEventListener("click", TakeBreak)
-      elements.jobAttendMeeting.addEventListener("click", AttendMeeting)
-      elements.jobApplyPromotion.addEventListener("click", ApplyPromotion)
-
-      var update_health = 0
-      var update_happiness = 0
-      var update_cash = 0
-
-      function WorkOneHour() {
+      const workOneHour = () => {
             //health
-            var healthVal = elements.healthValue.innerText
-            update_health = Number(healthVal)
-            update_health = update_health - update_health * (5 / 100)
-            elements.healthValue.innerHTML = update_health.toFixed(2)
+            config.updateValue(config.health, -5)
 
             //happiness
-            var happinessVal = elements.happinessValue.innerText
-            update_happiness = Number(happinessVal)
-            update_happiness = update_happiness + update_happiness * (5 / 100)
-            elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+            config.updateValue(config.happiness, +5)
 
             //cash
-            var cashVal = elements.cashValue.innerText
-            update_cash = Number(cashVal)
-            update_cash = update_cash + update_cash * (10 / 100)
-            elements.cashValue.innerHTML = update_cash.toFixed(2)
+            config.updateValue(config.cash, +10)
       }
 
-      function WorkThreeHours() {
+      const workThreeHours = () => {
             //health
-            var healthVal = elements.healthValue.innerText
-            update_health = Number(healthVal)
-            update_health = update_health - update_health * (10 / 100)
-            elements.healthValue.innerHTML = update_health.toFixed(2)
+            config.updateValue(config.health, -10)
 
             //happiness
-            var happinessVal = elements.happinessValue.innerText
-            update_happiness = Number(happinessVal)
-            update_happiness = update_happiness + update_happiness * (10 / 100)
-            elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+            config.updateValue(config.happiness, +10)
 
             //cash
-            var cashVal = elements.cashValue.innerText
-            update_cash = Number(cashVal)
-            update_cash = update_cash + update_cash * (20 / 100)
-            elements.cashValue.innerHTML = update_cash.toFixed(2)
+            config.updateValue(config.cash, +20)
       }
 
 
-      function WorkFiveHours() {
+      const workFiveHours = () => {
             //health
-            var healthVal = elements.healthValue.innerText
-            update_health = Number(healthVal)
-            update_health = update_health - update_health * (15 / 100)
-            elements.healthValue.innerHTML = update_health.toFixed(2)
+            config.updateValue(config.health, -15)
 
             //happiness
-            var happinessVal = elements.happinessValue.innerText
-            update_happiness = Number(happinessVal)
-            update_happiness = update_happiness + update_happiness * (15 / 100)
-            elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+            config.updateValue(config.happiness, +15)
 
             //cash
-            var cashVal = elements.cashValue.innerText
-            update_cash = Number(cashVal)
-            update_cash = update_cash + update_cash * (30 / 100)
-            elements.cashValue.innerHTML = update_cash.toFixed(2)
+            config.updateValue(config.cash, +30)
       }
 
-      function WorkNineHours() {
+      const workNineHours = () => {
             //health
-            //health
-            var healthVal = elements.healthValue.innerText
-            update_health = Number(healthVal)
-            update_health = update_health - update_health * (20 / 100)
-            elements.healthValue.innerHTML = update_health.toFixed(2)
+            config.updateValue(config.health, -20)
 
             //happiness
-            var happinessVal = elements.happinessValue.innerText
-            update_happiness = Number(happinessVal)
-            update_happiness = update_happiness + update_happiness * (20 / 100)
-            elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+            config.updateValue(config.happiness, +20)
 
             //cash
-            var cashVal = elements.cashValue.innerText
-            update_cash = Number(cashVal)
-            update_cash = update_cash + update_cash * (40 / 100)
-            elements.cashValue.innerHTML = update_cash.toFixed(2)
+            config.updateValue(config.cash, +40)
       }
 
-      function TakeBreak() {
+      const takeBreak = () => {
             //health
-            var healthVal = elements.healthValue.innerText
-            update_health = Number(healthVal)
-            update_health = update_health + update_health * (5 / 100)
-            elements.healthValue.innerHTML = update_health.toFixed(2)
+            config.updateValue(config.health, +5)
 
             //happiness
-            var happinessVal = elements.happinessValue.innerText
-            update_happiness = Number(happinessVal)
-            update_happiness = update_happiness + update_happiness * (5 / 100)
-            elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+            config.updateValue(config.happiness, +5)
 
             //cash
             //no changes
@@ -117,18 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
             // elements.cashValue.innerHTML = update_cash +2
       }
 
-      function AttendMeeting() {
+      const attendMeeting = () => {
             //health
-            var healthVal = elements.healthValue.innerText
-            update_health = Number(healthVal)
-            update_health = update_health - update_health * (5 / 100)
-            elements.healthValue.innerHTML = update_health.toFixed(2)
+            config.updateValue(config.health, -5)
 
             //happiness
-            var happinessVal = elements.happinessValue.innerText
-            update_happiness = Number(happinessVal)
-            update_happiness = update_happiness + update_happiness * (5 / 100)
-            elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+            config.updateValue(config.happiness, +5)
 
             //cash
             //no changes
@@ -138,19 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
             // elements.cashValue.innerHTML = update_cash +2
       }
 
-      function ApplyPromotion() {
+      const applyPromotion = () => {
             //health
-            //health
-            var healthVal = elements.healthValue.innerText
-            update_health = Number(healthVal)
-            update_health = update_health - update_health * (5 / 100)
-            elements.healthValue.innerHTML = update_health.toFixed(2)
+            config.updateValue(config.health, -5)
 
             //happiness
-            var happinessVal = elements.happinessValue.innerText
-            update_happiness = Number(happinessVal)
-            update_happiness = update_happiness + update_happiness * (5 / 100)
-            elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+            config.updateValue(config.happiness, +5)
 
             //cash
             //no changes
@@ -159,4 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
             // update_cash = Number(cashVal)
             // elements.cashValue.innerHTML = update_cash +2
       }
+
+      elements.jobWorkOneHour.addEventListener("click", workOneHour)
+      elements.jobWorkThreeHours.addEventListener("click", workThreeHours)
+      elements.jobWorkFiveHours.addEventListener("click", workFiveHours)
+      elements.jobWorkNineHours.addEventListener("click", workNineHours)
+      elements.jobTakeBreak.addEventListener("click", takeBreak)
+      elements.jobAttendMeeting.addEventListener("click", attendMeeting)
+      elements.jobApplyPromotion.addEventListener("click", applyPromotion)
 })

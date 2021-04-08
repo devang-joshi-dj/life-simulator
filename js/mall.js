@@ -1,90 +1,54 @@
 import * as elements from './elements.js'
+import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    elements.mallShopping.addEventListener("click", Shopping)
-    elements.mallWatchMovies.addEventListener("click", WatchMovies)
-    elements.mallGamingZone.addEventListener("click", GamingZone)
-    elements.mallFoodCourt.addEventListener("click", FoodCourt)
-
-    var update_health = 0
-    var update_happiness = 0
-    var update_cash = 0
-
-    function Shopping() {
+    const shopping = () => {
         //health
-        var healthVal = elements.healthValue.innerText
-        update_health = Number(healthVal)
-        update_health = update_health - update_health * (5 / 100)
-        elements.healthValue.innerHTML = update_health.toFixed(2)
+        config.updateValue(config.health, -5)
 
         //happiness
-        var happinessVal = elements.happinessValue.innerText
-        update_happiness = Number(happinessVal)
-        update_happiness = update_happiness + update_happiness * (10 / 100)
-        elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+        config.updateValue(config.happiness, +10)
 
         //cash
-        var cashVal = elements.cashValue.innerText
-        update_cash = Number(cashVal)
-        update_cash = update_cash - update_cash * (25 / 100)
-        elements.cashValue.innerHTML = update_cash.toFixed(2)
+        config.updateValue(config.cash, -25)
     }
-    function WatchMovies() {
+
+    const watchMovies = () => {
         //health
-        var healthVal = elements.healthValue.innerText
-        update_health = Number(healthVal)
-        update_health = update_health - update_health * (5 / 100)
-        elements.healthValue.innerHTML = update_health.toFixed(2)
+        config.updateValue(config.health, -5)
 
         //happiness
-        var happinessVal = elements.happinessValue.innerText
-        update_happiness = Number(happinessVal)
-        update_happiness = update_happiness + update_happiness * (10 / 100)
-        elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+        config.updateValue(config.happiness, +10)
 
         //cash
-        var cashVal = elements.cashValue.innerText
-        update_cash = Number(cashVal)
-        update_cash = update_cash - update_cash * (20 / 100)
-        elements.cashValue.innerHTML = update_cash.toFixed(2)
+        config.updateValue(config.cash, -20)
     }
-    function GamingZone() {
+
+    const gamingZone = () => {
         //health
-        var healthVal = elements.healthValue.innerText
-        update_health = Number(healthVal)
-        update_health = update_health - update_health * (5 / 100)
-        elements.healthValue.innerHTML = update_health.toFixed(2)
+        config.updateValue(config.health, -5)
 
         //happiness
-        var happinessVal = elements.happinessValue.innerText
-        update_happiness = Number(happinessVal)
-        update_happiness = update_happiness + update_happiness * (10 / 100)
-        elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+        config.updateValue(config.happiness, +10)
 
         //cash
-        var cashVal = elements.cashValue.innerText
-        update_cash = Number(cashVal)
-        update_cash = update_cash - update_cash * (25 / 100)
-        elements.cashValue.innerHTML = update_cash.toFixed(2)
+        config.updateValue(config.cash, -25)
     }
-    function FoodCourt() {
+
+    const foodCourt = () => {
         //health
-        var healthVal = elements.healthValue.innerText
-        update_health = Number(healthVal)
-        update_health = update_health + update_health * (15 / 100)
-        elements.healthValue.innerHTML = update_health.toFixed(2)
+        config.updateValue(config.health, +15)
 
         //happiness
-        var happinessVal = elements.happinessValue.innerText
-        update_happiness = Number(happinessVal)
-        update_happiness = update_happiness + update_happiness * (10 / 100)
-        elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+        config.updateValue(config.happiness, +10)
 
         //cash
-        var cashVal = elements.cashValue.innerText
-        update_cash = Number(cashVal)
-        update_cash = update_cash - update_cash * (20 / 100)
-        elements.cashValue.innerHTML = update_cash.toFixed(2)
+        config.updateValue(config.cash, -20)
     }
+
+    elements.mallShopping.addEventListener("click", shopping)
+    elements.mallWatchMovies.addEventListener("click", watchMovies)
+    elements.mallGamingZone.addEventListener("click", gamingZone)
+    elements.mallFoodCourt.addEventListener("click", foodCourt)
 })

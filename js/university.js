@@ -1,46 +1,22 @@
 import * as elements from './elements.js'
+import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    elements.universityAdmission.addEventListener("click", Admission)
-    elements.universityPayFees.addEventListener("click", PayFees)
-    elements.universityAttendClasses.addEventListener("click", AttendClasses)
-    elements.universityGroupStudy.addEventListener("click", GroupStudy)
-    elements.universityClubMeeting.addEventListener("click", ClubMeeting)
-    elements.universityEatCanteen.addEventListener("click", EatCanteen)
-    elements.universityPlayGames.addEventListener("click", PlayGames)
-    elements.universityStudyLibrary.addEventListener("click", StudyLibrary)
-
-    var update_health = 0
-    var update_happiness = 0
-    var update_cash = 0
-
-    function Admission() {
+    const admission = () => {
         //health
-        var healthVal = elements.healthValue.innerText
-        update_health = Number(healthVal)
-        update_health = update_health - update_health * (10 / 100)
-        elements.healthValue.innerHTML = update_health.toFixed(2)
+        config.updateValue(config.health, -10)
 
         //happiness
-        var happinessVal = elements.happinessValue.innerText
-        update_happiness = Number(happinessVal)
-        update_happiness = update_happiness + update_happiness * (10 / 100)
-        elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+        config.updateValue(config.happiness, +10)
 
         //cash
-        var cashVal = elements.cashValue.innerText
-        update_cash = Number(cashVal)
-        update_cash = update_cash - update_cash * (30 / 100)
-        elements.cashValue.innerHTML = update_cash.toFixed(2)
+        config.updateValue(config.cash, -30)
     }
 
-    function PayFees() {
+    const payFees = () => {
         //health
-        var healthVal = elements.healthValue.innerText
-        update_health = Number(healthVal)
-        update_health = update_health - update_health * (10 / 100)
-        elements.healthValue.innerHTML = update_health.toFixed(2)
+        config.updateValue(config.health, -10)
 
         //happiness
         //no changes
@@ -50,24 +26,15 @@ document.addEventListener("DOMContentLoaded", () => {
         // elements.happinessValue.innerHTML = update_happiness + 2
 
         //cash
-        var cashVal = elements.cashValue.innerText
-        update_cash = Number(cashVal)
-        update_cash = update_cash - update_cash * (30 / 100)
-        elements.cashValue.innerHTML = update_cash.toFixed(2)
+        config.updateValue(config.cash, -30)
     }
 
-    function AttendClasses() {
+    const attendClasses = () => {
         //health
-        var healthVal = elements.healthValue.innerText
-        update_health = Number(healthVal)
-        update_health = update_health - update_health * (10 / 100)
-        elements.healthValue.innerHTML = update_health.toFixed(2)
+        config.updateValue(config.health, -10)
 
         //happiness
-        var happinessVal = elements.happinessValue.innerText
-        update_happiness = Number(happinessVal)
-        update_happiness = update_happiness + update_happiness * (10 / 100)
-        elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+        config.updateValue(config.happiness, +10)
 
         //cash
         //no changes
@@ -77,18 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
         // elements.cashValue.innerHTML = update_cash + 2
     }
 
-    function GroupStudy() {
+    const groupStudy = () => {
         //health
-        var healthVal = elements.healthValue.innerText
-        update_health = Number(healthVal)
-        update_health = update_health - update_health * (10 / 100)
-        elements.healthValue.innerHTML = update_health.toFixed(2)
+        config.updateValue(config.health, -10)
 
         //happiness
-        var happinessVal = elements.happinessValue.innerText
-        update_happiness = Number(happinessVal)
-        update_happiness = update_happiness + update_happiness * (10 / 100)
-        elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+        config.updateValue(config.happiness, +10)
 
         //cash
         //no changes
@@ -98,18 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
         // elements.cashValue.innerHTML = update_cash + 2
     }
 
-    function ClubMeeting() {
+    const clubMeeting = () => {
         //health
-        var healthVal = elements.healthValue.innerText
-        update_health = Number(healthVal)
-        update_health = update_health + update_health * (10 / 100)
-        elements.healthValue.innerHTML = update_health.toFixed(2)
+        config.updateValue(config.health, +10)
 
         //happiness
-        var happinessVal = elements.happinessValue.innerText
-        update_happiness = Number(happinessVal)
-        update_happiness = update_happiness + update_happiness * (10 / 100)
-        elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+        config.updateValue(config.happiness, +10)
 
         //cash
         //no changes
@@ -118,37 +73,23 @@ document.addEventListener("DOMContentLoaded", () => {
         // update_cash = Number(cashVal)
         // elements.cashValue.innerHTML = update_cash + 2
     }
-    function EatCanteen() {
+
+    const eatCanteen = () => {
         //health
-        var healthVal = elements.healthValue.innerText
-        update_health = Number(healthVal)
-        update_health = update_health - update_health * (10 / 100)
-        elements.healthValue.innerHTML = update_health.toFixed(2)
+        config.updateValue(config.health, -10)
 
         //happiness
-        var happinessVal = elements.happinessValue.innerText
-        update_happiness = Number(happinessVal)
-        update_happiness = update_happiness + update_happiness * (10 / 100)
-        elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+        config.updateValue(config.happiness, +10)
 
         //cash
-        var cashVal = elements.cashValue.innerText
-        update_cash = Number(cashVal)
-        update_cash = update_cash - update_cash * (10 / 100)
-        elements.cashValue.innerHTML = update_cash.toFixed(2)
+        config.updateValue(config.cash, -10)
     }
-    function PlayGames() {
-        //health
-        var healthVal = elements.healthValue.innerText
-        update_health = Number(healthVal)
-        update_health = update_health + update_health * (10 / 100)
-        elements.healthValue.innerHTML = update_health.toFixed(2)
+
+    const playGames = () => {
+        config.updateValue(config.health, +10)
 
         //happiness
-        var happinessVal = elements.happinessValue.innerText
-        update_happiness = Number(happinessVal)
-        update_happiness = update_happiness + update_happiness * (10 / 100)
-        elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+        config.updateValue(config.happiness, +10)
 
         //cash
         //no changes
@@ -157,19 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
         // update_cash = Number(cashVal)
         // elements.cashValue.innerHTML = update_cash + 2
     }
-    function StudyLibrary() {
+
+    const studyLibrary = () => {
         //health
-        var healthVal = elements.healthValue.innerText
-        update_health = Number(healthVal)
-        update_health = update_health + update_health * (10 / 100)
-        elements.healthValue.innerHTML = update_health.toFixed(2)
+        config.updateValue(config.health, +10)
 
         //happiness
-        var happinessVal = elements.happinessValue.innerText
-        update_happiness = Number(happinessVal)
-        update_happiness = update_happiness + update_happiness * (10 / 100)
-        elements.happinessValue.innerHTML = update_happiness.toFixed(2)
-
+        config.updateValue(config.happiness, +10)
 
         //cashhValue
         //no changes
@@ -178,4 +113,13 @@ document.addEventListener("DOMContentLoaded", () => {
         // update_cash = Number(cashVal)
         // elements.cashValue.innerHTML = update_cash + 2
     }
+
+    elements.universityAdmission.addEventListener("click", admission)
+    elements.universityPayFees.addEventListener("click", payFees)
+    elements.universityAttendClasses.addEventListener("click", attendClasses)
+    elements.universityGroupStudy.addEventListener("click", groupStudy)
+    elements.universityClubMeeting.addEventListener("click", clubMeeting)
+    elements.universityEatCanteen.addEventListener("click", eatCanteen)
+    elements.universityPlayGames.addEventListener("click", playGames)
+    elements.universityStudyLibrary.addEventListener("click", studyLibrary)
 })

@@ -44,6 +44,7 @@ html, body {
     width: 100px;
     background-color: #393e46;
     color: #fff;
+    cursor: pointer;
 }
 
 /* Container for Intro End */
@@ -79,6 +80,12 @@ html, body {
 
 .health, .happiness, .cash {
     float: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.health span, .happiness span, .cash span {
+    margin: 0 5px;
 }
 
 .time {

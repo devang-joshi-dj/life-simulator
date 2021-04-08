@@ -1,8 +1,30 @@
 import * as elements from './elements.js'
 
-const navigationElements = [elements.homeElement, elements.universityElement, elements.jobElement, elements.bankElement, elements.gymElement, elements.mallElement, elements.worshipElement, elements.clubElement, elements.restaurantElement, elements.spaElement]
+const navigationElements = [
+    elements.homeElement,
+    elements.universityElement,
+    elements.jobElement,
+    elements.bankElement,
+    elements.gymElement,
+    elements.mallElement,
+    elements.worshipElement,
+    elements.clubElement,
+    elements.restaurantElement,
+    elements.spaElement
+]
 
-const navigationContentElements = [elements.homeContentElement, elements.universityContentElement, elements.jobContentElement, elements.bankContentElement, elements.gymContentElement, elements.mallContentElement, elements.worshipContentElement, elements.clubContentElement, elements.restaurantContentElement, elements.spaContentElement]
+const navigationContentElements = [
+    elements.homeContentElement,
+    elements.universityContentElement,
+    elements.jobContentElement,
+    elements.bankContentElement,
+    elements.gymContentElement,
+    elements.mallContentElement,
+    elements.worshipContentElement,
+    elements.clubContentElement,
+    elements.restaurantContentElement,
+    elements.spaContentElement
+]
 
 const toggleVisibility = (visibility, element) => {
     // function to change the visibility of element

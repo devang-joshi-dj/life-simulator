@@ -1,64 +1,33 @@
 import * as elements from "./elements.js"
+import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 
-     elements.bankOpenAccount.addEventListener("click", OpenAccount)
-     elements.bankDepositMoney.addEventListener("click", DepositMoney)
-     elements.bankWithdrawMoney.addEventListener("click", WithdrawMoney)
-     elements.bankTakeLoan.addEventListener("click", TakeLoan)
-     elements.bankPayBills.addEventListener("click", PayBills)
-     elements.bankTalkTeller.addEventListener("click", TalkTeller)
-
-     var update_health = 0
-     var update_happiness = 0
-     var update_cash = 0
-
-     function OpenAccount() {
+     function openAccount() {
           //health
-          var healthVal = elements.healthValue.innerText
-          update_health = Number(healthVal)
-          update_health = update_health - update_health * (5 / 100)
-          elements.healthValue.innerHTML = update_health.toFixed(2)
+          config.updateValue(config.health, -5)
 
           //happiness
-          var happinessVal = elements.happinessValue.innerText
-          update_happiness = Number(happinessVal)
-          update_happiness = update_happiness + update_happiness * (5 / 100)
-          elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+          config.updateValue(config.happiness, +5)
 
           //cash
-          var cashVal = elements.cashValue.innerText
-          update_cash = Number(cashVal)
-          update_cash = update_cash - update_cash * (10 / 100)
-          elements.cashValue.innerHTML = update_cash.toFixed(2)
+          config.updateValue(config.cash, -10)
      }
 
-     function DepositMoney() {
+     function depositMoney() {
           //health
-          var healthVal = elements.healthValue.innerText
-          update_health = Number(healthVal)
-          update_health = update_health - update_health * (5 / 100)
-          elements.healthValue.innerHTML = update_health.toFixed(2)
+          config.updateValue(config.health, -5)
 
           //happiness
-          var happinessVal = elements.happinessValue.innerText
-          update_happiness = Number(happinessVal)
-          update_happiness = update_happiness + update_happiness * (5 / 100)
-          elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+          config.updateValue(config.happiness, +5)
 
           //cash
-          var cashVal = elements.cashValue.innerText
-          update_cash = Number(cashVal)
-          update_cash = update_cash + update_cash * (10 / 100)
-          elements.cashValue.innerHTML = update_cash.toFixed(2)
+          config.updateValue(config.cash, +10)
      }
 
-     function WithdrawMoney() {
+     function withdrawMoney() {
           //health
-          var healthVal = elements.healthValue.innerText
-          update_health = Number(healthVal)
-          update_health = update_health - update_health * (5 / 100)
-          elements.healthValue.innerHTML = update_health.toFixed(2)
+          config.updateValue(config.health, +5)
 
           //happiness
           // no changes
@@ -68,18 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
           // elements.happinessValue.innerHTML = update_happiness +2
 
           //cash
-          var cashVal = elements.cashValue.innerText
-          update_cash = Number(cashVal)
-          update_cash = update_cash - update_cash * (10 / 100)
-          elements.cashValue.innerHTML = update_cash.toFixed(2)
+          config.updateValue(config.cash, -10)
      }
 
-     function TakeLoan() {
+     function takeLoan() {
           //health
-          var healthVal = elements.healthValue.innerText
-          update_health = Number(healthVal)
-          update_health = update_health - update_health * (5 / 100)
-          elements.healthValue.innerHTML = update_health.toFixed(2)
+          config.updateValue(config.health, -5)
 
           //happiness
           //  no changes
@@ -89,18 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
           // elements.happinessValue.innerHTML = update_happiness.toFixed(2)
 
           //cash
-          var cashVal = elements.cashValue.innerText
-          update_cash = Number(cashVal)
-          update_cash = update_cash + update_cash * (10 / 100)
-          elements.cashValue.innerHTML = update_cash.toFixed(2)
+          config.updateValue(config.cash, +10)
      }
 
-     function PayBills() {
+     function payBills() {
           //health
-          var healthVal = elements.healthValue.innerText
-          update_health = Number(healthVal)
-          update_health = update_health - update_health * (5 / 100)
-          elements.healthValue.innerHTML = update_health.toFixed(2)
+          config.updateValue(config.health, -5)
 
           //happiness
           //no changes
@@ -110,29 +67,24 @@ document.addEventListener("DOMContentLoaded", () => {
           // elements.happinessValue.innerHTML = update_happiness +2
 
           //cash
-          var cashVal = elements.cashValue.innerText
-          update_cash = Number(cashVal)
-          update_cash = update_cash - update_cash * (10 / 100)
-          elements.cashValue.innerHTML = update_cash.toFixed(2)
+          config.updateValue(config.cash, -10)
      }
 
-     function TalkTeller() {
+     function talkTeller() {
           //health
-          var healthVal = elements.healthValue.innerText
-          update_health = Number(healthVal)
-          update_health = update_health - update_health * (5 / 100)
-          elements.healthValue.innerHTML = update_health.toFixed(2)
+          config.updateValue(config.health, -5)
 
           //happiness
-          var happinessVal = elements.happinessValue.innerText
-          update_happiness = Number(happinessVal)
-          update_happiness = update_happiness + update_happiness * (5 / 100)
-          elements.happinessValue.innerHTML = update_happiness.toFixed(2)
+          config.updateValue(config.happiness, +5)
 
           //cash
-          var cashVal = elements.cashValue.innerText
-          update_cash = Number(cashVal)
-          update_cash = update_cash - update_cash * (10 / 100)
-          elements.cashValue.innerHTML = update_cash.toFixed(2)
+          config.updateValue(config.cash, -10)
      }
+
+     elements.bankOpenAccount.addEventListener("click", openAccount)
+     elements.bankDepositMoney.addEventListener("click", depositMoney)
+     elements.bankWithdrawMoney.addEventListener("click", withdrawMoney)
+     elements.bankTakeLoan.addEventListener("click", takeLoan)
+     elements.bankPayBills.addEventListener("click", payBills)
+     elements.bankTalkTeller.addEventListener("click", talkTeller)
 })
