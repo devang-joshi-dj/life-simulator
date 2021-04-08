@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   elements.gymDietPlan.addEventListener("click", DietPlan);
   elements.gymTalkTrainer.addEventListener("click", TalkTrainer);
 
+  var update_health = 0;
+  var update_happiness = 0;
+  var update_cash = 0;
+  
   function TakeAdmission() {
     //health
     var healthVal = elements.healthValue.innerText;
