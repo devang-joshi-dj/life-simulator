@@ -4,7 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.worshipPray.addEventListener("click", Pray);
     elements.worshipServe.addEventListener("click", Serve);
     elements.worshipCharity.addEventListener("click", Charity);
-
+    
+    var update_health = 0;
+    var update_happiness = 0;
+    var update_cash = 0;
     function Pray() {
         //health
         var healthVal = elements.healthValue.innerText;
@@ -27,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function Serve() {
         //health
-        //health
         var healthVal = elements.healthValue.innerText;
         update_health = Number(healthVal);
         update_health = update_health - update_health * (10 / 100);
@@ -47,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function Charity() {
-        //health
         //health
         var healthVal = elements.healthValue.innerText;
         update_health = Number(healthVal);
