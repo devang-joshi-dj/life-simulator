@@ -1,6 +1,6 @@
 import * as elements from './elements.js'
 
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
 
     elements.worshipPray.addEventListener("click", Pray)
     elements.worshipServe.addEventListener("click", Serve)
@@ -68,5 +68,4 @@ window.onload = () => {
         update_cash = update_cash - update_cash * (20 / 100)
         elements.cashValue.innerHTML = update_cash.toFixed(2)
     }
-
-}
+})

@@ -1,6 +1,6 @@
 import * as elements from './elements.js'
 
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
   var update_health = 0
   var update_happiness = 0
 
@@ -70,4 +70,4 @@ window.onload = () => {
     update_happiness = update_happiness + update_happiness * (20 / 100)
     elements.happinessValue.innerHTML = update_happiness.toFixed(2)
   }
-}
+})

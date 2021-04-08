@@ -1,6 +1,6 @@
 import * as elements from './elements.js'
 
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
 
       elements.restaurantEatFastFood.addEventListener("click", FastFood)
       elements.restaurantEatSeaFood.addEventListener("click", SeaFood)
@@ -155,4 +155,4 @@ window.onload = () => {
             elements.cashValue.innerHTML = update_cash.toFixed(2)
             elements.cashValue.innerHTML = update_cash + 2
       }
-}
+})
