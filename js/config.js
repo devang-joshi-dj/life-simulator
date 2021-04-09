@@ -28,4 +28,12 @@ export let cash = elements.cashValue
 export const updateValue = (element, value) => {
     // function for setting a value to an element
     element.innerHTML = Number(element.innerHTML) + value
+
+    if (element.innerHTML > 100 && (element == health || element == happiness)) {
+        element.innerHTML = 100
+    }
+
+    if (element.innerHTML < 0 && (element == health || element == happiness)) {
+        element.innerHTML = 0
+    }
 }
