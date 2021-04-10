@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //happiness
     config.updateValue(config.happiness, +10)
+
+    config.updateTime(1);
   }
 
   const homeRest = () => {
@@ -20,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //happiness
     config.updateValue(config.happiness, +10)
 
+    config.updateTime(1);
   }
 
   const homeMeetfamily = () => {
@@ -37,6 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
     //happiness
     config.updateValue(config.happiness, +20)
   }
+
+  document.addEventListener('click', () => {
+    config.disableElement(elements.homeRest, 23, 7)
+  })
 
   // btngroup click
   elements.homeMeal.addEventListener("click", homeMeal)
