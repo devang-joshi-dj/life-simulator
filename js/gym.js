@@ -3,6 +3,13 @@ import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  elements.gymTakeAdmission.disabled = false
+  elements.gymExerciseOneHour.disabled = true
+  elements.gymExerciseTwoHours.disabled = true
+  elements.gymExerciseThreeHours.disabled = true
+  elements.gymDietPlan.disabled = true
+  elements.gymTalkTrainer.disabled = true
+
   const takeAdmission = () => {
     //health
     config.updateValue(config.health, -5)
@@ -87,10 +94,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // elements.cashValue.innerHTML = update_cash +2
   }
 
-  elements.gymTakeAdmission.addEventListener("click", takeAdmission)
+  elements.gymTakeAdmission.addEventListener("click", () => {
+    takeAdmission()
+    elements.gymTakeAdmission.disabled = true
+    elements.gymExerciseOneHour.disabled = false
+    elements.gymExerciseTwoHours.disabled = false
+    elements.gymExerciseThreeHours.disabled = false
+    elements.gymDietPlan.disabled = false
+    elements.gymTalkTrainer.disabled = false
+  })
   elements.gymExerciseOneHour.addEventListener("click", exerciseOneHour)
   elements.gymExerciseTwoHours.addEventListener("click", exerciseTwoHours)
   elements.gymExerciseThreeHours.addEventListener("click", exerciseThreeHours)
-  elements.gymDietPlan.addEventListener("click", dietPlan)
+  elements.gymDietPlan.addEventListener("click", () => {
+    dietPlan()
+    elements.gymDietPlan.disabled = true
+  })
   elements.gymTalkTrainer.addEventListener("click", talkTrainer)
 })

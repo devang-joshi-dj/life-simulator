@@ -3,6 +3,13 @@ import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 
+     elements.bankOpenAccount.disabled = false
+     elements.bankDepositMoney.disabled = true
+     elements.bankWithdrawMoney.disabled = true
+     elements.bankTakeLoan.disabled = true
+     elements.bankPayBills.disabled = true
+     elements.bankTalkTeller.disabled = true
+
      function openAccount() {
           //health
           config.updateValue(config.health, -5)
@@ -11,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
           config.updateValue(config.happiness, +5)
 
           //cash
-          config.updateValue(config.cash, -10)
+          config.updateValue(config.cash, -100)
      }
 
      function depositMoney() {
@@ -81,7 +88,15 @@ document.addEventListener("DOMContentLoaded", () => {
           config.updateValue(config.cash, -10)
      }
 
-     elements.bankOpenAccount.addEventListener("click", openAccount)
+     elements.bankOpenAccount.addEventListener("click", () => {
+          openAccount()
+          elements.bankOpenAccount.disabled = true
+          elements.bankDepositMoney.disabled = false
+          elements.bankWithdrawMoney.disabled = false
+          elements.bankTakeLoan.disabled = false
+          elements.bankPayBills.disabled = false
+          elements.bankTalkTeller.disabled = false
+     })
      elements.bankDepositMoney.addEventListener("click", depositMoney)
      elements.bankWithdrawMoney.addEventListener("click", withdrawMoney)
      elements.bankTakeLoan.addEventListener("click", takeLoan)

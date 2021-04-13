@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const initialHealth = 50
     const initialHappiness = 50
     const initialCash = 1000
-
     const initialTime = 7
 
     const setValue = (element, value) => {
@@ -53,6 +52,7 @@ export const updateTime = (time) => {
 }
 
 export const disableElement = (element, start, end) => {
+    // function for disabling specific elements according to the provided time
     if (start > end) {
         if (elements.timeValue.innerHTML >= start || elements.timeValue.innerHTML <= end) {
             element.disabled = true

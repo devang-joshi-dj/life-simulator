@@ -3,6 +3,15 @@ import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    elements.universityAdmission.disabled = false
+    elements.universityPayFees.disabled = true
+    elements.universityAttendClasses.disabled = true
+    elements.universityGroupStudy.disabled = true
+    elements.universityClubMeeting.disabled = true
+    elements.universityEatCanteen.disabled = true
+    elements.universityPlayGames.disabled = true
+    elements.universityStudyLibrary.disabled = true
+
     const admission = () => {
         //health
         config.updateValue(config.health, -10)
@@ -11,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         config.updateValue(config.happiness, +10)
 
         //cash
-        config.updateValue(config.cash, -30)
+        config.updateValue(config.cash, -500)
     }
 
     const payFees = () => {
@@ -114,8 +123,28 @@ document.addEventListener("DOMContentLoaded", () => {
         // elements.cashValue.innerHTML = update_cash + 2
     }
 
-    elements.universityAdmission.addEventListener("click", admission)
-    elements.universityPayFees.addEventListener("click", payFees)
+    elements.universityAdmission.addEventListener("click", () => {
+        admission()
+        elements.universityAdmission.disabled = true
+        elements.universityPayFees.disabled = false
+        elements.universityAttendClasses.disabled = true
+        elements.universityGroupStudy.disabled = true
+        elements.universityClubMeeting.disabled = true
+        elements.universityEatCanteen.disabled = true
+        elements.universityPlayGames.disabled = true
+        elements.universityStudyLibrary.disabled = true
+    })
+    elements.universityPayFees.addEventListener("click", () => {
+        payFees()
+        elements.universityAdmission.disabled = true
+        elements.universityPayFees.disabled = true
+        elements.universityAttendClasses.disabled = false
+        elements.universityGroupStudy.disabled = false
+        elements.universityClubMeeting.disabled = false
+        elements.universityEatCanteen.disabled = false
+        elements.universityPlayGames.disabled = false
+        elements.universityStudyLibrary.disabled = false
+    })
     elements.universityAttendClasses.addEventListener("click", attendClasses)
     elements.universityGroupStudy.addEventListener("click", groupStudy)
     elements.universityClubMeeting.addEventListener("click", clubMeeting)
