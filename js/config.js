@@ -53,10 +53,22 @@ export const updateTime = (time) => {
 }
 
 export const disableElement = (element, start, end) => {
-    if (elements.timeValue.innerHTML >= start || elements.timeValue.innerHTML <= end) {
-        element.disabled = true
+    if (start > end) {
+        if (elements.timeValue.innerHTML >= start || elements.timeValue.innerHTML <= end) {
+            element.disabled = true
+        }
+        else {
+            element.disabled = false
+        }
     }
-    else {
-        element.disabled = false
+
+    if (start < end) {
+        if (elements.timeValue.innerHTML >= start && elements.timeValue.innerHTML <= end) {
+            element.disabled = true
+        }
+        else {
+            element.disabled = false
+        }
     }
+
 }
