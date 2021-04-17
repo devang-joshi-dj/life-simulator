@@ -112,3 +112,12 @@ document.addEventListener("DOMContentLoaded", () => {
   })
   elements.gymTalkTrainer.addEventListener("click", talkTrainer)
 })
+
+document.addEventListener('click', () => {
+  config.disableElement(elements.gymTakeAdmission, 20,6)
+  config.disableElement(elements.gymExerciseOneHour, 20,6)
+  config.disableElement(elements.gymExerciseTwoHours, 20,6)
+  config.disableElement(elements.gymExerciseThreeHours, 20,6)
+  config.disableElement(elements.gymDietPlan,20,6)
+  config.disableElement(elements.gymTalkTrainer,20,6)
+})

@@ -79,6 +79,15 @@ document.addEventListener("DOMContentLoaded", () => {
             //cash
             config.updateValue(config.cash, -17)
       }
+      document.addEventListener('click', () => {
+            config.disableElement(elements.restaurantEatFastFood, 7,16)
+            config.disableElement(elements.restaurantEatSeaFood, 7,17)
+            
+            
+            
+            config.disableElement(elements.restaurantEatItalianFood, 7,16)
+            config.disableElement(elements.restaurantEatChineseFood, 7,16)
+      })
 
       elements.restaurantEatFastFood.addEventListener("click", fastFood)
       elements.restaurantEatSeaFood.addEventListener("click", seaFood)

@@ -80,10 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const applyPromotion = () => {
             //health
-            config.updateValue(config.health, -5)
+            config.updateValue(config.health, -4)
 
             //happiness
-            config.updateValue(config.happiness, +5)
+            config.updateValue(config.happiness, -4)
 
             //cash
             //no changes
@@ -92,6 +92,19 @@ document.addEventListener("DOMContentLoaded", () => {
             // update_cash = Number(cashVal)
             // elements.cashValue.innerHTML = update_cash +2
       }
+
+      document.addEventListener('click', () => {
+            config.disableElement(elements.jobWorkOneHour,20,10)
+            config.disableElement(elements.jobWorkThreeHours, 20,10)
+            config.disableElement(elements.jobWorkFiveHours, 20,10)
+            config.disableElement(elements.jobWorkNineHours, 20,10)
+            config.disableElement(elements.jobTakeBreak, 20,10)
+            config.disableElement(elements.jobAttendMeeting, 20,10)
+            config.disableElement(elements.jobApplyPromotion, 20,10)
+            
+    
+        })
+
 
       elements.jobWorkOneHour.addEventListener("click", workOneHour)
       elements.jobWorkThreeHours.addEventListener("click", workThreeHours)
