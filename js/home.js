@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Eat Meal function
   const homeMeal = () => {
     //health
-    config.updateValue(config.health, +5)
+    config.updateValue(config.health, +2)
 
     //happiness
-    config.updateValue(config.happiness, +10)
+    config.updateValue(config.happiness, +2)
 
     config.updateTime(1);
   }
@@ -17,28 +17,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const homeRest = () => {
 
     //health
-    config.updateValue(config.health, +5)
+    config.updateValue(config.health, +2)
 
     //happiness
-    config.updateValue(config.happiness, +10)
+    config.updateValue(config.happiness, +2)
 
     config.updateTime(1);
   }
 
   const homeMeetfamily = () => {
     //health
-    config.updateValue(config.health, -5)
+    config.updateValue(config.health, -2)
 
     //happiness
-    config.updateValue(config.happiness, +10)
+    config.updateValue(config.happiness, +2)
   }
 
   function homeCleanRoom() {
     //health
-    config.updateValue(config.health, -10)
+    config.updateValue(config.health, -2)
 
     //happiness
-    config.updateValue(config.happiness, +20)
+    config.updateValue(config.happiness, +2)
   }
 
   document.addEventListener('click', () => {

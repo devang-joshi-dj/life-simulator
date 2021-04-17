@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const admission = () => {
         //health
-        config.updateValue(config.health, -10)
+        config.updateValue(config.health, -2)
 
         //happiness
-        config.updateValue(config.happiness, +10)
+        config.updateValue(config.happiness, +2)
 
         //cash
         config.updateValue(config.cash, -500)
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const payFees = () => {
         //health
-        config.updateValue(config.health, -10)
+        config.updateValue(config.health, -2)
 
         //happiness
         //no changes
@@ -35,15 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
         // elements.happinessValue.innerHTML = update_happiness + 2
 
         //cash
-        config.updateValue(config.cash, -30)
+        config.updateValue(config.cash, -500)
     }
 
     const attendClasses = () => {
         //health
-        config.updateValue(config.health, -10)
+        config.updateValue(config.health, -4)
 
         //happiness
-        config.updateValue(config.happiness, +10)
+        config.updateValue(config.happiness, +4)
 
         //cash
         //no changes
@@ -55,10 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const groupStudy = () => {
         //health
-        config.updateValue(config.health, -10)
+        config.updateValue(config.health, -3)
 
         //happiness
-        config.updateValue(config.happiness, +10)
+        config.updateValue(config.happiness, +3)
 
         //cash
         //no changes
@@ -70,10 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const clubMeeting = () => {
         //health
-        config.updateValue(config.health, +10)
+        config.updateValue(config.health, -3)
 
         //happiness
-        config.updateValue(config.happiness, +10)
+        config.updateValue(config.happiness, +3)
 
         //cash
         //no changes
@@ -85,20 +85,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const eatCanteen = () => {
         //health
-        config.updateValue(config.health, -10)
+        config.updateValue(config.health, -4)
 
         //happiness
-        config.updateValue(config.happiness, +10)
+        config.updateValue(config.happiness, +4)
 
         //cash
-        config.updateValue(config.cash, -10)
+        config.updateValue(config.cash, -4)
     }
 
     const playGames = () => {
-        config.updateValue(config.health, +10)
+        config.updateValue(config.health, +4)
 
         //happiness
-        config.updateValue(config.happiness, +10)
+        config.updateValue(config.happiness, +4)
 
         //cash
         //no changes
@@ -110,10 +110,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const studyLibrary = () => {
         //health
-        config.updateValue(config.health, +10)
+        config.updateValue(config.health, +3)
 
         //happiness
-        config.updateValue(config.happiness, +10)
+        config.updateValue(config.happiness, +3)
 
         //cashhValue
         //no changes
@@ -145,7 +145,6 @@ document.addEventListener("DOMContentLoaded", () => {
         elements.universityPlayGames.disabled = false
         elements.universityStudyLibrary.disabled = false
     })
-
     document.addEventListener('click', () => {
         config.disableElement(elements.universityAdmission, 18,9)
         config.disableElement(elements.universityPayFees, 18,9)
@@ -157,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
         config.disableElement(elements.universityStudyLibrary, 18,9)
 
     })
-    
+
     elements.universityAttendClasses.addEventListener("click", attendClasses)
     elements.universityGroupStudy.addEventListener("click", groupStudy)
     elements.universityClubMeeting.addEventListener("click", clubMeeting)
