@@ -46,11 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
         //cash
         config.updateValue(config.cash, -20)
     }
+
     document.addEventListener('click', () => {
-        config.disableElement(elements.mallShopping,21,10)
-        config.disableElement(elements.mallWatchMovies,21,10)
-        config.disableElement(elements.mallGamingZone,21,10)
-        config.disableElement(elements.mallFoodCourt,21,10)
+        config.disableElement(elements.mallShopping, 21, 10)
+        config.disableElement(elements.mallWatchMovies, 21, 10)
+        config.disableElement(elements.mallGamingZone, 21, 10)
+        config.disableElement(elements.mallFoodCourt, 21, 10)
     })
 
     elements.mallShopping.addEventListener("click", shopping)

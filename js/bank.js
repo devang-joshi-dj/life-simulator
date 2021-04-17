@@ -88,6 +88,15 @@ document.addEventListener("DOMContentLoaded", () => {
           config.updateValue(config.cash, -10)
      }
 
+     document.addEventListener('click', () => {
+          config.disableElement(elements.bankOpenAccount, 7, 10)
+          config.disableElement(elements.bankDepositMoney, 7, 10)
+          config.disableElement(elements.bankWithdrawMoney, 7, 10)
+          config.disableElement(elements.bankTakeLoan, 7, 10)
+          config.disableElement(elements.bankPayBills, 7, 10)
+          config.disableElement(elements.bankTalkTeller, 7, 10)
+     })
+
      elements.bankOpenAccount.addEventListener("click", () => {
           openAccount()
           elements.bankOpenAccount.disabled = true
@@ -97,14 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
           elements.bankPayBills.disabled = false
           elements.bankTalkTeller.disabled = false
      })
-     document.addEventListener('click', () => {
-            config.disableElement(elements.bankOpenAccount, 7,10)
-            config.disableElement(elements.bankDepositMoney, 7,10)
-            config.disableElement(elements.bankWithdrawMoney, 7,10)
-            config.disableElement(elements.bankTakeLoan, 7,10)
-            config.disableElement(elements.bankPayBills, 7,10)
-            config.disableElement(elements.bankTalkTeller, 7,10)
-     })
+
      elements.bankDepositMoney.addEventListener("click", depositMoney)
      elements.bankWithdrawMoney.addEventListener("click", withdrawMoney)
      elements.bankTakeLoan.addEventListener("click", takeLoan)

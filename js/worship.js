@@ -35,11 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
         //cash
         config.updateValue(config.cash, -30)
     }
+
     document.addEventListener('click', () => {
-        config.disableElement(elements.worshipPray,21,7)
-        config.disableElement(elements.worshipServe,21,7)
-        config.disableElement(elements.worshipCharity,21,7)
+        config.disableElement(elements.worshipPray, 21, 7)
+        config.disableElement(elements.worshipServe, 21, 7)
+        config.disableElement(elements.worshipCharity, 21, 7)
     })
+
     elements.worshipPray.addEventListener("click", pray)
     elements.worshipServe.addEventListener("click", serve)
     elements.worshipCharity.addEventListener("click", charity)

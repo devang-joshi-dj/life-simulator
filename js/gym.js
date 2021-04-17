@@ -94,6 +94,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // elements.cashValue.innerHTML = update_cash +2
   }
 
+  document.addEventListener('click', () => {
+    config.disableElement(elements.gymTakeAdmission, 20, 6)
+    config.disableElement(elements.gymExerciseOneHour, 20, 6)
+    config.disableElement(elements.gymExerciseTwoHours, 20, 6)
+    config.disableElement(elements.gymExerciseThreeHours, 20, 6)
+    config.disableElement(elements.gymDietPlan, 20, 6)
+    config.disableElement(elements.gymTalkTrainer, 20, 6)
+  })
+
   elements.gymTakeAdmission.addEventListener("click", () => {
     takeAdmission()
     elements.gymTakeAdmission.disabled = true
@@ -111,13 +120,4 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.gymDietPlan.disabled = true
   })
   elements.gymTalkTrainer.addEventListener("click", talkTrainer)
-})
-
-document.addEventListener('click', () => {
-  config.disableElement(elements.gymTakeAdmission, 20,6)
-  config.disableElement(elements.gymExerciseOneHour, 20,6)
-  config.disableElement(elements.gymExerciseTwoHours, 20,6)
-  config.disableElement(elements.gymExerciseThreeHours, 20,6)
-  config.disableElement(elements.gymDietPlan,20,6)
-  config.disableElement(elements.gymTalkTrainer,20,6)
 })

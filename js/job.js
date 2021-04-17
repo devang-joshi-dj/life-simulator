@@ -94,17 +94,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       document.addEventListener('click', () => {
-            config.disableElement(elements.jobWorkOneHour,20,10)
-            config.disableElement(elements.jobWorkThreeHours, 20,10)
-            config.disableElement(elements.jobWorkFiveHours, 20,10)
-            config.disableElement(elements.jobWorkNineHours, 20,10)
-            config.disableElement(elements.jobTakeBreak, 20,10)
-            config.disableElement(elements.jobAttendMeeting, 20,10)
-            config.disableElement(elements.jobApplyPromotion, 20,10)
-            
-    
-        })
-
+            config.disableElement(elements.jobWorkOneHour, 20, 10)
+            config.disableElement(elements.jobWorkThreeHours, 20, 10)
+            config.disableElement(elements.jobWorkFiveHours, 20, 10)
+            config.disableElement(elements.jobWorkNineHours, 20, 10)
+            config.disableElement(elements.jobTakeBreak, 20, 10)
+            config.disableElement(elements.jobAttendMeeting, 20, 10)
+            config.disableElement(elements.jobApplyPromotion, 20, 10)
+      })
 
       elements.jobWorkOneHour.addEventListener("click", workOneHour)
       elements.jobWorkThreeHours.addEventListener("click", workThreeHours)

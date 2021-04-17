@@ -123,6 +123,17 @@ document.addEventListener("DOMContentLoaded", () => {
         // elements.cashValue.innerHTML = update_cash + 2
     }
 
+    document.addEventListener('click', () => {
+        config.disableElement(elements.universityAdmission, 18, 9)
+        config.disableElement(elements.universityPayFees, 18, 9)
+        config.disableElement(elements.universityAttendClasses, 18, 9)
+        config.disableElement(elements.universityGroupStudy, 18, 9)
+        config.disableElement(elements.universityClubMeeting, 18, 9)
+        config.disableElement(elements.universityEatCanteen, 18, 9)
+        config.disableElement(elements.universityPlayGames, 18, 9)
+        config.disableElement(elements.universityStudyLibrary, 18, 9)
+    })
+
     elements.universityAdmission.addEventListener("click", () => {
         admission()
         elements.universityAdmission.disabled = true
@@ -145,18 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
         elements.universityPlayGames.disabled = false
         elements.universityStudyLibrary.disabled = false
     })
-    document.addEventListener('click', () => {
-        config.disableElement(elements.universityAdmission, 18,9)
-        config.disableElement(elements.universityPayFees, 18,9)
-        config.disableElement(elements.universityAttendClasses, 18,9)
-        config.disableElement(elements.universityGroupStudy, 18,9)
-        config.disableElement(elements.universityClubMeeting, 18,9)
-        config.disableElement(elements.universityEatCanteen,18,9)
-        config.disableElement(elements.universityPlayGames, 18,9)
-        config.disableElement(elements.universityStudyLibrary, 18,9)
-
-    })
-
     elements.universityAttendClasses.addEventListener("click", attendClasses)
     elements.universityGroupStudy.addEventListener("click", groupStudy)
     elements.universityClubMeeting.addEventListener("click", clubMeeting)

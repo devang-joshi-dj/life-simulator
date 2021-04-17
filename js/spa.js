@@ -24,10 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
         //cash
         config.updateValue(config.cash, -22)
     }
+
     document.addEventListener('click', () => {
-        config.disableElement(elements.spaMassage,21,9)
-        config.disableElement(elements.spaManicurePedicure,21,9)
+        config.disableElement(elements.spaMassage, 21, 9)
+        config.disableElement(elements.spaManicurePedicure, 21, 9)
     })
+
     elements.spaMassage.addEventListener("click", massage)
     elements.spaManicurePedicure.addEventListener("click", manicurePedicure)
 })

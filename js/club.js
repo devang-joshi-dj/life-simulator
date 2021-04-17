@@ -41,10 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // update_cash = update_cash - update_cash * (25 / 100)
         // elements.cashValue.innerHTML = update_cash.toFixed(2)
     }
+
     document.addEventListener('click', () => {
-        config.disableElement(elements.clubDance,4,19)
-        config.disableElement(elements.clubDrinkEat,4,19)
-        config.disableElement(elements.clubMeetPeople,4,19)
+        config.disableElement(elements.clubDance, 4, 19)
+        config.disableElement(elements.clubDrinkEat, 4, 19)
+        config.disableElement(elements.clubMeetPeople, 4, 19)
     })
 
     elements.clubDance.addEventListener("click", dance)
