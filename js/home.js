@@ -5,39 +5,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Eat Meal function
   const homeMeal = () => {
-    //health
     config.updateValue(config.health, +2)
 
-    //happiness
+    config.updateValue(config.hunger, +2)
+
     config.updateValue(config.happiness, +2)
 
     config.updateTime(1);
   }
 
   const homeRest = () => {
-
-    //health
     config.updateValue(config.health, +2)
 
-    //happiness
     config.updateValue(config.happiness, +2)
 
     config.updateTime(1);
   }
 
   const homeMeetfamily = () => {
-    //health
     config.updateValue(config.health, -2)
 
-    //happiness
     config.updateValue(config.happiness, +2)
   }
 
   function homeCleanRoom() {
-    //health
     config.updateValue(config.health, -2)
 
-    //happiness
     config.updateValue(config.happiness, +2)
   }
 

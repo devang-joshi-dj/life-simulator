@@ -3,6 +3,7 @@ import * as elements from './elements.js'
 document.addEventListener("DOMContentLoaded", () => {
 
     const initialHealth = 50
+    const initualHunger = 50
     const initialHappiness = 50
     const initialCash = 1000
     const initialTime = 7
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const setValues = () => {
         // function for setting all values
         setValue(health, initialHealth)
+        setValue(hunger, initualHunger)
         setValue(happiness, initialHappiness)
         setValue(cash, initialCash)
         setValue(time, initialTime)
@@ -24,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 export let health = elements.healthValue
+export let hunger = elements.hungerValue
 export let happiness = elements.happinessValue
 export let cash = elements.cashValue
 export let time = elements.timeValue

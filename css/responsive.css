@@ -1,5 +1,14 @@
 /* MEDIA QUERIES */
 
+@media screen and (max-width: 1260px) {
+    .statistics div {
+        margin: 0;
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
 @media screen and (max-width: 790px) {
     .intro {
         width: 70%;
@@ -14,12 +23,6 @@
     .intro {
         width: 100%;
         margin-left: 0;
-    }
-    .statistics div {
-        margin: 0;
-        float: none;
-        display: block;
-        text-align: left;
     }
     .time {
         float: none;

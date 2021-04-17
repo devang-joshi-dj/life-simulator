@@ -14,6 +14,7 @@ export const mainElement = document.querySelector('.main') // Main Content Conta
 
 // Statistics Element Start
 export const healthValue = document.querySelector('.healthValue')
+export const hungerValue = document.querySelector('.hungerValue')
 export const happinessValue = document.querySelector('.happinessValue')
 export const cashValue = document.querySelector('.cashValue')
 export const timeValue = document.querySelector('.timeValue')

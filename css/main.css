@@ -78,13 +78,13 @@ html, body {
     background-color: white;
 }
 
-.health, .happiness, .cash {
+.health, .hunger, .happiness, .cash {
     float: left;
     display: flex;
     flex-direction: row;
 }
 
-.health span, .happiness span, .cash span {
+.health span, .hunger span, .happiness span, .cash span {
     margin: 0 5px;
 }
 
