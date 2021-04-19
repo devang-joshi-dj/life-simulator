@@ -3,7 +3,10 @@ import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    elements.universityAdmission.disabled = false
+    let admissionFlag1 = false
+    let feesFlag1 = false
+    let admissionFlag2 = true
+    let feesFlag2 = true
     elements.universityPayFees.disabled = true
     elements.universityAttendClasses.disabled = true
     elements.universityGroupStudy.disabled = true
@@ -124,18 +127,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     document.addEventListener('click', () => {
-        config.disableElement(elements.universityAdmission, 18, 9)
-        config.disableElement(elements.universityPayFees, 18, 9)
-        config.disableElement(elements.universityAttendClasses, 18, 9)
-        config.disableElement(elements.universityGroupStudy, 18, 9)
-        config.disableElement(elements.universityClubMeeting, 18, 9)
-        config.disableElement(elements.universityEatCanteen, 18, 9)
-        config.disableElement(elements.universityPlayGames, 18, 9)
-        config.disableElement(elements.universityStudyLibrary, 18, 9)
+        if (admissionFlag2)
+            config.disableElement(elements.universityAdmission, 18, 9)
+        if (admissionFlag1 && feesFlag2)
+            config.disableElement(elements.universityPayFees, 18, 9)
+        if (feesFlag1) {
+            config.disableElement(elements.universityAttendClasses, 18, 9)
+            config.disableElement(elements.universityGroupStudy, 18, 9)
+            config.disableElement(elements.universityClubMeeting, 18, 9)
+            config.disableElement(elements.universityEatCanteen, 18, 9)
+            config.disableElement(elements.universityPlayGames, 18, 9)
+            config.disableElement(elements.universityStudyLibrary, 18, 9)
+        }
     })
 
     elements.universityAdmission.addEventListener("click", () => {
         admission()
+        admissionFlag1 = true
+        admissionFlag2 = false
         elements.universityAdmission.disabled = true
         elements.universityPayFees.disabled = false
         elements.universityAttendClasses.disabled = true
@@ -146,6 +155,8 @@ document.addEventListener("DOMContentLoaded", () => {
         elements.universityStudyLibrary.disabled = true
     })
     elements.universityPayFees.addEventListener("click", () => {
+        feesFlag1 = true
+        feesFlag2 = false
         payFees()
         elements.universityAdmission.disabled = true
         elements.universityPayFees.disabled = true
