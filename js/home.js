@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function homeCleanRoom() {
-    config.updateValue(config.health, -2)
+    //config.updateValue(config.health, -2)
+    config.updateValue(config.hunger, -2)
 
     config.updateValue(config.happiness, +2)
   }

@@ -5,46 +5,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const shopping = () => {
         //health
-        config.updateValue(config.health, -3)
-
+        //config.updateValue(config.health, -3)
+        //hunger
+        config.updateValue(config.hunger, -3)
         //happiness
         config.updateValue(config.happiness, +3)
 
         //cash
-        config.updateValue(config.cash, -25)
+        config.updateValue(config.cash, -30)
     }
 
     const watchMovies = () => {
         //health
-        config.updateValue(config.health, -5)
-
+        // config.updateValue(config.health, -5)
+        //hunger
+        config.updateValue(config.hunger, -5)
         //happiness
         config.updateValue(config.happiness, +10)
 
         //cash
-        config.updateValue(config.cash, -20)
+        config.updateValue(config.cash, -30)
     }
 
     const gamingZone = () => {
         //health
-        config.updateValue(config.health, -5)
+        //  config.updateValue(config.health, -5)
+        //hunger
+        config.updateValue(config.hunger, -5)
+        //happiness
+        config.updateValue(config.happiness, +10)
 
+        //cash
+        config.updateValue(config.cash, -30)
+    }
+
+    const foodCourt = () => {
+        //health
+        config.updateValue(config.health, -8)
+        //hunger
+        config.updateValue(config.hunger, +10)
         //happiness
         config.updateValue(config.happiness, +10)
 
         //cash
         config.updateValue(config.cash, -25)
-    }
-
-    const foodCourt = () => {
-        //health
-        config.updateValue(config.health, +15)
-
-        //happiness
-        config.updateValue(config.happiness, +10)
-
-        //cash
-        config.updateValue(config.cash, -20)
     }
 
     document.addEventListener('click', () => {

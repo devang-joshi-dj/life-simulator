@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const admission = () => {
         //health
-        config.updateValue(config.health, -2)
+        //config.updateValue(config.health, )
 
         //happiness
         config.updateValue(config.happiness, +2)
@@ -28,7 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const payFees = () => {
         //health
-        config.updateValue(config.health, -2)
+        //config.updateValue(config.health, -2)
+
 
         //happiness
         //no changes
@@ -43,8 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const attendClasses = () => {
         //health
-        config.updateValue(config.health, -4)
+        //config.updateValue(config.health, -4)
 
+        //hunger
+        config.updateValue(config.hunger, -2)
         //happiness
         config.updateValue(config.happiness, +4)
 
@@ -58,7 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const groupStudy = () => {
         //health
-        config.updateValue(config.health, -3)
+        // config.updateValue(config.health, -3)
+        //hunger
+        config.updateValue(config.hunger, -3)
 
         //happiness
         config.updateValue(config.happiness, +3)
@@ -73,8 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const clubMeeting = () => {
         //health
-        config.updateValue(config.health, -3)
-
+        //config.updateValue(config.health, -3)
+        //hunger
+        config.updateValue(config.hunger, -3)
         //happiness
         config.updateValue(config.happiness, +3)
 
@@ -90,6 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
         //health
         config.updateValue(config.health, -4)
 
+        //hunger
+        config.updateValue(config.hunger, +4)
+
         //happiness
         config.updateValue(config.happiness, +4)
 
@@ -98,8 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const playGames = () => {
-        config.updateValue(config.health, +4)
-
+        //config.updateValue(config.health, +4)
+        //hunger
+        config.updateValue(config.hunger, -4)
         //happiness
         config.updateValue(config.happiness, +4)
 
@@ -113,7 +123,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const studyLibrary = () => {
         //health
-        config.updateValue(config.health, +3)
+        // config.updateValue(config.health, +3)
+        //hunger
+        config.updateValue(config.hunger, -3)
 
         //happiness
         config.updateValue(config.happiness, +3)
