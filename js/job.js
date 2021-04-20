@@ -7,39 +7,52 @@ document.addEventListener("DOMContentLoaded", () => {
             //health
             config.updateValue(config.health, -5)
 
+            //hunger
+            config.updateValue(config.hunger, -5)
+
+
             //happiness
             config.updateValue(config.happiness, +5)
-
-            //cash
-            config.updateValue(config.cash, +10)
-      }
-
-      const workThreeHours = () => {
-            //health
-            config.updateValue(config.health, -10)
-
-            //happiness
-            config.updateValue(config.happiness, +10)
 
             //cash
             config.updateValue(config.cash, +20)
       }
 
+      const workThreeHours = () => {
+            //health
+            config.updateValue(config.health, -5)
+            //hunger
+            config.updateValue(config.hunger, -6)
+
+            //happiness
+            config.updateValue(config.happiness, +10)
+
+            //cash
+            config.updateValue(config.cash, +40)
+      }
+
 
       const workFiveHours = () => {
             //health
-            config.updateValue(config.health, -15)
+            config.updateValue(config.health, -5)
+
+            //hunger
+            config.updateValue(config.hunger, -7)
+
 
             //happiness
             config.updateValue(config.happiness, +15)
 
             //cash
-            config.updateValue(config.cash, +30)
+            config.updateValue(config.cash, +60)
       }
 
       const workNineHours = () => {
             //health
-            config.updateValue(config.health, -20)
+            config.updateValue(config.health, -5)
+            //hunger
+            config.updateValue(config.hunger, -8)
+
 
             //happiness
             config.updateValue(config.happiness, +20)
@@ -51,6 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const takeBreak = () => {
             //health
             config.updateValue(config.health, +5)
+
+            //hunger
+            config.updateValue(config.hunger, +5)
 
             //happiness
             config.updateValue(config.happiness, +5)
@@ -65,7 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const attendMeeting = () => {
             //health
-            config.updateValue(config.health, -5)
+            //config.updateValue(config.health, -5)
+            //hunger
+            config.updateValue(config.hunger, -5)
 
             //happiness
             config.updateValue(config.happiness, +5)
@@ -80,7 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const applyPromotion = () => {
             //health
-            config.updateValue(config.health, -4)
+            // config.updateValue(config.health, -4)
+            //hunger
+            config.updateValue(config.hunger, -5)
 
             //happiness
             config.updateValue(config.happiness, -4)

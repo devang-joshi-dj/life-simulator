@@ -12,30 +12,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
      function openAccount() {
           //health
-          config.updateValue(config.health, -5)
+          //config.updateValue(config.health, -5)
+          //hunger
+          config.updateValue(config.hunger, -3)
 
           //happiness
           config.updateValue(config.happiness, +5)
 
           //cash
-          config.updateValue(config.cash, -100)
+          config.updateValue(config.cash, -50)
      }
 
      function depositMoney() {
           //health
-          config.updateValue(config.health, -5)
-
+          // config.updateValue(config.health, -5)
+          //hunger
+          config.updateValue(config.hunger, -5)
           //happiness
           config.updateValue(config.happiness, +5)
 
           //cash
-          config.updateValue(config.cash, +10)
+          config.updateValue(config.cash, +40)
      }
+
 
      function withdrawMoney() {
           //health
-          config.updateValue(config.health, +5)
-
+          //config.updateValue(config.health, +5)
+          //hunger
+          config.updateValue(config.hunger, -5)
           //happiness
           // no changes
           // var update_happiness = 0
@@ -44,13 +49,14 @@ document.addEventListener("DOMContentLoaded", () => {
           // elements.happinessValue.innerHTML = update_happiness +2
 
           //cash
-          config.updateValue(config.cash, -10)
+          config.updateValue(config.cash, -30)
      }
 
      function takeLoan() {
           //health
-          config.updateValue(config.health, -5)
-
+          // config.updateValue(config.health, -5)
+          //hunger
+          config.updateValue(config.hunger, -4)
           //happiness
           //  no changes
           // var happinessVal = elements.happinessValue.innerText
@@ -64,8 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
      function payBills() {
           //health
-          config.updateValue(config.health, -5)
-
+          // config.updateValue(config.health, -5)
+          //hunger
+          config.updateValue(config.hunger, -4)
           //happiness
           //no changes
           // var update_happiness = 0
@@ -79,8 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
      function talkTeller() {
           //health
-          config.updateValue(config.health, -5)
-
+          //config.updateValue(config.health, -5)
+          //hunger
+          config.updateValue(config.hunger, -4)
           //happiness
           config.updateValue(config.happiness, +5)
 

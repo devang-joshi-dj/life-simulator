@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const dance = () => {
 
         //health
-        config.updateValue(config.health, -10)
-
+        //config.updateValue(config.health, -10)
+        //hunger
+        config.updateValue(config.hunger, -5)
         //happiness
         config.updateValue(config.happiness, +15)
 
@@ -18,7 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const drinkEat = () => {
         //health
         config.updateValue(config.health, -20)
-
+        //hunger
+        config.updateValue(config.hunger, +8)
         //happiness
         config.updateValue(config.happiness, +15)
 
@@ -29,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const meetPeople = () => {
         //health
-        config.updateValue(config.health, -10)
+        //config.updateValue(config.health, -10)
 
         //happiness
         config.updateValue(config.happiness, +15)

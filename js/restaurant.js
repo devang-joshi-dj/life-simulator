@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const fastFood = () => {
             //health
-            config.updateValue(config.health, -15)
-
+            config.updateValue(config.health, -10)
+            //hunger
+            config.updateValue(config.hunger, +10)
             //happiness
             config.updateValue(config.happiness, +15)
 
@@ -16,7 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const seaFood = () => {
             //health
-            config.updateValue(config.health, -20)
+            config.updateValue(config.health, +5)
+            //hunger
+            config.updateValue(config.hunger, +10)
 
             //happiness
             config.updateValue(config.happiness, +20)
@@ -27,8 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const salad = () => {
             //health
-            config.updateValue(config.health, +20)
-
+            config.updateValue(config.health, +10)
+            //hunger
+            config.updateValue(config.hunger, +10)
             //happiness
             config.updateValue(config.happiness, +20)
 
@@ -38,8 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const southIndian = () => {
             //health
-            config.updateValue(config.health, +20)
-
+            config.updateValue(config.health, +7)
+            //hunger
+            config.updateValue(config.hunger, +10)
             //happiness
             config.updateValue(config.happiness, +20)
 
@@ -49,8 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const northIndian = () => {
             //health
-            config.updateValue(config.health, +20)
-
+            config.updateValue(config.health, +10)
+            //hunger
+            config.updateValue(config.hunger, +10)
             //happiness
             config.updateValue(config.happiness, +20)
 
@@ -60,8 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const italianFood = () => {
             //health
-            config.updateValue(config.health, +20)
-
+            config.updateValue(config.health, +10)
+            //hunger
+            config.updateValue(config.hunger, +5)
             //happiness
             config.updateValue(config.happiness, +20)
 
@@ -72,7 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const chineseFood = () => {
             //health
             config.updateValue(config.health, -20)
-
+            //hunger
+            config.updateValue(config.hunger, +10)
             //happiness
             config.updateValue(config.happiness, +20)
 

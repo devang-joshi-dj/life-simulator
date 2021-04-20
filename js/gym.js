@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const takeAdmission = () => {
     //health
-    config.updateValue(config.health, -5)
-
+    //config.updateValue(config.health, -5)
+    //hunger
+    config.updateValue(config.hunger, -5)
     //happiness
     config.updateValue(config.happiness, +5)
 
@@ -24,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const exerciseOneHour = () => {
     //health
     config.updateValue(config.health, +5)
-
+    //hunger
+    config.updateValue(config.hunger, -5)
     //happiness
     config.updateValue(config.happiness, +5)
 
@@ -38,8 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const exerciseTwoHours = () => {
     //health
-    config.updateValue(config.health, +5)
-
+    config.updateValue(config.health, +6)
+    //hunger
+    config.updateValue(config.hunger, -6)
     //happiness
     config.updateValue(config.happiness, +5)
 
@@ -53,8 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const exerciseThreeHours = () => {
     //health
-    config.updateValue(config.health, +5)
-
+    config.updateValue(config.health, +7)
+    //hunger
+    config.updateValue(config.hunger, -7)
     //happiness
     config.updateValue(config.happiness, +5)
 
@@ -69,8 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const dietPlan = () => {
     //health
-    config.updateValue(config.health, +2)
-
+    config.updateValue(config.health, +4)
+    //hunger
+    config.updateValue(config.hunger, +4)
     //happiness
     config.updateValue(config.happiness, +2)
 
@@ -81,8 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const talkTrainer = () => {
 
     //health
-    config.updateValue(config.health, +5)
-
+    //config.updateValue(config.health, +5)
+    //hunger
+    config.updateValue(config.hunger, -5)
     //happiness
     config.updateValue(config.happiness, +5)
 

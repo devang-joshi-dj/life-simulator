@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const massage = () => {
         //health
-        config.updateValue(config.health, +12)
+        config.updateValue(config.health, +7)
 
         //happiness
         config.updateValue(config.happiness, +15)
