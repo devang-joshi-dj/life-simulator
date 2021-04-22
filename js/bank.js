@@ -3,6 +3,9 @@ import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 
+     let openAccountFlag1 = true
+     let openAccountFlag2 = false
+
      elements.bankOpenAccount.disabled = false
      elements.bankDepositMoney.disabled = true
      elements.bankWithdrawMoney.disabled = true
@@ -97,16 +100,21 @@ document.addEventListener("DOMContentLoaded", () => {
      }
 
      document.addEventListener('click', () => {
-          config.disableElement(elements.bankOpenAccount, 7, 10)
-          config.disableElement(elements.bankDepositMoney, 7, 10)
-          config.disableElement(elements.bankWithdrawMoney, 7, 10)
-          config.disableElement(elements.bankTakeLoan, 7, 10)
-          config.disableElement(elements.bankPayBills, 7, 10)
-          config.disableElement(elements.bankTalkTeller, 7, 10)
+          if (openAccountFlag1)
+               config.disableElement(elements.bankOpenAccount, 17, 10)
+          if (openAccountFlag2) {
+               config.disableElement(elements.bankDepositMoney, 17, 10)
+               config.disableElement(elements.bankWithdrawMoney, 17, 10)
+               config.disableElement(elements.bankTakeLoan, 17, 10)
+               config.disableElement(elements.bankPayBills, 17, 10)
+               config.disableElement(elements.bankTalkTeller, 17, 10)
+          }
      })
 
      elements.bankOpenAccount.addEventListener("click", () => {
           openAccount()
+          openAccountFlag1 = false
+          openAccountFlag2 = true
           elements.bankOpenAccount.disabled = true
           elements.bankDepositMoney.disabled = false
           elements.bankWithdrawMoney.disabled = false

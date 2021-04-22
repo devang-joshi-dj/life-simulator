@@ -106,15 +106,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener('click', () => {
     if (admissionFlag1)
-      config.disableElement(elements.gymTakeAdmission, 20, 9)
+      config.disableElement(elements.gymTakeAdmission, 20, 6)
     if (admissionFlag2) {
-      config.disableElement(elements.gymExerciseOneHour, 20, 9)
-      config.disableElement(elements.gymExerciseTwoHours, 20, 9)
-      config.disableElement(elements.gymExerciseThreeHours, 20, 9)
+      config.disableElement(elements.gymExerciseOneHour, 20, 6)
+      config.disableElement(elements.gymExerciseTwoHours, 20, 6)
+      config.disableElement(elements.gymExerciseThreeHours, 20, 6)
       if (dietPlanFlag) {
-        config.disableElement(elements.gymDietPlan, 20, 9)
+        config.disableElement(elements.gymDietPlan, 20, 6)
       }
-      config.disableElement(elements.gymTalkTrainer, 20, 9)
+      config.disableElement(elements.gymTalkTrainer, 20, 6)
     }
   })
 
