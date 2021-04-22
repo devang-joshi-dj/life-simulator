@@ -64,6 +64,7 @@ export const universityPlayGames = document.querySelector('#universityPlayGames'
 export const universityStudyLibrary = document.querySelector('#universityStudyLibrary')
 
 // buttons of Job
+export const jobApplyForWork = document.querySelector('#jobApplyForWork')
 export const jobWorkOneHour = document.querySelector('#jobWorkOneHour')
 export const jobWorkThreeHours = document.querySelector('#jobWorkThreeHours')
 export const jobWorkFiveHours = document.querySelector('#jobWorkFiveHours')
