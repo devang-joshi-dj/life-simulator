@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     config.updateValue(config.happiness, +2)
 
-    config.updateTime(1);
+    config.updateTime(0, 20)
   }
 
   const homeRest = () => {
