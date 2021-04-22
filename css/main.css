@@ -1,50 +1,50 @@
 :root {
-    --defaultHeight: 600px;
-    --defaultFontSize: 2em;
+	--defaultHeight: 600px;
+	--defaultFontSize: 2em;
 }
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
-    background-image: linear-gradient(to bottom, #393e46, #929aab, #393e46);
-    margin: 0;
-    height: 100%;
-    user-select: none;
+	background-image: linear-gradient(to bottom, #393e46, #929aab, #393e46);
+	margin: 0;
+	height: 100%;
+	user-select: none;
 }
 
 /* Container for Intro Start */
 
 .intro {
-    width: 50%;
-    height: 50%;
-    margin-left: 25%;
-    margin-top: 5%;
-    padding: 10px;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(189, 189, 189);
+	width: 50%;
+	height: 50%;
+	margin-left: 25%;
+	margin-top: 5%;
+	padding: 10px;
+	border-radius: 50px;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(189, 189, 189);
 }
 
 .introText1 {
-    font-size: 1.4em;
+	font-size: 1.4em;
 }
 
 .introText2, .introText3, .introText4 {
-    font-size: 1.2em;
+	font-size: 1.2em;
 }
 
 #introButton {
-    padding: 10px;
-    width: 100px;
-    background-color: #393e46;
-    color: #fff;
-    cursor: pointer;
+	padding: 10px;
+	width: 100px;
+	background-color: #393e46;
+	color: #fff;
+	cursor: pointer;
 }
 
 /* Container for Intro End */
@@ -52,44 +52,44 @@ html, body {
 /* Container for Content Start */
 
 .container {
-    width: 100%;
-    display: none;
-    min-height: 100vh;
-    flex-direction: column;
+	width: 100%;
+	display: none;
+	min-height: 100vh;
+	flex-direction: column;
 }
 
 /* Statistics Start */
 
 .statistics {
-    font-family: 'Lato', sans-serif;
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    overflow: hidden;
-    padding: 5px 10px;
+	font-family: 'Lato', sans-serif;
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	padding: 5px 10px;
 }
 
 .statistics div {
-    font-size: var(--defaultFontSize);
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: white;
+	font-size: var(--defaultFontSize);
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: white;
 }
 
 .health, .hunger, .happiness, .cash {
-    float: left;
-    display: flex;
-    flex-direction: row;
+	float: left;
+	display: flex;
+	flex-direction: row;
 }
 
 .health span, .hunger span, .happiness span, .cash span {
-    margin: 0 5px;
+	margin: 0 5px;
 }
 
 .time {
-    float: right;
+	float: right;
 }
 
 /* Statistics End */
@@ -97,84 +97,84 @@ html, body {
 /* Container for Main Content Start */
 
 .main {
-    font-family: 'Lato', sans-serif;
-    width: 100%;
-    height: var(--defaultHeight);
-    overflow: hidden;
+	font-family: 'Lato', sans-serif;
+	width: 100%;
+	height: var(--defaultHeight);
+	overflow: hidden;
 }
 
 .main div {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: var(--defaultHeight);
-    background-color: #cccccc;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: var(--defaultHeight);
+	background-color: #cccccc;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 div.btnGroup {
-    display: flex;
-    background: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+	display: flex;
+	background: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 div.btnGroup button {
-    border-radius: 50px;
-    border: 2px solid white;
-    outline: none;
-    padding: 10px;
-    width: 170px;
-    margin: 5px;
-    cursor: pointer;
+	border-radius: 50px;
+	border: 2px solid white;
+	outline: none;
+	padding: 10px;
+	width: 170px;
+	margin: 5px;
+	cursor: pointer;
 }
 
 div.btnGroup button:active {
-    border-color: black;
-    transition: all .1s;
+	border-color: black;
+	transition: all .1s;
 }
 
 .homeContent {
-    background-image: url("../imgs/lifesimulator_Home.svg");
+	background-image: url("../imgs/lifesimulator_Home.svg");
 }
 
 .universityContent {
-    background-image: url("../imgs/lifesimulator_University.svg");
+	background-image: url("../imgs/lifesimulator_University.svg");
 }
 
 .jobContent {
-    background-image: url("../imgs/lifesimulator_Job.svg");
+	background-image: url("../imgs/lifesimulator_Job.svg");
 }
 
 .bankContent {
-    background-image: url("../imgs/lifesimulator_Bank.svg");
+	background-image: url("../imgs/lifesimulator_Bank.svg");
 }
 
 .gymContent {
-    background-image: url("../imgs/lifesimulator_Gym.svg");
+	background-image: url("../imgs/lifesimulator_Gym.svg");
 }
 
 .mallContent {
-    background-image: url("../imgs/lifesimulator_Mall.svg");
+	background-image: url("../imgs/lifesimulator_Mall.svg");
 }
 
 .worshipContent {
-    background-image: url("../imgs/lifesimulator_Worship.svg");
+	background-image: url("../imgs/lifesimulator_Worship.svg");
 }
 
 .clubContent {
-    background-image: url("../imgs/lifesimulator_Club.svg");
+	background-image: url("../imgs/lifesimulator_Club.svg");
 }
 
 .restaurantContent {
-    background-image: url("../imgs/lifesimulator_Restaurant.svg");
+	background-image: url("../imgs/lifesimulator_Restaurant.svg");
 }
 
 .spaContent {
-    background-image: url("../imgs/lifesimulator_Spa.svg");
+	background-image: url("../imgs/lifesimulator_Spa.svg");
 }
 
 /* Container for Main Content End */
@@ -182,32 +182,32 @@ div.btnGroup button:active {
 /* Places to go for Footer Section Start */
 
 .places {
-    font-family: 'Lato', sans-serif;
-    width: 100%;
-    padding: 5px;
-    background-color: #929aab;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	font-family: 'Lato', sans-serif;
+	width: 100%;
+	padding: 5px;
+	background-color: #929aab;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .places div {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .places div:hover {
-    color: white;
+	color: white;
 }
 
 .places div {
-    font-size: var(--defaultFontSize);
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: white;
+	font-size: var(--defaultFontSize);
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: white;
 }
 
 .places div:hover {
-    background-color: #393e46;
+	background-color: #393e46;
 }
 
 /* Places to go for Footer Section End */
