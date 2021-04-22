@@ -47,7 +47,7 @@ export const updateValue = (element, value) => {
     }
 }
 
-export const updateTime = (hour, minute = 0) => {
+export const updateTime = (hour = 0, minute = 0) => {
     // function for updating time
     elements.hourValue.innerHTML = Number(elements.hourValue.innerHTML) + hour
     elements.minuteValue.innerHTML = Number(elements.minuteValue.innerHTML) + minute
@@ -70,7 +70,7 @@ export const updateTime = (hour, minute = 0) => {
 export const disableElement = (element, start, end) => {
     // function for disabling specific elements according to the provided time
     if (start > end) {
-        if (elements.timeValue.innerHTML >= start || elements.timeValue.innerHTML <= end) {
+        if (elements.hourValue.innerHTML >= start || elements.hourValue.innerHTML <= end) {
             element.disabled = true
         }
         else {
@@ -79,7 +79,7 @@ export const disableElement = (element, start, end) => {
     }
 
     if (start < end) {
-        if (elements.timeValue.innerHTML >= start && elements.timeValue.innerHTML <= end) {
+        if (elements.hourValue.innerHTML >= start && elements.hourValue.innerHTML <= end) {
             element.disabled = true
         }
         else {

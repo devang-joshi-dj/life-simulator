@@ -3,6 +3,10 @@ import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  let admissionFlag1 = true
+  let admissionFlag2 = false
+  let dietPlanFlag = true
+
   elements.gymTakeAdmission.disabled = false
   elements.gymExerciseOneHour.disabled = true
   elements.gymExerciseTwoHours.disabled = true
@@ -101,16 +105,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.addEventListener('click', () => {
-    config.disableElement(elements.gymTakeAdmission, 20, 6)
-    config.disableElement(elements.gymExerciseOneHour, 20, 6)
-    config.disableElement(elements.gymExerciseTwoHours, 20, 6)
-    config.disableElement(elements.gymExerciseThreeHours, 20, 6)
-    config.disableElement(elements.gymDietPlan, 20, 6)
-    config.disableElement(elements.gymTalkTrainer, 20, 6)
+    if (admissionFlag1)
+      config.disableElement(elements.gymTakeAdmission, 20, 9)
+    if (admissionFlag2) {
+      config.disableElement(elements.gymExerciseOneHour, 20, 9)
+      config.disableElement(elements.gymExerciseTwoHours, 20, 9)
+      config.disableElement(elements.gymExerciseThreeHours, 20, 9)
+      if (dietPlanFlag) {
+        config.disableElement(elements.gymDietPlan, 20, 9)
+      }
+      config.disableElement(elements.gymTalkTrainer, 20, 9)
+    }
   })
 
   elements.gymTakeAdmission.addEventListener("click", () => {
     takeAdmission()
+    admissionFlag1 = false
+    admissionFlag2 = true
     elements.gymTakeAdmission.disabled = true
     elements.gymExerciseOneHour.disabled = false
     elements.gymExerciseTwoHours.disabled = false
@@ -123,6 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
   elements.gymExerciseThreeHours.addEventListener("click", exerciseThreeHours)
   elements.gymDietPlan.addEventListener("click", () => {
     dietPlan()
+    dietPlanFlag = false
     elements.gymDietPlan.disabled = true
   })
   elements.gymTalkTrainer.addEventListener("click", talkTrainer)

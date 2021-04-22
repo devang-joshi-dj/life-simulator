@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let feesFlag1 = false
     let admissionFlag2 = true
     let feesFlag2 = true
+
     elements.universityPayFees.disabled = true
     elements.universityAttendClasses.disabled = true
     elements.universityGroupStudy.disabled = true
