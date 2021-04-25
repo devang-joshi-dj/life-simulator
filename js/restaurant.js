@@ -89,7 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	document.addEventListener('click', () => {
 		config.disableElement(elements.restaurantEatFastFood, 7, 16)
-		config.disableElement(elements.restaurantEatSeaFood, 7, 17)
+		config.disableElement(elements.restaurantEatSeaFood, 7, 16)
+		config.disableElement(elements.restaurantEatSalad, 7, 16)
+		config.disableElement(elements.restaurantEatSouthIndian, 7, 16)
+		config.disableElement(elements.restaurantEatNorthIndian, 7, 16)
 		config.disableElement(elements.restaurantEatItalianFood, 7, 16)
 		config.disableElement(elements.restaurantEatChineseFood, 7, 16)
 	})

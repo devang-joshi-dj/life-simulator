@@ -95,7 +95,7 @@ document.addEventListener("click", () => {
 export const disableElement = (element, start, end) => {
 	// function for disabling specific elements according to the provided time
 	if (start > end) {
-		if (elements.hourValue.innerHTML >= start || elements.hourValue.innerHTML <= end) {
+		if (elements.hourValue.innerHTML >= start || elements.hourValue.innerHTML < end) {
 			element.disabled = true
 		}
 		else {
@@ -104,7 +104,7 @@ export const disableElement = (element, start, end) => {
 	}
 
 	if (start < end) {
-		if (elements.hourValue.innerHTML >= start && elements.hourValue.innerHTML <= end) {
+		if (elements.hourValue.innerHTML >= start && elements.hourValue.innerHTML < end) {
 			element.disabled = true
 		}
 		else {
