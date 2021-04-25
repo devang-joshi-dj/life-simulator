@@ -3,6 +3,14 @@ import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 
+	let promotionStatus = 0
+	let promotionLimit = 10
+	let oneHourSalary = 20
+	let threeHourSalary = 40
+	let fiveHourSalary = 60
+	let nineHourSalary = 80
+
+	let promotionFlag = false
 	let applyForWorkFlag1 = true
 	let applyForWorkFlag2 = false
 
@@ -26,12 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		//hunger
 		config.updateValue(config.hunger, -5)
 
-
 		//happiness
 		config.updateValue(config.happiness, +5)
 
 		//cash
-		config.updateValue(config.cash, +20)
+		config.updateValue(config.cash, oneHourSalary)
 	}
 
 	const workThreeHours = () => {
@@ -44,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateValue(config.happiness, +10)
 
 		//cash
-		config.updateValue(config.cash, +40)
+		config.updateValue(config.cash, threeHourSalary)
 	}
 
 
@@ -55,12 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		//hunger
 		config.updateValue(config.hunger, -7)
 
-
 		//happiness
 		config.updateValue(config.happiness, +15)
 
 		//cash
-		config.updateValue(config.cash, +60)
+		config.updateValue(config.cash, fiveHourSalary)
 	}
 
 	const workNineHours = () => {
@@ -69,12 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		//hunger
 		config.updateValue(config.hunger, -8)
 
-
 		//happiness
 		config.updateValue(config.happiness, +20)
 
 		//cash
-		config.updateValue(config.cash, +40)
+		config.updateValue(config.cash, nineHourSalary)
 	}
 
 	const takeBreak = () => {
@@ -139,7 +144,11 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.disableElement(elements.jobWorkNineHours, 20, 10)
 			config.disableElement(elements.jobTakeBreak, 20, 10)
 			config.disableElement(elements.jobAttendMeeting, 20, 10)
-			config.disableElement(elements.jobApplyPromotion, 20, 10)
+			if (promotionFlag == true) {
+				elements.jobApplyPromotion.disabled = true
+			} else {
+				config.disableElement(elements.jobApplyPromotion, 20, 10)
+			}
 		}
 	})
 
@@ -157,11 +166,46 @@ document.addEventListener("DOMContentLoaded", () => {
 		elements.jobAttendMeeting.disabled = false
 		elements.jobApplyPromotion.disabled = false
 	})
-	elements.jobWorkOneHour.addEventListener("click", workOneHour)
-	elements.jobWorkThreeHours.addEventListener("click", workThreeHours)
-	elements.jobWorkFiveHours.addEventListener("click", workFiveHours)
-	elements.jobWorkNineHours.addEventListener("click", workNineHours)
-	elements.jobTakeBreak.addEventListener("click", takeBreak)
-	elements.jobAttendMeeting.addEventListener("click", attendMeeting)
-	elements.jobApplyPromotion.addEventListener("click", applyPromotion)
+	elements.jobWorkOneHour.addEventListener("click", () => {
+		workOneHour()
+		promotionFlag = false
+	})
+	elements.jobWorkThreeHours.addEventListener("click", () => {
+		workThreeHours()
+		promotionFlag = false
+	})
+	elements.jobWorkFiveHours.addEventListener("click", () => {
+		workFiveHours()
+		promotionFlag = false
+	})
+	elements.jobWorkNineHours.addEventListener("click", () => {
+		workNineHours()
+		promotionFlag = false
+	})
+	elements.jobTakeBreak.addEventListener("click", () => {
+		takeBreak()
+		promotionFlag = false
+	})
+	elements.jobAttendMeeting.addEventListener("click", () => {
+		attendMeeting()
+		promotionFlag = false
+	})
+	elements.jobApplyPromotion.addEventListener("click", () => {
+		applyPromotion()
+		if (promotionStatus <= promotionLimit) {
+			const randomNumber = Math.floor(Math.random() * 10)
+			if (randomNumber == 1 || randomNumber == 5 || randomNumber == 9) {
+				oneHourSalary = oneHourSalary + 20
+				threeHourSalary = threeHourSalary + 20
+				fiveHourSalary = fiveHourSalary + 20
+				nineHourSalary = nineHourSalary + 20
+				alert("You got the Promotion")
+			} else {
+				alert("You didn't got Promotion")
+			}
+		} else {
+			alert("You have reached the highest position already. Cannot be promoted anymore")
+		}
+		promotionFlag = true
+	})
 })
