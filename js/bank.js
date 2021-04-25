@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 
-
 	const withdrawMoney = () => {
 		config.updateValue(config.hunger, -5)
 

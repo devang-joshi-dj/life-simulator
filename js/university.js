@@ -17,126 +17,44 @@ document.addEventListener("DOMContentLoaded", () => {
 	elements.universityStudyLibrary.disabled = true
 
 	const admission = () => {
-		//health
-		//config.updateValue(config.health, )
-
-		//happiness
 		config.updateValue(config.happiness, +2)
-
-		//cash
 		config.updateValue(config.cash, -500)
 	}
 
 	const payFees = () => {
-		//health
-		//config.updateValue(config.health, -2)
-
-
-		//happiness
-		//no changes
-		// var update_happiness = 0
-		// var happinessVal = elements.happinessValue.innerText
-		// update_happiness = Number(happinessVal)
-		// elements.happinessValue.innerHTML = update_happiness + 2
-
-		//cash
 		config.updateValue(config.cash, -500)
 	}
 
 	const attendClasses = () => {
-		//health
-		//config.updateValue(config.health, -4)
-
-		//hunger
 		config.updateValue(config.hunger, -2)
-		//happiness
 		config.updateValue(config.happiness, +4)
-
-		//cash
-		//no changes
-		// var update_cash = 0
-		// var cashVal = elements.cashValue.innerText
-		// update_cash = Number(cashVal)
-		// elements.cashValue.innerHTML = update_cash + 2
 	}
 
 	const groupStudy = () => {
-		//health
-		// config.updateValue(config.health, -3)
-		//hunger
 		config.updateValue(config.hunger, -3)
-
-		//happiness
 		config.updateValue(config.happiness, +3)
-
-		//cash
-		//no changes
-		// var update_cash = 0
-		// var cashVal = elements.cashValue.innerText
-		// update_cash = Number(cashVal)
-		// elements.cashValue.innerHTML = update_cash + 2
 	}
 
 	const clubMeeting = () => {
-		//health
-		//config.updateValue(config.health, -3)
-		//hunger
 		config.updateValue(config.hunger, -3)
-		//happiness
 		config.updateValue(config.happiness, +3)
-
-		//cash
-		//no changes
-		// var update_cash = 0
-		// var cashVal = elements.cashValue.innerText
-		// update_cash = Number(cashVal)
-		// elements.cashValue.innerHTML = update_cash + 2
 	}
 
 	const eatCanteen = () => {
-		//health
 		config.updateValue(config.health, -4)
-
-		//hunger
 		config.updateValue(config.hunger, +4)
-
-		//happiness
 		config.updateValue(config.happiness, +4)
-
-		//cash
 		config.updateValue(config.cash, -4)
 	}
 
 	const playGames = () => {
-		//config.updateValue(config.health, +4)
-		//hunger
 		config.updateValue(config.hunger, -4)
-		//happiness
 		config.updateValue(config.happiness, +4)
-
-		//cash
-		//no changes
-		// var update_cash = 0
-		// var cashVal = elements.cashValue.innerText
-		// update_cash = Number(cashVal)
-		// elements.cashValue.innerHTML = update_cash + 2
 	}
 
 	const studyLibrary = () => {
-		//health
-		// config.updateValue(config.health, +3)
-		//hunger
 		config.updateValue(config.hunger, -3)
-
-		//happiness
 		config.updateValue(config.happiness, +3)
-
-		//cashhValue
-		//no changes
-		// var update_cash = 0
-		// var cashVal = elements.cashValue.innerText
-		// update_cash = Number(cashVal)
-		// elements.cashValue.innerHTML = update_cash + 2
 	}
 
 	document.addEventListener('click', () => {

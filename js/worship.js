@@ -4,38 +4,21 @@ import * as config from './config.js'
 document.addEventListener("DOMContentLoaded", () => {
 
 	const pray = () => {
-		//health
 		config.updateValue(config.health, +10)
-		//hunger
 		config.updateValue(config.hunger, -5)
-		//happiness
 		config.updateValue(config.happiness, +15)
-
-		//cash
 		config.updateValue(config.cash, -10)
 	}
 
 	const serve = () => {
-		//health
-		// config.updateValue(config.health, -10)
-		//hunger
 		config.updateValue(config.hunger, -8)
-		//happiness
 		config.updateValue(config.happiness, +15)
-
-		//cash
 		config.updateValue(config.cash, -20)
 	}
 
 	const charity = () => {
-		//health
-		//  config.updateValue(config.health, +10)
-		//hunger
 		config.updateValue(config.hunger, -8)
-		//happiness
 		config.updateValue(config.happiness, +20)
-
-		//cash
 		config.updateValue(config.cash, -30)
 	}
 

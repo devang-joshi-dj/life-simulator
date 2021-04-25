@@ -76,11 +76,19 @@ export const updateTime = (hour = 0, minute = 0) => {
 }
 
 document.addEventListener("click", () => {
-	if (elements.minuteValue.innerHTML == 0) {
+	// function to properly handle zero in time before single digit time
+	if (elements.hourValue.innerHTML == 0) {
+		elements.hourValue.innerHTML = '00'
+	}
+	if (Number(elements.hourValue.innerHTML) >= 1 && Number(elements.hourValue.innerHTML) <= 9) {
+		elements.hourValue.innerHTML = '0' + Number(elements.hourValue.innerHTML)
+	}
+
+	if (Number(elements.minuteValue.innerHTML) == 0) {
 		elements.minuteValue.innerHTML = '00'
 	}
-	if (elements.minuteValue.innerHTML >= 1 && elements.minuteValue.innerHTML <= 9) {
-		elements.minuteValue.innerHTML = '0' + elements.minuteValue.innerHTML
+	if (Number(elements.minuteValue.innerHTML) >= 1 && Number(elements.minuteValue.innerHTML) <= 9) {
+		elements.minuteValue.innerHTML = '0' + Number(elements.minuteValue.innerHTML)
 	}
 })
 

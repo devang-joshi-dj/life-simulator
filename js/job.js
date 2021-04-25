@@ -28,110 +28,48 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	const workOneHour = () => {
-		//health
 		config.updateValue(config.health, -5)
-
-		//hunger
 		config.updateValue(config.hunger, -5)
-
-		//happiness
 		config.updateValue(config.happiness, +5)
-
-		//cash
 		config.updateValue(config.cash, oneHourSalary)
 	}
 
 	const workThreeHours = () => {
-		//health
 		config.updateValue(config.health, -5)
-		//hunger
 		config.updateValue(config.hunger, -6)
-
-		//happiness
 		config.updateValue(config.happiness, +10)
-
-		//cash
 		config.updateValue(config.cash, threeHourSalary)
 	}
 
 
 	const workFiveHours = () => {
-		//health
 		config.updateValue(config.health, -5)
-
-		//hunger
 		config.updateValue(config.hunger, -7)
-
-		//happiness
 		config.updateValue(config.happiness, +15)
-
-		//cash
 		config.updateValue(config.cash, fiveHourSalary)
 	}
 
 	const workNineHours = () => {
-		//health
 		config.updateValue(config.health, -5)
-		//hunger
 		config.updateValue(config.hunger, -8)
-
-		//happiness
 		config.updateValue(config.happiness, +20)
-
-		//cash
 		config.updateValue(config.cash, nineHourSalary)
 	}
 
 	const takeBreak = () => {
-		//health
 		config.updateValue(config.health, +5)
-
-		//hunger
 		config.updateValue(config.hunger, +5)
-
-		//happiness
 		config.updateValue(config.happiness, +5)
-
-		//cash
-		//no changes
-		// var update_cash = 0
-		// var cashVal = elements.cashValue.innerText
-		// update_cash = Number(cashVal)
-		// elements.cashValue.innerHTML = update_cash +2
 	}
 
 	const attendMeeting = () => {
-		//health
-		//config.updateValue(config.health, -5)
-		//hunger
 		config.updateValue(config.hunger, -5)
-
-		//happiness
 		config.updateValue(config.happiness, +5)
-
-		//cash
-		//no changes
-		// var update_cash = 0
-		// var cashVal = elements.cashValue.innerText
-		// update_cash = Number(cashVal)
-		// elements.cashValue.innerHTML = update_cash +2
 	}
 
 	const applyPromotion = () => {
-		//health
-		// config.updateValue(config.health, -4)
-		//hunger
 		config.updateValue(config.hunger, -5)
 
-		//happiness
-		config.updateValue(config.happiness, -4)
-
-		//cash
-		//no changes
-		// var update_cash = 0
-		// var cashVal = elements.cashValue.innerText
-		// update_cash = Number(cashVal)
-		// elements.cashValue.innerHTML = update_cash +2
 	}
 
 	document.addEventListener('click', () => {

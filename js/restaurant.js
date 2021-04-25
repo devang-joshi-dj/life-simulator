@@ -4,87 +4,51 @@ import * as config from './config.js'
 document.addEventListener("DOMContentLoaded", () => {
 
 	const fastFood = () => {
-		//health
 		config.updateValue(config.health, -10)
-		//hunger
 		config.updateValue(config.hunger, +10)
-		//happiness
 		config.updateValue(config.happiness, +15)
-
-		//cash
 		config.updateValue(config.cash, -17)
 	}
 
 	const seaFood = () => {
-		//health
 		config.updateValue(config.health, +5)
-		//hunger
 		config.updateValue(config.hunger, +10)
-
-		//happiness
 		config.updateValue(config.happiness, +20)
-
-		//cash
 		config.updateValue(config.cash, -22)
 	}
 
 	const salad = () => {
-		//health
 		config.updateValue(config.health, +10)
-		//hunger
 		config.updateValue(config.hunger, +10)
-		//happiness
 		config.updateValue(config.happiness, +20)
-
-		//cash
 		config.updateValue(config.cash, -12)
 	}
 
 	const southIndian = () => {
-		//health
 		config.updateValue(config.health, +7)
-		//hunger
 		config.updateValue(config.hunger, +10)
-		//happiness
 		config.updateValue(config.happiness, +20)
-
-		//cash
 		config.updateValue(config.cash, -17)
 	}
 
 	const northIndian = () => {
-		//health
 		config.updateValue(config.health, +10)
-		//hunger
 		config.updateValue(config.hunger, +10)
-		//happiness
 		config.updateValue(config.happiness, +20)
-
-		//cash
 		config.updateValue(config.cash, -17)
 	}
 
 	const italianFood = () => {
-		//health
 		config.updateValue(config.health, +10)
-		//hunger
 		config.updateValue(config.hunger, +5)
-		//happiness
 		config.updateValue(config.happiness, +20)
-
-		//cash
 		config.updateValue(config.cash, -12)
 	}
 
 	const chineseFood = () => {
-		//health
 		config.updateValue(config.health, -20)
-		//hunger
 		config.updateValue(config.hunger, +10)
-		//happiness
 		config.updateValue(config.happiness, +20)
-
-		//cash
 		config.updateValue(config.cash, -17)
 	}
 
