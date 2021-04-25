@@ -7,49 +7,84 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateValue(config.health, -10)
 		config.updateValue(config.hunger, +10)
 		config.updateValue(config.happiness, +15)
-		config.updateValue(config.cash, -17)
+
+		if (config.cash.innerHTML > 17) {
+			config.updateValue(config.cash, -17)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const seaFood = () => {
 		config.updateValue(config.health, +5)
 		config.updateValue(config.hunger, +10)
 		config.updateValue(config.happiness, +20)
-		config.updateValue(config.cash, -22)
+
+		if (config.cash.innerHTML > 22) {
+			config.updateValue(config.cash, -22)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const salad = () => {
 		config.updateValue(config.health, +10)
 		config.updateValue(config.hunger, +10)
 		config.updateValue(config.happiness, +20)
-		config.updateValue(config.cash, -12)
+
+		if (config.cash.innerHTML > 12) {
+			config.updateValue(config.cash, -12)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const southIndian = () => {
 		config.updateValue(config.health, +7)
 		config.updateValue(config.hunger, +10)
 		config.updateValue(config.happiness, +20)
-		config.updateValue(config.cash, -17)
+
+		if (config.cash.innerHTML > 17) {
+			config.updateValue(config.cash, -17)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const northIndian = () => {
 		config.updateValue(config.health, +10)
 		config.updateValue(config.hunger, +10)
 		config.updateValue(config.happiness, +20)
-		config.updateValue(config.cash, -17)
+
+		if (config.cash.innerHTML > 17) {
+			config.updateValue(config.cash, -17)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const italianFood = () => {
-		config.updateValue(config.health, +10)
-		config.updateValue(config.hunger, +5)
-		config.updateValue(config.happiness, +20)
-		config.updateValue(config.cash, -12)
+		config.updateValue(config.health, +0)
+		config.updateValue(config.hunger, +0)
+		config.updateValue(config.happiness, +0)
+
+		if (config.cash.innerHTML > 12) {
+			config.updateValue(config.cash, -12)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const chineseFood = () => {
 		config.updateValue(config.health, -20)
 		config.updateValue(config.hunger, +10)
 		config.updateValue(config.happiness, +20)
-		config.updateValue(config.cash, -17)
+
+		if (config.cash.innerHTML > 17) {
+			config.updateValue(config.cash, -17)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	document.addEventListener('click', () => {

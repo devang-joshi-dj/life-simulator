@@ -17,7 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	const takeAdmission = () => {
 		config.updateValue(config.hunger, -5)
 		config.updateValue(config.happiness, +5)
-		config.updateValue(config.cash, -10)
+
+		if (config.cash.innerHTML > 10) {
+			config.updateValue(config.cash, -10)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const exerciseOneHour = () => {
@@ -42,7 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateValue(config.health, +4)
 		config.updateValue(config.hunger, +4)
 		config.updateValue(config.happiness, +2)
-		config.updateValue(config.cash, -5)
+
+		if (config.cash.innerHTML > 5) {
+			config.updateValue(config.cash, -5)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const talkTrainer = () => {

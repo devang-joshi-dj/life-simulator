@@ -21,12 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
 	const openAccount = () => {
 		config.updateValue(config.hunger, -3)
 		config.updateValue(config.happiness, +5)
-		config.updateValue(config.cash, -50)
+
+		if (config.cash.innerHTML > 50) {
+			config.updateValue(config.cash, -50)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const depositMoney = () => {
 		config.updateValue(config.hunger, -5)
 		config.updateValue(config.happiness, +5)
+
 		if (config.cash.innerHTML > 0) {
 			config.updateValue(config.cash, -50)
 			config.updateValue(config.balance, +50)
@@ -73,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	const talkTeller = () => {
 		config.updateValue(config.hunger, -4)
 		config.updateValue(config.happiness, +5)
-		config.updateValue(config.cash, -10)
 	}
 
 	document.addEventListener('click', () => {

@@ -6,26 +6,46 @@ document.addEventListener("DOMContentLoaded", () => {
 	const shopping = () => {
 		config.updateValue(config.hunger, -3)
 		config.updateValue(config.happiness, +3)
-		config.updateValue(config.cash, -30)
+
+		if (config.cash.innerHTML > 30) {
+			config.updateValue(config.cash, -30)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const watchMovies = () => {
 		config.updateValue(config.hunger, -5)
 		config.updateValue(config.happiness, +10)
-		config.updateValue(config.cash, -30)
+
+		if (config.cash.innerHTML > 30) {
+			config.updateValue(config.cash, -30)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const gamingZone = () => {
 		config.updateValue(config.hunger, -5)
 		config.updateValue(config.happiness, +10)
-		config.updateValue(config.cash, -30)
+
+		if (config.cash.innerHTML > 30) {
+			config.updateValue(config.cash, -30)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const foodCourt = () => {
 		config.updateValue(config.health, -8)
 		config.updateValue(config.hunger, +10)
 		config.updateValue(config.happiness, +10)
-		config.updateValue(config.cash, -25)
+
+		if (config.cash.innerHTML > 25) {
+			config.updateValue(config.cash, -25)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	document.addEventListener('click', () => {

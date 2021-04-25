@@ -6,15 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
 	const dance = () => {
 		config.updateValue(config.hunger, -5)
 		config.updateValue(config.happiness, +15)
-		config.updateValue(config.cash, -20)
 	}
 
 	const drinkEat = () => {
 		config.updateValue(config.health, -20)
 		config.updateValue(config.hunger, +8)
 		config.updateValue(config.happiness, +15)
-		config.updateValue(config.cash, -25)
 
+		if (config.cash.innerHTML > 25) {
+			config.updateValue(config.cash, -25)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const meetPeople = () => {

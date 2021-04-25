@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateValue(config.cash, threeHourSalary)
 	}
 
-
 	const workFiveHours = () => {
 		config.updateValue(config.health, -5)
 		config.updateValue(config.hunger, -7)
@@ -69,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const applyPromotion = () => {
 		config.updateValue(config.hunger, -5)
-
 	}
 
 	document.addEventListener('click', () => {

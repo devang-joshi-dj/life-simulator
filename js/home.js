@@ -3,7 +3,6 @@ import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 
-	// Eat Meal function
 	const homeMeal = () => {
 		config.updateValue(config.health, +2)
 		config.updateValue(config.hunger, +2)

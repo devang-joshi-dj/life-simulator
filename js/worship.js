@@ -7,19 +7,34 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateValue(config.health, +10)
 		config.updateValue(config.hunger, -5)
 		config.updateValue(config.happiness, +15)
-		config.updateValue(config.cash, -10)
+
+		if (config.cash.innerHTML > 10) {
+			config.updateValue(config.cash, -10)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const serve = () => {
 		config.updateValue(config.hunger, -8)
 		config.updateValue(config.happiness, +15)
-		config.updateValue(config.cash, -20)
+
+		if (config.cash.innerHTML > 20) {
+			config.updateValue(config.cash, -20)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const charity = () => {
 		config.updateValue(config.hunger, -8)
 		config.updateValue(config.happiness, +20)
-		config.updateValue(config.cash, -30)
+
+		if (config.cash.innerHTML > 30) {
+			config.updateValue(config.cash, -30)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	document.addEventListener('click', () => {

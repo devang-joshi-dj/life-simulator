@@ -18,11 +18,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const admission = () => {
 		config.updateValue(config.happiness, +2)
-		config.updateValue(config.cash, -500)
+
+		if (config.cash.innerHTML > 500) {
+			config.updateValue(config.cash, -500)
+			alert("You got the admission")
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const payFees = () => {
-		config.updateValue(config.cash, -500)
+
+		if (config.cash.innerHTML > 500) {
+			config.updateValue(config.cash, -500)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const attendClasses = () => {
@@ -44,7 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateValue(config.health, -4)
 		config.updateValue(config.hunger, +4)
 		config.updateValue(config.happiness, +4)
-		config.updateValue(config.cash, -4)
+
+		if (config.cash.innerHTML > 4) {
+			config.updateValue(config.cash, -4)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 	const playGames = () => {
