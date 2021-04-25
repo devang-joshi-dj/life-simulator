@@ -73,11 +73,17 @@ export const jobTakeBreak = document.querySelector('#jobTakeBreak')
 export const jobAttendMeeting = document.querySelector('#jobAttendMeeting')
 export const jobApplyPromotion = document.querySelector('#jobApplyPromotion')
 
+// info of Bank
+export const balance = document.querySelector('#balance')
+export const loan = document.querySelector('#loan')
+export const bills = document.querySelector('#bills')
+
 // buttons of Bank
 export const bankOpenAccount = document.querySelector('#bankOpenAccount')
 export const bankDepositMoney = document.querySelector('#bankDepositMoney')
 export const bankWithdrawMoney = document.querySelector('#bankWithdrawMoney')
 export const bankTakeLoan = document.querySelector('#bankTakeLoan')
+export const bankPayLoan = document.querySelector('#bankPayLoan')
 export const bankPayBills = document.querySelector('#bankPayBills')
 export const bankTalkTeller = document.querySelector('#bankTalkTeller')
 

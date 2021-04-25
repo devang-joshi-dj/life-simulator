@@ -153,6 +153,24 @@ div.btnGroup button:active {
 	background-image: url("../imgs/lifesimulator_Bank.svg");
 }
 
+div.bankInfo {
+	width: 150px;
+	height: 90px;
+	display: block;
+	background-color: rgb(36, 36, 36);
+	color: white;
+	top: 20px;
+}
+
+div.balance, div.loan, div.bills {
+	width: inherit;
+	height: 30px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	background-color: rgb(36, 36, 36);
+}
+
 .gymContent {
 	background-image: url("../imgs/lifesimulator_Gym.svg");
 }

@@ -3,6 +3,10 @@ import * as config from './config.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 
+	config.setValue(config.balance, 0)
+	config.setValue(config.loan, 0)
+	config.setValue(config.bills, 0)
+
 	let openAccountFlag1 = true
 	let openAccountFlag2 = false
 
@@ -10,102 +14,86 @@ document.addEventListener("DOMContentLoaded", () => {
 	elements.bankDepositMoney.disabled = true
 	elements.bankWithdrawMoney.disabled = true
 	elements.bankTakeLoan.disabled = true
+	elements.bankPayLoan.disabled = true
 	elements.bankPayBills.disabled = true
 	elements.bankTalkTeller.disabled = true
 
-	function openAccount() {
-		//health
-		//config.updateValue(config.health, -5)
-		//hunger
+	const openAccount = () => {
 		config.updateValue(config.hunger, -3)
-
-		//happiness
 		config.updateValue(config.happiness, +5)
-
-		//cash
 		config.updateValue(config.cash, -50)
 	}
 
-	function depositMoney() {
-		//health
-		// config.updateValue(config.health, -5)
-		//hunger
+	const depositMoney = () => {
 		config.updateValue(config.hunger, -5)
-		//happiness
 		config.updateValue(config.happiness, +5)
-
-		//cash
-		config.updateValue(config.cash, +40)
+		if (config.cash.innerHTML > 0) {
+			config.updateValue(config.cash, -50)
+			config.updateValue(config.balance, +50)
+		} else {
+			alert("You don't have enough money")
+		}
 	}
 
 
-	function withdrawMoney() {
-		//health
-		//config.updateValue(config.health, +5)
-		//hunger
+	const withdrawMoney = () => {
 		config.updateValue(config.hunger, -5)
-		//happiness
-		// no changes
-		// var update_happiness = 0
-		// var happinessVal = elements.happinessValue.innerText
-		// update_happiness = Number(happinessVal)
-		// elements.happinessValue.innerHTML = update_happiness +2
 
-		//cash
-		config.updateValue(config.cash, -30)
+		if (config.balance.innerHTML > 0) {
+			config.updateValue(config.cash, +50)
+			config.updateValue(config.balance, -50)
+		} else {
+			alert("You don't have enough balance")
+		}
 	}
 
-	function takeLoan() {
-		//health
-		// config.updateValue(config.health, -5)
-		//hunger
+	const takeLoan = () => {
 		config.updateValue(config.hunger, -4)
-		//happiness
-		//  no changes
-		// var happinessVal = elements.happinessValue.innerText
-		// update_happiness = Number(happinessVal)
-		// update_happiness = update_happiness + update_happiness * (5 / 100)
-		// elements.happinessValue.innerHTML = update_happiness.toFixed(2)
-
-		//cash
-		config.updateValue(config.cash, +10)
+		config.updateValue(config.cash, +1000)
+		config.updateValue(config.loan, +1000)
 	}
 
-	function payBills() {
-		//health
-		// config.updateValue(config.health, -5)
-		//hunger
+	const payLoan = () => {
 		config.updateValue(config.hunger, -4)
-		//happiness
-		//no changes
-		// var update_happiness = 0
-		// var happinessVal = elements.happinessValue.innerText
-		// update_happiness = Number(happinessVal)
-		// elements.happinessValue.innerHTML = update_happiness +2
 
-		//cash
-		config.updateValue(config.cash, -10)
+		if (config.loan.innerHTML > 0) {
+			config.updateValue(config.cash, -1000)
+			config.updateValue(config.loan, -1000)
+		} else {
+			alert("You have no loan to pay")
+		}
 	}
 
-	function talkTeller() {
-		//health
-		//config.updateValue(config.health, -5)
-		//hunger
+	const payBills = () => {
 		config.updateValue(config.hunger, -4)
-		//happiness
+		const bill = Number(config.bills.innerHTML) - Number(config.bills.innerHTML) - Number(config.bills.innerHTML)
+		config.updateValue(config.cash, bill)
+		config.setValue(config.bills, 0)
+	}
+
+	const talkTeller = () => {
+		config.updateValue(config.hunger, -4)
 		config.updateValue(config.happiness, +5)
-
-		//cash
 		config.updateValue(config.cash, -10)
 	}
 
 	document.addEventListener('click', () => {
+		config.updateValue(config.bills, +0.1)
+		let bills = Number(config.bills.innerHTML)
+		bills = bills.toFixed(2)
+		config.setValue(config.bills, bills)
+
+		let cash = Number(config.cash.innerHTML)
+		cash = cash.toFixed(2)
+		config.setValue(config.cash, cash)
+
 		if (openAccountFlag1)
 			config.disableElement(elements.bankOpenAccount, 17, 10)
 		if (openAccountFlag2) {
 			config.disableElement(elements.bankDepositMoney, 17, 10)
 			config.disableElement(elements.bankWithdrawMoney, 17, 10)
 			config.disableElement(elements.bankTakeLoan, 17, 10)
+			config.disableElement(elements.bankPayLoan, 17, 10)
 			config.disableElement(elements.bankPayBills, 17, 10)
 			config.disableElement(elements.bankTalkTeller, 17, 10)
 		}
@@ -119,13 +107,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		elements.bankDepositMoney.disabled = false
 		elements.bankWithdrawMoney.disabled = false
 		elements.bankTakeLoan.disabled = false
+		elements.bankPayLoan.disabled = false
 		elements.bankPayBills.disabled = false
 		elements.bankTalkTeller.disabled = false
 	})
-
 	elements.bankDepositMoney.addEventListener("click", depositMoney)
 	elements.bankWithdrawMoney.addEventListener("click", withdrawMoney)
 	elements.bankTakeLoan.addEventListener("click", takeLoan)
+	elements.bankPayLoan.addEventListener("click", payLoan)
 	elements.bankPayBills.addEventListener("click", payBills)
 	elements.bankTalkTeller.addEventListener("click", talkTeller)
 })

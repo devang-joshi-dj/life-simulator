@@ -3,271 +3,280 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="description"
-			content="Life simulator is an online game, where a player can control his own character (human being) and virtually makes the decision of his life."
-		/>
-		<meta
-			name="keywords"
-			content="HTML, CSS, JavaScript, Life, Simulation, Web, Game, Application"
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Life Simulator</title>
 
-		<!-- Cascading StyleSheets -->
-		<link rel="stylesheet" href="./css/main.css" />
-		<link rel="stylesheet" href="./css/responsive.css" />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description"
+		content="Life simulator is an online game, where a player can control his own character (human being) and virtually makes the decision of his life." />
+	<meta name="keywords" content="HTML, CSS, JavaScript, Life, Simulation, Web, Game, Application" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Life Simulator</title>
 
-		<!-- For Fonts -->
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
-			rel="stylesheet"
-		/>
+	<!-- Cascading StyleSheets -->
+	<link rel="stylesheet" href="./css/main.css" />
+	<link rel="stylesheet" href="./css/responsive.css" />
 
-		<!-- For Icons -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-			integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-			crossorigin="anonymous"
-		/>
+	<!-- For Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
 
-		<!-- For Navigating from one place to another -->
-		<script src="./js/config.js" type="module"></script>
-		<script src="./js/home.js" type="module"></script>
-		<script src="./js/university.js" type="module"></script>
-		<script src="./js/job.js" type="module"></script>
-		<script src="./js/bank.js" type="module"></script>
-		<script src="./js/gym.js" type="module"></script>
-		<script src="./js/mall.js" type="module"></script>
-		<script src="./js/worship.js" type="module"></script>
-		<script src="./js/club.js" type="module"></script>
-		<script src="./js/restaurant.js" type="module"></script>
-		<script src="./js/spa.js" type="module"></script>
-		<script src="./js/intro.js" type="module"></script>
-		<script src="./js/navigation.js" type="module"></script>
-	</head>
+	<!-- For Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+		integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+		crossorigin="anonymous" />
 
-	<body>
-		<div class="intro">
-			<p class="introText1"></p>
-			<p class="introText2"></p>
-			<p class="introText3"></p>
-			<p class="introText4"></p>
-			<button id="introButton">OK</button>
+	<!-- For Navigating from one place to another -->
+	<script src="./js/config.js" type="module"></script>
+	<script src="./js/home.js" type="module"></script>
+	<script src="./js/university.js" type="module"></script>
+	<script src="./js/job.js" type="module"></script>
+	<script src="./js/bank.js" type="module"></script>
+	<script src="./js/gym.js" type="module"></script>
+	<script src="./js/mall.js" type="module"></script>
+	<script src="./js/worship.js" type="module"></script>
+	<script src="./js/club.js" type="module"></script>
+	<script src="./js/restaurant.js" type="module"></script>
+	<script src="./js/spa.js" type="module"></script>
+	<script src="./js/intro.js" type="module"></script>
+	<script src="./js/navigation.js" type="module"></script>
+</head>
+
+<body>
+	<div class="intro">
+		<p class="introText1"></p>
+		<p class="introText2"></p>
+		<p class="introText3"></p>
+		<p class="introText4"></p>
+		<button id="introButton">OK</button>
+	</div>
+
+	<!-- Main Container Start -->
+	<div class="container">
+		<!-- Statistics Start -->
+		<div class="statistics">
+			<div class="health">
+				<i class="fas fa-heartbeat"></i>
+				<span>Health</span>
+				<span class="healthValue" id="healthValue"></span>
+			</div>
+
+			<div class="hunger">
+				<i class="fas fa-hamburger"></i>
+				<span>Hunger</span>
+				<span class="hungerValue" id="hungerValue"></span>
+			</div>
+
+			<div class="happiness">
+				<i class="fas fa-smile-wink"></i>
+				<span>Happiness</span>
+				<span class="happinessValue" id="happinessValue"></span>
+			</div>
+
+			<div class="cash">
+				<i class="fas fa-wallet"></i>
+				<span>Cash</span>
+				<span>$</span>
+				<span class="cashValue" id="cashValue"></span>
+			</div>
+
+			<div class="time">
+				<i class="fas fa-clock"></i>
+				<span>Time</span>
+				<span class="hourValue" id="hourValue"></span>
+				<span>:</span>
+				<span class="minuteValue" id="minuteValue"></span>
+			</div>
 		</div>
+		<!-- Statistics End -->
 
-		<!-- Main Container Start -->
-		<div class="container">
-			<!-- Statistics Start -->
-			<div class="statistics">
-				<div class="health">
-					<i class="fas fa-heartbeat"></i>
-					<span>Health</span>
-					<span class="healthValue" id="healthValue"></span>
-				</div>
-
-				<div class="hunger">
-					<i class="fas fa-hamburger"></i>
-					<span>Hunger</span>
-					<span class="hungerValue" id="hungerValue"></span>
-				</div>
-
-				<div class="happiness">
-					<i class="fas fa-smile-wink"></i>
-					<span>Happiness</span>
-					<span class="happinessValue" id="happinessValue"></span>
-				</div>
-
-				<div class="cash">
-					<i class="fas fa-wallet"></i>
-					<span>Cash</span>
-					<span>$</span>
-					<span class="cashValue" id="cashValue"></span>
-				</div>
-
-				<div class="time">
-					<i class="fas fa-clock"></i>
-					<span>Time</span>
-					<span class="hourValue" id="hourValue"></span>
-					<span>:</span>
-					<span class="minuteValue" id="minuteValue"></span>
-				</div>
+		<!-- Places to go for Header Section Start -->
+		<div class="places header">
+			<div class="home">
+				<i class="fas fa-home"></i>
+				<span>Home</span>
 			</div>
-			<!-- Statistics End -->
 
-			<!-- Places to go for Header Section Start -->
-			<div class="places header">
-				<div class="home">
-					<i class="fas fa-home"></i>
-					<span>Home</span>
-				</div>
-
-				<div class="university">
-					<i class="fas fa-university"></i>
-					<span>University</span>
-				</div>
-
-				<div class="job">
-					<i class="fas fa-user-md"></i>
-					<span>Job</span>
-				</div>
-
-				<div class="bank">
-					<i class="fas fa-piggy-bank"></i>
-					<span>Bank</span>
-				</div>
-
-				<div class="gym">
-					<i class="fas fa-dumbbell"></i>
-					<span>Gym</span>
-				</div>
+			<div class="university">
+				<i class="fas fa-university"></i>
+				<span>University</span>
 			</div>
-			<!-- Places to go for Header Section End -->
 
-			<!-- Container for Content Start -->
-			<div class="main">
-				<div class="homeContent">
-					<div class="btnGroup">
-						<button id="homeMeal">Eat Meal</button>
-						<button id="homeRest">Rest/Sleep</button>
-						<button id="homeMeetFamily">Meet Family Members</button>
-						<button id="homeCleanRoom">Clean Your Room</button>
-					</div>
-				</div>
-
-				<div class="universityContent">
-					<div class="btnGroup">
-						<button id="universityAdmission">Take Admission</button>
-						<br />
-						<button id="universityPayFees">Pay Fees</button>
-						<button id="universityAttendClasses">Attend Classes</button>
-						<button id="universityGroupStudy">Group Study</button>
-						<button id="universityClubMeeting">Club Meeting</button>
-						<button id="universityEatCanteen">Eat in Canteen</button>
-						<button id="universityPlayGames">Play Games</button>
-						<button id="universityStudyLibrary">Study In Library</button>
-					</div>
-				</div>
-
-				<div class="jobContent">
-					<div class="btnGroup">
-						<button id="jobApplyForWork">Apply For Work</button>
-						<br />
-						<button id="jobWorkOneHour">Work 1 Hour</button>
-						<button id="jobWorkThreeHours">Work 3+ Hours</button>
-						<button id="jobWorkFiveHours">Work 5+ Hours</button>
-						<button id="jobWorkNineHours">Work 9+ Hours</button>
-						<br />
-						<button id="jobTakeBreak">Take Break</button>
-						<button id="jobAttendMeeting">Attend Meeting</button>
-						<button id="jobApplyPromotion">Apply for promotion</button>
-					</div>
-				</div>
-
-				<div class="bankContent">
-					<div class="btnGroup">
-						<button id="bankOpenAccount">Open Bank Account</button>
-						<br />
-						<button id="bankDepositMoney">Deposit Money</button>
-						<button id="bankWithdrawMoney">Withdraw Money</button>
-						<button id="bankTakeLoan">Take Out A Loan</button>
-						<button id="bankPayBills">Pay Bills</button>
-						<button id="bankTalkTeller">Talk with Teller</button>
-					</div>
-				</div>
-
-				<div class="gymContent">
-					<div class="btnGroup">
-						<button id="gymTakeAdmission">Take Admission</button>
-						<br />
-						<button id="gymExerciseOneHour">Exercise 1 Hour</button>
-						<button id="gymExerciseTwoHours">Exercise 2 Hours</button>
-						<button id="gymExerciseThreeHours">Exercise 3 Hours</button>
-						<br />
-						<button id="gymDietPlan">Take A Diet Plan</button>
-						<button id="gymTalkTrainer">Talk To Trainer</button>
-					</div>
-				</div>
-
-				<div class="mallContent">
-					<div class="btnGroup">
-						<button id="mallShopping">Shopping</button>
-						<button id="mallWatchMovies">Watch Movies</button>
-						<button id="mallGamingZone">Play In Gaming Zone</button>
-						<button id="mallFoodCourt">Eat In Food Court</button>
-					</div>
-				</div>
-
-				<div class="worshipContent">
-					<div class="btnGroup">
-						<button id="worshipPray">Pray</button>
-						<button id="worshipServe">Serve</button>
-						<button id="worshipCharity">Charity</button>
-					</div>
-				</div>
-
-				<div class="clubContent">
-					<div class="btnGroup">
-						<button id="clubDance">Dance</button>
-						<button id="clubDrinkEat">Drink/Eat</button>
-						<button id="clubMeetPeople">Meet New People</button>
-					</div>
-				</div>
-
-				<div class="restaurantContent">
-					<div class="btnGroup">
-						<button id="restaurantEatFastFood">Eat Fast Food</button>
-						<button id="restaurantEatSeaFood">Eat Sea Food</button>
-						<button id="restaurantEatSalad">Eat Salad</button>
-						<button id="restaurantEatSouthIndian">Eat South Indian</button>
-						<button id="restaurantEatNorthIndian">Eat North Indian</button>
-						<button id="restaurantEatItalianFood">Eat Italian Food</button>
-						<button id="restaurantEatChineseFood">Eat Chinese Food</button>
-					</div>
-				</div>
-
-				<div class="spaContent">
-					<div class="btnGroup">
-						<button id="spaMassage">Take Massages</button>
-						<button id="spaManicurePedicure">Manicure and Pedicure</button>
-					</div>
-				</div>
+			<div class="job">
+				<i class="fas fa-user-md"></i>
+				<span>Job</span>
 			</div>
-			<!-- Container for Content End -->
 
-			<!-- Places to go for Footer Section Start -->
-			<div class="places footer">
-				<div class="mall">
-					<i class="fas fa-building"></i>
-					<span>Mall</span>
-				</div>
-
-				<div class="worship">
-					<i class="fas fa-praying-hands"></i>
-					<span>Worship</span>
-				</div>
-
-				<div class="club">
-					<i class="fas fa-wine-glass-alt"></i>
-					<span>Club</span>
-				</div>
-
-				<div class="restaurant">
-					<i class="fas fa-utensils"></i>
-					<span>Restaurant</span>
-				</div>
-
-				<div class="spa">
-					<i class="fas fa-spa"></i>
-					<span>Spa</span>
-				</div>
+			<div class="bank">
+				<i class="fas fa-piggy-bank"></i>
+				<span>Bank</span>
 			</div>
-			<!-- Places to go for Footer Section End -->
+
+			<div class="gym">
+				<i class="fas fa-dumbbell"></i>
+				<span>Gym</span>
+			</div>
 		</div>
-		<!-- Main Container End -->
-	</body>
+		<!-- Places to go for Header Section End -->
+
+		<!-- Container for Content Start -->
+		<div class="main">
+			<div class="homeContent">
+				<div class="btnGroup">
+					<button id="homeMeal">Eat Meal</button>
+					<button id="homeRest">Rest/Sleep</button>
+					<button id="homeMeetFamily">Meet Family Members</button>
+					<button id="homeCleanRoom">Clean Your Room</button>
+				</div>
+			</div>
+
+			<div class="universityContent">
+				<div class="btnGroup">
+					<button id="universityAdmission">Take Admission</button>
+					<br />
+					<button id="universityPayFees">Pay Fees</button>
+					<button id="universityAttendClasses">Attend Classes</button>
+					<button id="universityGroupStudy">Group Study</button>
+					<button id="universityClubMeeting">Club Meeting</button>
+					<button id="universityEatCanteen">Eat in Canteen</button>
+					<button id="universityPlayGames">Play Games</button>
+					<button id="universityStudyLibrary">Study In Library</button>
+				</div>
+			</div>
+
+			<div class="jobContent">
+				<div class="btnGroup">
+					<button id="jobApplyForWork">Apply For Work</button>
+					<br />
+					<button id="jobWorkOneHour">Work 1 Hour</button>
+					<button id="jobWorkThreeHours">Work 3+ Hours</button>
+					<button id="jobWorkFiveHours">Work 5+ Hours</button>
+					<button id="jobWorkNineHours">Work 9+ Hours</button>
+					<br />
+					<button id="jobTakeBreak">Take Break</button>
+					<button id="jobAttendMeeting">Attend Meeting</button>
+					<button id="jobApplyPromotion">Apply for promotion</button>
+				</div>
+			</div>
+
+			<div class="bankContent">
+				<div class="btnGroup">
+					<div class="bankInfo">
+						<div class="balance">
+							<span>Balance</span>
+							<span>: $</span>
+							<span id="balance"></span>
+						</div>
+						<div class="loan">
+							<span>Loan</span>
+							<span>: $</span>
+							<span id="loan"></span>
+						</div>
+						<div class="bills">
+							<span>Bills</span>
+							<span>: $</span>
+							<span id="bills"></span>
+						</div>
+					</div>
+					<button id="bankOpenAccount">Open Bank Account</button>
+					<br />
+					<button id="bankDepositMoney">Deposit Money</button>
+					<button id="bankWithdrawMoney">Withdraw Money</button>
+					<button id="bankTakeLoan">Take Out A Loan</button>
+					<button id="bankPayLoan">Pay Loan</button>
+					<button id="bankPayBills">Pay Bills</button>
+					<button id="bankTalkTeller">Talk with Teller</button>
+				</div>
+			</div>
+
+			<div class="gymContent">
+				<div class="btnGroup">
+					<button id="gymTakeAdmission">Take Admission</button>
+					<br />
+					<button id="gymExerciseOneHour">Exercise 1 Hour</button>
+					<button id="gymExerciseTwoHours">Exercise 2 Hours</button>
+					<button id="gymExerciseThreeHours">Exercise 3 Hours</button>
+					<br />
+					<button id="gymDietPlan">Take A Diet Plan</button>
+					<button id="gymTalkTrainer">Talk To Trainer</button>
+				</div>
+			</div>
+
+			<div class="mallContent">
+				<div class="btnGroup">
+					<button id="mallShopping">Shopping</button>
+					<button id="mallWatchMovies">Watch Movies</button>
+					<button id="mallGamingZone">Play In Gaming Zone</button>
+					<button id="mallFoodCourt">Eat In Food Court</button>
+				</div>
+			</div>
+
+			<div class="worshipContent">
+				<div class="btnGroup">
+					<button id="worshipPray">Pray</button>
+					<button id="worshipServe">Serve</button>
+					<button id="worshipCharity">Charity</button>
+				</div>
+			</div>
+
+			<div class="clubContent">
+				<div class="btnGroup">
+					<button id="clubDance">Dance</button>
+					<button id="clubDrinkEat">Drink/Eat</button>
+					<button id="clubMeetPeople">Meet New People</button>
+				</div>
+			</div>
+
+			<div class="restaurantContent">
+				<div class="btnGroup">
+					<button id="restaurantEatFastFood">Eat Fast Food</button>
+					<button id="restaurantEatSeaFood">Eat Sea Food</button>
+					<button id="restaurantEatSalad">Eat Salad</button>
+					<button id="restaurantEatSouthIndian">Eat South Indian</button>
+					<button id="restaurantEatNorthIndian">Eat North Indian</button>
+					<button id="restaurantEatItalianFood">Eat Italian Food</button>
+					<button id="restaurantEatChineseFood">Eat Chinese Food</button>
+				</div>
+			</div>
+
+			<div class="spaContent">
+				<div class="btnGroup">
+					<button id="spaMassage">Take Massages</button>
+					<button id="spaManicurePedicure">Manicure and Pedicure</button>
+				</div>
+			</div>
+		</div>
+		<!-- Container for Content End -->
+
+		<!-- Places to go for Footer Section Start -->
+		<div class="places footer">
+			<div class="mall">
+				<i class="fas fa-building"></i>
+				<span>Mall</span>
+			</div>
+
+			<div class="worship">
+				<i class="fas fa-praying-hands"></i>
+				<span>Worship</span>
+			</div>
+
+			<div class="club">
+				<i class="fas fa-wine-glass-alt"></i>
+				<span>Club</span>
+			</div>
+
+			<div class="restaurant">
+				<i class="fas fa-utensils"></i>
+				<span>Restaurant</span>
+			</div>
+
+			<div class="spa">
+				<i class="fas fa-spa"></i>
+				<span>Spa</span>
+			</div>
+		</div>
+		<!-- Places to go for Footer Section End -->
+	</div>
+	<!-- Main Container End -->
+</body>
+
 </html>
