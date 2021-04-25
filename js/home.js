@@ -30,14 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const homeCleanRoom = () => {
 		//config.updateValue(config.health, -2)
+
 		config.updateValue(config.hunger, -2)
 
 		config.updateValue(config.happiness, +2)
 	}
-
-	document.addEventListener('click', () => {
-		config.disableElement(elements.homeRest, 23, 7)
-	})
 
 	// btngroup click
 	elements.homeMeal.addEventListener("click", homeMeal)

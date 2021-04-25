@@ -42,11 +42,11 @@ export const updateValue = (element, value) => {
 	// function for updating a value to an element
 	element.innerHTML = Number(element.innerHTML) + value
 
-	if (element.innerHTML > 100 && (element == health || element == happiness)) {
+	if (element.innerHTML > 100 && (element == health || element == hunger || element == happiness)) {
 		element.innerHTML = 100
 	}
 
-	if (element.innerHTML < 0 && (element == health || element == happiness)) {
+	if (element.innerHTML < 0 && (element == health || element == hunger || element == happiness || element == cash)) {
 		element.innerHTML = 0
 	}
 }
@@ -68,8 +68,21 @@ export const updateTime = (hour = 0, minute = 0) => {
 		const extraMinute = Number(elements.minuteValue.innerHTML) - 60
 		elements.minuteValue.innerHTML = extraMinute
 		elements.hourValue.innerHTML = Number(elements.hourValue.innerHTML) + 1
+		if (elements.hourValue.innerHTML > 24) {
+			const extrahour = Number(elements.hourValue.innerHTML) - 24
+			elements.hourValue.innerHTML = 0 + extrahour
+		}
 	}
 }
+
+document.addEventListener("click", () => {
+	if (elements.minuteValue.innerHTML == 0) {
+		elements.minuteValue.innerHTML = '00'
+	}
+	if (elements.minuteValue.innerHTML >= 1 && elements.minuteValue.innerHTML <= 9) {
+		elements.minuteValue.innerHTML = '0' + elements.minuteValue.innerHTML
+	}
+})
 
 export const disableElement = (element, start, end) => {
 	// function for disabling specific elements according to the provided time
