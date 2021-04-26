@@ -17,8 +17,9 @@ html, body {
 /* Container for Intro Start */
 
 .intro {
-	width: 50%;
-	height: 50%;
+	width: 40%;
+	height: 200;
+
 	margin-left: 25%;
 	margin-top: 5%;
 	padding: 10px;
@@ -35,9 +36,9 @@ html, body {
 	font-size: 1.4em;
 }
 
-.introText2, .introText3, .introText4 {
-	font-size: 1.2em;
-}
+/* /* .introText2, .introText3, .introText4 {
+	font-size: 1.2em; 
+} */
 
 #introButton {
 	padding: 10px;
