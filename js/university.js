@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(30);
+		config.updateTime(0,30);
 	}
 
 	const attendClasses = () => {
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const clubMeeting = () => {
 		config.updateValue(config.hunger, -3)
 		config.updateValue(config.happiness, +3)
-		config.updateTime(30);
+		config.updateTime(0,30);
 	}
 
 	const eatCanteen = () => {
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(20);
+		config.updateTime(0,20);
 	}
 
 	const playGames = () => {

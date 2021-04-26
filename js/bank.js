@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const talkTeller = () => {
 		config.updateValue(config.hunger, -4)
 		config.updateValue(config.happiness, +5)
-		config.updateTime(30)
+		config.updateTime(0,30)
 	}
 
 	document.addEventListener('click', () => {

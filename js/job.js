@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const applyPromotion = () => {
 		config.updateValue(config.hunger, -5)
-		config.updateTime(20)
+		config.updateTime(0,20)
 	}
 
 	document.addEventListener('click', () => {
