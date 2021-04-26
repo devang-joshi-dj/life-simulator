@@ -24,13 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const meetPeople = () => {
 		config.updateValue(config.happiness, +15)
+		config.updateTime(1)
 	}
 
 	document.addEventListener('click', () => {
 		config.disableElement(elements.clubDance, 4, 19)
 		config.disableElement(elements.clubDrinkEat, 4, 19)
 		config.disableElement(elements.clubMeetPeople, 4, 19)
-		config.updateTime(1)
+		
 	})
 
 	elements.clubDance.addEventListener("click", dance)

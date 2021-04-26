@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You have no loan to pay")
 		}
+		config.updateTime(1)
 	}
 
 	const payBills = () => {

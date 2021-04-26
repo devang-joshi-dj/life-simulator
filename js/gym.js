@@ -51,13 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateValue(config.health, +4)
 		config.updateValue(config.hunger, +4)
 		config.updateValue(config.happiness, +2)
-		config.updateTime(0,10)
 
 		if (config.cash.innerHTML > 5) {
 			config.updateValue(config.cash, -5)
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(0,10)
 	}
 
 	const talkTrainer = () => {
