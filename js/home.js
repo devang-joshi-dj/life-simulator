@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	const homeMeetfamily = () => {
-		config.updateValue(config.health, -2)
+		//config.updateValue(config.health, -2)
 		config.updateValue(config.happiness, +2)
 		config.updateTime(1);
 	}

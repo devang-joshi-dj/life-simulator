@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	elements.universityStudyLibrary.disabled = true
 
 	const admission = () => {
+		
 		config.updateValue(config.happiness, +2)
 
 		if (config.cash.innerHTML > 500) {
