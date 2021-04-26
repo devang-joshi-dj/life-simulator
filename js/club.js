@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const dance = () => {
 		config.updateValue(config.hunger, -5)
 		config.updateValue(config.happiness, +15)
+		config.updateTime(2)
 	}
 
 	const drinkEat = () => {
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	const meetPeople = () => {
@@ -28,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.disableElement(elements.clubDance, 4, 19)
 		config.disableElement(elements.clubDrinkEat, 4, 19)
 		config.disableElement(elements.clubMeetPeople, 4, 19)
+		config.updateTime(1)
 	})
 
 	elements.clubDance.addEventListener("click", dance)

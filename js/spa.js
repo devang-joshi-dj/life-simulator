@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	const manicurePedicure = () => {
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	document.addEventListener('click', () => {

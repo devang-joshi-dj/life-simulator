@@ -25,7 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1);
 	}
+
 
 	const payFees = () => {
 
@@ -34,21 +36,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(30);
 	}
 
 	const attendClasses = () => {
 		config.updateValue(config.hunger, -2)
 		config.updateValue(config.happiness, +4)
+		config.updateTime(1);
 	}
 
 	const groupStudy = () => {
 		config.updateValue(config.hunger, -3)
 		config.updateValue(config.happiness, +3)
+		config.updateTime(1);
 	}
 
 	const clubMeeting = () => {
 		config.updateValue(config.hunger, -3)
 		config.updateValue(config.happiness, +3)
+		config.updateTime(30);
 	}
 
 	const eatCanteen = () => {
@@ -61,16 +67,19 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(20);
 	}
 
 	const playGames = () => {
 		config.updateValue(config.hunger, -4)
 		config.updateValue(config.happiness, +4)
+		config.updateTime(1);
 	}
 
 	const studyLibrary = () => {
 		config.updateValue(config.hunger, -3)
 		config.updateValue(config.happiness, +3)
+		config.updateTime(1);
 	}
 
 	document.addEventListener('click', () => {

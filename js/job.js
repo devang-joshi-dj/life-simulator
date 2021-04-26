@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateValue(config.hunger, -5)
 		config.updateValue(config.happiness, +5)
 		config.updateValue(config.cash, oneHourSalary)
+		config.updateTime(1)
 	}
 
 	const workThreeHours = () => {
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateValue(config.hunger, -6)
 		config.updateValue(config.happiness, +10)
 		config.updateValue(config.cash, threeHourSalary)
+		config.updateTime(3)
 	}
 
 	const workFiveHours = () => {
@@ -46,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateValue(config.hunger, -7)
 		config.updateValue(config.happiness, +15)
 		config.updateValue(config.cash, fiveHourSalary)
+		config.updateTime(5)
 	}
 
 	const workNineHours = () => {
@@ -53,21 +56,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateValue(config.hunger, -8)
 		config.updateValue(config.happiness, +20)
 		config.updateValue(config.cash, nineHourSalary)
+		config.updateTime(9)
 	}
 
 	const takeBreak = () => {
 		config.updateValue(config.health, +5)
 		config.updateValue(config.hunger, +5)
 		config.updateValue(config.happiness, +5)
+		config.updateTime(1)
 	}
 
 	const attendMeeting = () => {
 		config.updateValue(config.hunger, -5)
 		config.updateValue(config.happiness, +5)
+		config.updateTime(1)
 	}
 
 	const applyPromotion = () => {
 		config.updateValue(config.hunger, -5)
+		config.updateTime(20)
 	}
 
 	document.addEventListener('click', () => {

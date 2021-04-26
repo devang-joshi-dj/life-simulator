@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	const seaFood = () => {
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	const salad = () => {
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	const southIndian = () => {
@@ -49,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	const northIndian = () => {
@@ -61,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	const italianFood = () => {
@@ -73,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	const chineseFood = () => {
@@ -85,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	document.addEventListener('click', () => {

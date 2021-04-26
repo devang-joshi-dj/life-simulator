@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(2)
 	}
 
 	const watchMovies = () => {
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(3)
 	}
 
 	const gamingZone = () => {
@@ -34,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	const foodCourt = () => {
@@ -46,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	document.addEventListener('click', () => {

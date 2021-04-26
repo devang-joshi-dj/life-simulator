@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	const depositMoney = () => {
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough money")
 		}
+		config.updateTime(1)
 	}
 
 	const withdrawMoney = () => {
@@ -50,12 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			alert("You don't have enough balance")
 		}
+		config.updateTime(1)
 	}
 
 	const takeLoan = () => {
 		config.updateValue(config.hunger, -4)
 		config.updateValue(config.cash, +1000)
 		config.updateValue(config.loan, +1000)
+		config.updateTime(1)
 	}
 
 	const payLoan = () => {
@@ -74,11 +78,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		const bill = Number(config.bills.innerHTML) - Number(config.bills.innerHTML) - Number(config.bills.innerHTML)
 		config.updateValue(config.cash, bill)
 		config.setValue(config.bills, 0)
+		config.updateTime(1)
 	}
 
 	const talkTeller = () => {
 		config.updateValue(config.hunger, -4)
 		config.updateValue(config.happiness, +5)
+		config.updateTime(30)
 	}
 
 	document.addEventListener('click', () => {
@@ -96,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (openAccountFlag2) {
 			config.disableElement(elements.bankDepositMoney, 17, 10)
 			config.disableElement(elements.bankWithdrawMoney, 17, 10)
-			config.disableElement(elements.bankTakeLoan, 17, 10)
 			config.disableElement(elements.bankPayLoan, 17, 10)
 			config.disableElement(elements.bankPayBills, 17, 10)
 			config.disableElement(elements.bankTalkTeller, 17, 10)
@@ -122,3 +127,4 @@ document.addEventListener("DOMContentLoaded", () => {
 	elements.bankPayBills.addEventListener("click", payBills)
 	elements.bankTalkTeller.addEventListener("click", talkTeller)
 })
+
