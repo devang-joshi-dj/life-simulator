@@ -16,29 +16,38 @@ html, body {
 
 /* Container for Intro Start */
 
+.introContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .intro {
 	width: 40%;
 	height: 200;
-
-	margin-left: 25%;
-	margin-top: 5%;
 	padding: 10px;
 	border-radius: 50px;
 	display: flex;
 	flex-direction: column;
-	position: absolute;
 	align-items: center;
 	justify-content: center;
 	background-color: rgb(189, 189, 189);
 }
 
-.introText1 {
+.introText {
 	font-size: 1.4em;
 }
 
-/* /* .introText2, .introText3, .introText4 {
-	font-size: 1.2em; 
-} */
+.introText h1 {
+	margin: 0;
+	color: teal;
+}
+
+.intro p {
+	color: darkslategray;
+}
 
 #introButton {
 	padding: 10px;

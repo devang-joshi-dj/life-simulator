@@ -9,15 +9,18 @@ xmlhttp.onreadystatechange = function () {
 
 		const title = (randomPlayer["Gender"] == "Male") ? 'Mr.' : 'Mrs.'
 
-		elements.introText1Element.innerHTML = `NAME                  : ${title} ${randomPlayer["Name"]}.<br>
-		                                        DOB                   : ${randomPlayer["Date of birth"]}. <br>
-												AGE                   : ${randomPlayer["Age"]}.<br>
-												City                  : ${randomPlayer["City"]}.<br>
-												State                 : ${randomPlayer["State"]}.<br>
-												Highest Qualification : ${randomPlayer["Highest Qualification"]}.<br>
-												Occupation            : ${randomPlayer["Occupation"]}.<br>
-												Father's Name         : ${randomPlayer["Father's Name"]}<br>
-												Mother's Name         : ${randomPlayer["Mother's Name"]}`
+		elements.introTextElement.innerHTML = `
+		<h1><center>ID</center></h1><br>
+		NAME: ${title} ${randomPlayer["Name"]}<br>
+		DOB: ${randomPlayer["Date of birth"]}<br>
+		AGE: ${randomPlayer["Age"]}<br>
+		City: ${randomPlayer["City"]}<br>
+		State: ${randomPlayer["State"]}<br>
+		Highest Qualification : ${randomPlayer["Highest Qualification"]}<br>
+		Occupation: ${randomPlayer["Occupation"]}<br>
+		Father's Name: ${randomPlayer["Father's Name"]}<br>
+		Mother's Name: ${randomPlayer["Mother's Name"]}
+		`
 	}
 }
 xmlhttp.open("GET", "../assets/player.json", true)
@@ -26,7 +29,7 @@ xmlhttp.send()
 
 window.onload = () => {
 	elements.introButton.addEventListener('click', () => {
-		elements.introElement.style.display = 'none'
+		elements.introContainer.style.display = 'none'
 		elements.containerElement.style.display = 'flex'
 		elements.homeElement.click()
 	})

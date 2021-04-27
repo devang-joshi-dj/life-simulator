@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const applyPromotion = () => {
 		config.updateValue(config.hunger, -5)
-		config.updateTime(0,20)
+		config.updateTime(0, 20)
 	}
 
 	document.addEventListener('click', () => {
@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.disableElement(elements.jobWorkNineHours, 20, 10)
 			config.disableElement(elements.jobTakeBreak, 20, 10)
 			config.disableElement(elements.jobAttendMeeting, 20, 10)
+
 			if (promotionFlag == true) {
 				elements.jobApplyPromotion.disabled = true
 			} else {
