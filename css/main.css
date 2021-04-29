@@ -124,30 +124,21 @@ html, body {
 	background-size: cover;
 }
 
-div.btnGroup {
-	display: flex;
-	background: none;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+.main div .bg {
+	display: block !important;
+	height: 100% !important;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
 }
 
-div.btnGroup button {
-	border-radius: 50px;
-	border: 2px solid white;
-	outline: none;
-	padding: 10px;
-	width: 170px;
-	margin: 5px;
-	cursor: pointer;
+.homeContent, .universityContent, .jobContent, .bankContent, .gymContent, .mallContent, .worshipContent, .clubContent, .restaurantContent, .spaContent {
+	position: absolute;
 }
 
-div.btnGroup button:active {
-	border-color: black;
-	transition: all .1s;
-}
-
-.homeContent {
+.homeContent .bg {
 	background-image: url("../imgs/lifesimulator_Home.svg");
 }
 
@@ -171,15 +162,15 @@ div.foodAndGrocery {
 	background-color: rgb(36, 36, 36);
 }
 
-.universityContent {
+.universityContent .bg {
 	background-image: url("../imgs/lifesimulator_University.svg");
 }
 
-.jobContent {
+.jobContent .bg {
 	background-image: url("../imgs/lifesimulator_Job.svg");
 }
 
-.bankContent {
+.bankContent .bg {
 	background-image: url("../imgs/lifesimulator_Bank.svg");
 }
 
@@ -201,28 +192,51 @@ div.balance, div.loan, div.bills {
 	background-color: rgb(36, 36, 36);
 }
 
-.gymContent {
+.gymContent .bg {
 	background-image: url("../imgs/lifesimulator_Gym.svg");
 }
 
-.mallContent {
+.mallContent .bg {
 	background-image: url("../imgs/lifesimulator_Mall.svg");
 }
 
-.worshipContent {
+.worshipContent .bg {
 	background-image: url("../imgs/lifesimulator_Worship.svg");
 }
 
-.clubContent {
+.clubContent .bg {
 	background-image: url("../imgs/lifesimulator_Club.svg");
 }
 
-.restaurantContent {
+.restaurantContent .bg {
 	background-image: url("../imgs/lifesimulator_Restaurant.svg");
 }
 
-.spaContent {
+.spaContent .bg {
 	background-image: url("../imgs/lifesimulator_Spa.svg");
+}
+
+div.btnGroup {
+	display: flex;
+	background: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+div.btnGroup button {
+	border-radius: 50px;
+	border: 2px solid white;
+	outline: none;
+	padding: 10px;
+	width: 170px;
+	margin: 5px;
+	cursor: pointer;
+}
+
+div.btnGroup button:active {
+	border-color: black;
+	transition: all .1s;
 }
 
 /* Container for Main Content End */
