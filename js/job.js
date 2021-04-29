@@ -28,35 +28,59 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	const workOneHour = () => {
-		config.updateValue(config.health, -2)
-		config.updateValue(config.hunger, -5)
-		config.updateValue(config.happiness, +5)
-		config.updateValue(config.cash, oneHourSalary)
-		config.updateTime(1)
+		const timeDiff = 20 - config.hour.innerHTML
+		if (timeDiff >= 1) {
+			config.updateValue(config.health, -2)
+			config.updateValue(config.hunger, -5)
+			config.updateValue(config.happiness, +5)
+			config.updateValue(config.cash, oneHourSalary)
+			config.updateTime(1)
+		}
+		else {
+			alert("You don't have enough time")
+		}
 	}
 
 	const workThreeHours = () => {
-		config.updateValue(config.health, -5)
-		config.updateValue(config.hunger, -9)
-		config.updateValue(config.happiness, +9)
-		config.updateValue(config.cash, threeHourSalary)
-		config.updateTime(3)
+		const timeDiff = 20 - config.hour.innerHTML
+		if (timeDiff >= 3) {
+			config.updateValue(config.health, -5)
+			config.updateValue(config.hunger, -9)
+			config.updateValue(config.happiness, +9)
+			config.updateValue(config.cash, threeHourSalary)
+			config.updateTime(3)
+		}
+		else {
+			alert("You don't have enough time")
+		}
 	}
 
 	const workFiveHours = () => {
-		config.updateValue(config.health, -9)
-		config.updateValue(config.hunger, -17)
-		config.updateValue(config.happiness, +17)
-		config.updateValue(config.cash, fiveHourSalary)
-		config.updateTime(5)
+		const timeDiff = 20 - config.hour.innerHTML
+		if (timeDiff >= 5) {
+			config.updateValue(config.health, -9)
+			config.updateValue(config.hunger, -17)
+			config.updateValue(config.happiness, +17)
+			config.updateValue(config.cash, fiveHourSalary)
+			config.updateTime(5)
+		}
+		else {
+			alert("You don't have enough time")
+		}
 	}
 
 	const workNineHours = () => {
-		config.updateValue(config.health, -17)
-		config.updateValue(config.hunger, -33)
-		config.updateValue(config.happiness, +33)
-		config.updateValue(config.cash, nineHourSalary)
-		config.updateTime(9)
+		const timeDiff = 20 - config.hour.innerHTML
+		if (timeDiff >= 9) {
+			config.updateValue(config.health, -17)
+			config.updateValue(config.hunger, -33)
+			config.updateValue(config.happiness, +33)
+			config.updateValue(config.cash, nineHourSalary)
+			config.updateTime(9)
+		}
+		else {
+			alert("You don't have enough time")
+		}
 	}
 
 	const takeBreak = () => {
