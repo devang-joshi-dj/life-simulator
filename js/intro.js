@@ -10,7 +10,7 @@ xmlhttp.onreadystatechange = function () {
 		const title = (randomPlayer["Gender"] == "Male") ? 'Mr.' : 'Mrs.'
 
 		elements.introTextElement.innerHTML = `
-		<h1><center>ID</center></h1><br>
+		<h1><center>ID</center></h1>
 		NAME: ${title} ${randomPlayer["Name"]}<br>
 		DOB: ${randomPlayer["Date of birth"]}<br>
 		AGE: ${randomPlayer["Age"]}<br>
