@@ -45,6 +45,9 @@ export const restaurantElement = document.querySelector('.restaurant')
 export const spaElement = document.querySelector('.spa')
 // Buttons of Header And Footer End
 
+// info of Home
+export const foodAndGrocery = document.querySelector('#foodAndGrocery')
+
 //buttons of Home
 export const homeMeal = document.querySelector('#homeMeal')
 export const homeRest = document.querySelector('#homeRest')
@@ -98,6 +101,7 @@ export const mallShopping = document.querySelector('#mallShopping')
 export const mallWatchMovies = document.querySelector('#mallWatchMovies')
 export const mallGamingZone = document.querySelector('#mallGamingZone')
 export const mallFoodCourt = document.querySelector('#mallFoodCourt')
+export const mallFoodAndGroceries = document.querySelector('#mallFoodAndGroceries')
 
 // buttons of Worship
 export const worshipPray = document.querySelector('#worshipPray')

@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const initialCash = 1000
 	const initialHour = 7
 	const initialMinute = 0
+	const initialFoodAndGrocery = 10
 
 	const setValues = () => {
 		// function for setting all values
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		setValue(cash, initialCash)
 		setValue(hour, initialHour)
 		setValue(minute, initialMinute)
+		setValue(foodAndGrocery, initialFoodAndGrocery)
 	}
 
 	setValues()
@@ -33,6 +35,8 @@ export let happiness = elements.happinessValue
 export let cash = elements.cashValue
 export let hour = elements.hourValue
 export let minute = elements.minuteValue
+
+export let foodAndGrocery = elements.foodAndGrocery
 
 export let balance = elements.balance
 export let loan = elements.loan
@@ -75,23 +79,6 @@ export const updateTime = (hour = 0, minute = 0) => {
 	}
 }
 
-document.addEventListener("click", () => {
-	// function to properly handle zero in time before single digit time
-	if (elements.hourValue.innerHTML == 0) {
-		elements.hourValue.innerHTML = '00'
-	}
-	if (Number(elements.hourValue.innerHTML) >= 1 && Number(elements.hourValue.innerHTML) <= 9) {
-		elements.hourValue.innerHTML = '0' + Number(elements.hourValue.innerHTML)
-	}
-
-	if (Number(elements.minuteValue.innerHTML) == 0) {
-		elements.minuteValue.innerHTML = '00'
-	}
-	if (Number(elements.minuteValue.innerHTML) >= 1 && Number(elements.minuteValue.innerHTML) <= 9) {
-		elements.minuteValue.innerHTML = '0' + Number(elements.minuteValue.innerHTML)
-	}
-})
-
 export const disableElement = (element, start, end) => {
 	// function for disabling specific elements according to the provided time
 	if (start > end) {
@@ -113,3 +100,20 @@ export const disableElement = (element, start, end) => {
 	}
 
 }
+
+document.addEventListener("click", () => {
+	// function to properly handle zero in time before single digit time
+	if (elements.hourValue.innerHTML == 0) {
+		elements.hourValue.innerHTML = '00'
+	}
+	if (Number(elements.hourValue.innerHTML) >= 1 && Number(elements.hourValue.innerHTML) <= 9) {
+		elements.hourValue.innerHTML = '0' + Number(elements.hourValue.innerHTML)
+	}
+
+	if (Number(elements.minuteValue.innerHTML) == 0) {
+		elements.minuteValue.innerHTML = '00'
+	}
+	if (Number(elements.minuteValue.innerHTML) >= 1 && Number(elements.minuteValue.innerHTML) <= 9) {
+		elements.minuteValue.innerHTML = '0' + Number(elements.minuteValue.innerHTML)
+	}
+})

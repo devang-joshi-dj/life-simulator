@@ -151,6 +151,26 @@ div.btnGroup button:active {
 	background-image: url("../imgs/lifesimulator_Home.svg");
 }
 
+div.homeInfo {
+	width: 250px;
+	height: 40px;
+	position: absolute;
+	display: block;
+	background-color: rgb(36, 36, 36);
+	color: white;
+	top: 20px;
+}
+
+div.foodAndGrocery {
+	width: inherit;
+	height: inherit;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(36, 36, 36);
+}
+
 .universityContent {
 	background-image: url("../imgs/lifesimulator_University.svg");
 }

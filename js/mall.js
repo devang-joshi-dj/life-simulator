@@ -52,15 +52,30 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateTime(1)
 	}
 
+	const foodAndGroceries = () => {
+		if (config.cash.innerHTML >= 10) {
+			config.updateValue(config.cash, -10)
+			if (isNaN(config.foodAndGrocery.innerHTML)) {
+				config.setValue(config.foodAndGrocery, +10)
+			} else {
+				config.updateValue(config.foodAndGrocery, +10)
+			}
+
+			config.updateTime(0, 40)
+		}
+	}
+
 	document.addEventListener('click', () => {
 		config.disableElement(elements.mallShopping, 21, 10)
 		config.disableElement(elements.mallWatchMovies, 21, 10)
 		config.disableElement(elements.mallGamingZone, 21, 10)
 		config.disableElement(elements.mallFoodCourt, 21, 10)
+		config.disableElement(elements.mallFoodAndGroceries, 21, 10)
 	})
 
 	elements.mallShopping.addEventListener("click", shopping)
 	elements.mallWatchMovies.addEventListener("click", watchMovies)
 	elements.mallGamingZone.addEventListener("click", gamingZone)
 	elements.mallFoodCourt.addEventListener("click", foodCourt)
+	elements.mallFoodAndGroceries.addEventListener("click", foodAndGroceries)
 })

@@ -33,6 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.disableElement(elements.homeMeetFamily, 0, 7)
 		config.disableElement(elements.homeCleanRoom, 0, 7)
 
+		if (config.foodAndGrocery.innerHTML <= 0 || isNaN(config.foodAndGrocery.innerHTML)) {
+			config.foodAndGrocery.innerHTML = "<span style='color:red'>Buy From Mall</span>"
+			elements.homeMeal.disabled = true
+		}
+		else {
+			elements.homeMeal.disabled = false
+		}
+
 		if (cleanRoomFlag == true) {
 			elements.homeCleanRoom.disabled = true
 		} else {
@@ -41,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	})
 
 	elements.homeMeal.addEventListener("click", () => {
+		config.updateValue(config.foodAndGrocery, -1)
 		homeMeal()
 		cleanRoomFlag = false
 	})
