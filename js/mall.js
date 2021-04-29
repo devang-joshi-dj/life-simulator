@@ -4,57 +4,54 @@ import * as config from './config.js'
 document.addEventListener("DOMContentLoaded", () => {
 
 	const shopping = () => {
-		config.updateValue(config.hunger, -3)
-		config.updateValue(config.happiness, +3)
-
 		if (config.cash.innerHTML > 30) {
+			config.updateValue(config.hunger, -3)
+			config.updateValue(config.happiness, +3)
 			config.updateValue(config.cash, -30)
+			config.updateTime(2)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(2)
 	}
 
 	const watchMovies = () => {
-		config.updateValue(config.hunger, -5)
-		config.updateValue(config.happiness, +10)
-
 		if (config.cash.innerHTML > 30) {
+			config.updateValue(config.hunger, -5)
+			config.updateValue(config.happiness, +10)
 			config.updateValue(config.cash, -30)
+			config.updateTime(3)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(3)
 	}
 
 	const gamingZone = () => {
-		config.updateValue(config.hunger, -5)
-		config.updateValue(config.happiness, +10)
-
 		if (config.cash.innerHTML > 30) {
+			config.updateValue(config.hunger, -5)
+			config.updateValue(config.happiness, +10)
 			config.updateValue(config.cash, -30)
+			config.updateTime(1)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(1)
 	}
 
 	const foodCourt = () => {
-		config.updateValue(config.health, -8)
-		config.updateValue(config.hunger, +10)
-		config.updateValue(config.happiness, +10)
-
 		if (config.cash.innerHTML > 25) {
+			config.updateValue(config.health, -8)
+			config.updateValue(config.hunger, +10)
+			config.updateValue(config.happiness, +10)
 			config.updateValue(config.cash, -25)
+			config.updateTime(1)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(1)
 	}
 
 	const foodAndGroceries = () => {
 		if (config.cash.innerHTML >= 10) {
 			config.updateValue(config.cash, -10)
+
 			if (isNaN(config.foodAndGrocery.innerHTML)) {
 				config.setValue(config.foodAndGrocery, +10)
 			} else {

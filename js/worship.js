@@ -4,40 +4,37 @@ import * as config from './config.js'
 document.addEventListener("DOMContentLoaded", () => {
 
 	const pray = () => {
-		config.updateValue(config.health, +10)
-		config.updateValue(config.hunger, -5)
-		config.updateValue(config.happiness, +15)
-
 		if (config.cash.innerHTML > 10) {
+			config.updateValue(config.health, +10)
+			config.updateValue(config.hunger, -5)
+			config.updateValue(config.happiness, +15)
 			config.updateValue(config.cash, -10)
+			config.updateTime(1)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(1)
 	}
 
 	const serve = () => {
-		config.updateValue(config.hunger, -8)
-		config.updateValue(config.happiness, +15)
-
 		if (config.cash.innerHTML > 20) {
+			config.updateValue(config.hunger, -8)
+			config.updateValue(config.happiness, +15)
 			config.updateValue(config.cash, -20)
+			config.updateTime(2)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(2)
 	}
 
 	const charity = () => {
-		config.updateValue(config.hunger, -8)
-		config.updateValue(config.happiness, +20)
-
 		if (config.cash.innerHTML > 30) {
+			config.updateValue(config.hunger, -8)
+			config.updateValue(config.happiness, +20)
 			config.updateValue(config.cash, -30)
+			config.updateTime(1)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(1)
 	}
 
 	document.addEventListener('click', () => {

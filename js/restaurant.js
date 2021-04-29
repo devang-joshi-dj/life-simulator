@@ -4,94 +4,87 @@ import * as config from './config.js'
 document.addEventListener("DOMContentLoaded", () => {
 
 	const fastFood = () => {
-		config.updateValue(config.health, -10)
-		config.updateValue(config.hunger, +10)
-		config.updateValue(config.happiness, +15)
-
 		if (config.cash.innerHTML > 17) {
+			config.updateValue(config.health, -10)
+			config.updateValue(config.hunger, +10)
+			config.updateValue(config.happiness, +15)
 			config.updateValue(config.cash, -17)
+			config.updateTime(1)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(1)
 	}
 
 	const seaFood = () => {
-		config.updateValue(config.health, +5)
-		config.updateValue(config.hunger, +10)
-		config.updateValue(config.happiness, +20)
-
 		if (config.cash.innerHTML > 22) {
+			config.updateValue(config.health, +5)
+			config.updateValue(config.hunger, +10)
+			config.updateValue(config.happiness, +20)
 			config.updateValue(config.cash, -22)
+			config.updateTime(1)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(1)
 	}
 
 	const salad = () => {
-		config.updateValue(config.health, +10)
-		config.updateValue(config.hunger, +10)
-		config.updateValue(config.happiness, +20)
-
 		if (config.cash.innerHTML > 12) {
+			config.updateValue(config.health, +10)
+			config.updateValue(config.hunger, +10)
+			config.updateValue(config.happiness, +20)
 			config.updateValue(config.cash, -12)
+			config.updateTime(1)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(1)
 	}
 
 	const southIndian = () => {
-		config.updateValue(config.health, +7)
-		config.updateValue(config.hunger, +10)
-		config.updateValue(config.happiness, +20)
-
 		if (config.cash.innerHTML > 17) {
+			config.updateValue(config.health, +7)
+			config.updateValue(config.hunger, +10)
+			config.updateValue(config.happiness, +20)
 			config.updateValue(config.cash, -17)
+			config.updateTime(1)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(1)
 	}
 
 	const northIndian = () => {
-		config.updateValue(config.health, +10)
-		config.updateValue(config.hunger, +10)
-		config.updateValue(config.happiness, +20)
-
 		if (config.cash.innerHTML > 17) {
+			config.updateValue(config.health, +10)
+			config.updateValue(config.hunger, +10)
+			config.updateValue(config.happiness, +20)
 			config.updateValue(config.cash, -17)
+			config.updateTime(1)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(1)
 	}
 
 	const italianFood = () => {
-		config.updateValue(config.health, +0)
-		config.updateValue(config.hunger, +0)
-		config.updateValue(config.happiness, +0)
-
 		if (config.cash.innerHTML > 12) {
+			config.updateValue(config.health, +0)
+			config.updateValue(config.hunger, +0)
+			config.updateValue(config.happiness, +0)
 			config.updateValue(config.cash, -12)
+			config.updateTime(1)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(1)
 	}
 
 	const chineseFood = () => {
-		config.updateValue(config.health, -20)
-		config.updateValue(config.hunger, +10)
-		config.updateValue(config.happiness, +20)
-
 		if (config.cash.innerHTML > 17) {
+			config.updateValue(config.health, -20)
+			config.updateValue(config.hunger, +10)
+			config.updateValue(config.happiness, +20)
 			config.updateValue(config.cash, -17)
+			config.updateTime(1)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(1)
 	}
 
 	document.addEventListener('click', () => {

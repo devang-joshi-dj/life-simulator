@@ -15,15 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	elements.gymTalkTrainer.disabled = true
 
 	const takeAdmission = () => {
-		config.updateValue(config.hunger, -5)
-		config.updateValue(config.happiness, +5)
-
 		if (config.cash.innerHTML > 10) {
+			config.updateValue(config.hunger, -5)
+			config.updateValue(config.happiness, +5)
 			config.updateValue(config.cash, -10)
+			config.updateTime(0, 20)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(0,20)
 	}
 
 	const exerciseOneHour = () => {
@@ -48,22 +47,21 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	const dietPlan = () => {
-		config.updateValue(config.health, +4)
-		config.updateValue(config.hunger, +4)
-		config.updateValue(config.happiness, +2)
-
 		if (config.cash.innerHTML > 5) {
+			config.updateValue(config.health, +4)
+			config.updateValue(config.hunger, +4)
+			config.updateValue(config.happiness, +2)
 			config.updateValue(config.cash, -5)
+			config.updateTime(0, 10)
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(0,10)
 	}
 
 	const talkTrainer = () => {
 		config.updateValue(config.hunger, -5)
 		config.updateValue(config.happiness, +5)
-		config.updateTime(0,30)
+		config.updateTime(0, 30)
 	}
 
 	document.addEventListener('click', () => {

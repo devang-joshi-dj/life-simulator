@@ -17,16 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	elements.universityStudyLibrary.disabled = true
 
 	const admission = () => {
-		
+
 		config.updateValue(config.happiness, +2)
 
 		if (config.cash.innerHTML > 500) {
 			config.updateValue(config.cash, -500)
+			config.updateTime(1);
 			alert("You got the admission")
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(1);
 	}
 
 
@@ -34,10 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		if (config.cash.innerHTML > 500) {
 			config.updateValue(config.cash, -500)
+			config.updateTime(0, 30);
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(0,30);
 	}
 
 	const attendClasses = () => {
@@ -55,20 +55,19 @@ document.addEventListener("DOMContentLoaded", () => {
 	const clubMeeting = () => {
 		config.updateValue(config.hunger, -3)
 		config.updateValue(config.happiness, +3)
-		config.updateTime(0,30);
+		config.updateTime(0, 30);
 	}
 
 	const eatCanteen = () => {
-		config.updateValue(config.health, -4)
-		config.updateValue(config.hunger, +4)
-		config.updateValue(config.happiness, +4)
-
 		if (config.cash.innerHTML > 4) {
+			config.updateValue(config.health, -4)
+			config.updateValue(config.hunger, +4)
+			config.updateValue(config.happiness, +4)
 			config.updateValue(config.cash, -4)
+			config.updateTime(0, 20);
 		} else {
 			alert("You don't have enough money")
 		}
-		config.updateTime(0,20);
 	}
 
 	const playGames = () => {
