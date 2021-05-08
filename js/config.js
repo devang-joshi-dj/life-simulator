@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	const initialHunger = 50
 	const initialHappiness = 50
 	const initialCash = 1000
+	const initialIntelligence = 0
+	const initialStrength = 0
+	const initialSpirituality = 0
 	const initialHour = 7
 	const initialMinute = 0
 	const initialFoodAndGrocery = 10
@@ -16,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		setValue(hunger, initialHunger)
 		setValue(happiness, initialHappiness)
 		setValue(cash, initialCash)
+		setValue(intelligence, initialIntelligence)
+		setValue(strength, initialStrength)
+		setValue(spirituality, initialSpirituality)
 		setValue(hour, initialHour)
 		setValue(minute, initialMinute)
 		setValue(foodAndGrocery, initialFoodAndGrocery)
@@ -32,6 +38,11 @@ export const setValue = (element, value) => {
 export let health = elements.healthValue
 export let hunger = elements.hungerValue
 export let happiness = elements.happinessValue
+
+export let intelligence = elements.intelligenceValue
+export let strength = elements.strengthValue
+export let spirituality = elements.spiritualityValue
+
 export let cash = elements.cashValue
 export let hour = elements.hourValue
 export let minute = elements.minuteValue

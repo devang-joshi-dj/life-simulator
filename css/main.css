@@ -162,6 +162,31 @@ div.foodAndGrocery {
 	background-color: rgb(36, 36, 36);
 }
 
+div.characterStatsInfo {
+	width: 250px;
+	height: 120px;
+	position: absolute;
+	display: block;
+	background-color: rgb(36, 36, 36);
+	color: white;
+	bottom: 40px;
+}
+
+div.intelligence, div.strength, div.spirituality {
+	width: inherit;
+	height: 40px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(36, 36, 36);
+}
+
+#foodAndGrocery, #intelligenceValue, #strengthValue, #spiritualityValue {
+	padding-left: 5px;
+	font-weight: bold;
+}
+
 .universityContent .bg {
 	background-image: url("../imgs/lifesimulator_University.svg");
 }

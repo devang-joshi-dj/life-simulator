@@ -1,6 +1,13 @@
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1300px) {
+	.statistics div {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+
+@media screen and (max-width: 1250px) {
 	.statistics div {
 		margin: 0;
 		float: none;

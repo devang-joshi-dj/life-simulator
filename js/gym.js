@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	let admissionFlag2 = false
 	let dietPlanFlag = true
 
+	const timeDiff = 20 - config.hour.innerHTML
+
 	elements.gymTakeAdmission.disabled = false
 	elements.gymExerciseOneHour.disabled = true
 	elements.gymExerciseTwoHours.disabled = true
@@ -26,24 +28,45 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	const exerciseOneHour = () => {
-		config.updateValue(config.health, +5)
-		config.updateValue(config.hunger, +5)
-		config.updateValue(config.happiness, +5)
-		config.updateTime(1)
+		const timeDiff = 20 - config.hour.innerHTML
+		if (timeDiff >= 1) {
+			config.updateValue(config.health, +5)
+			config.updateValue(config.hunger, +5)
+			config.updateValue(config.happiness, +5)
+			config.updateTime(1)
+			config.updateValue(config.strength, +4)
+		}
+		else {
+			alert("You don't have enough time")
+		}
 	}
 
 	const exerciseTwoHours = () => {
-		config.updateValue(config.health, +6)
-		config.updateValue(config.hunger, +6)
-		config.updateValue(config.happiness, +5)
-		config.updateTime(2)
+		const timeDiff = 20 - config.hour.innerHTML
+		if (timeDiff >= 2) {
+			config.updateValue(config.health, +6)
+			config.updateValue(config.hunger, +6)
+			config.updateValue(config.happiness, +5)
+			config.updateTime(2)
+			config.updateValue(config.strength, +8)
+		}
+		else {
+			alert("You don't have enough time")
+		}
 	}
 
 	const exerciseThreeHours = () => {
-		config.updateValue(config.health, +7)
-		config.updateValue(config.hunger, +7)
-		config.updateValue(config.happiness, +5)
-		config.updateTime(3);
+		const timeDiff = 20 - config.hour.innerHTML
+		if (timeDiff >= 3) {
+			config.updateValue(config.health, +7)
+			config.updateValue(config.hunger, +7)
+			config.updateValue(config.happiness, +5)
+			config.updateTime(3);
+			config.updateValue(config.strength, +12)
+		}
+		else {
+			alert("You don't have enough time")
+		}
 	}
 
 	const dietPlan = () => {

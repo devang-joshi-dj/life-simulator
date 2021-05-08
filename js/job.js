@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	elements.jobApplyPromotion.disabled = true
 
 	const jobApplyForWork = () => {
-
+		config.updateValue(config.happiness, +5)
+		config.updateTime(1)
 	}
 
 	const workOneHour = () => {

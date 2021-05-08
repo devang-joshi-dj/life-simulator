@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	elements.universityStudyLibrary.disabled = true
 
 	const admission = () => {
-
 		config.updateValue(config.happiness, +2)
 
 		if (config.cash.innerHTML > 500) {
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 	const payFees = () => {
-
 		if (config.cash.innerHTML > 500) {
 			config.updateValue(config.cash, -500)
 			config.updateTime(0, 30);
@@ -44,12 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateValue(config.hunger, +2)
 		config.updateValue(config.happiness, +4)
 		config.updateTime(1);
+		config.updateValue(config.intelligence, +5)
 	}
 
 	const groupStudy = () => {
 		config.updateValue(config.hunger, +3)
 		config.updateValue(config.happiness, +3)
 		config.updateTime(1);
+		config.updateValue(config.intelligence, +6)
 	}
 
 	const clubMeeting = () => {
@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.updateValue(config.hunger, +3)
 		config.updateValue(config.happiness, +3)
 		config.updateTime(1);
+		config.updateValue(config.intelligence, +8)
 	}
 
 	document.addEventListener('click', () => {

@@ -11,12 +11,15 @@ export const placesFooterElement = document.querySelector('.footer') // Footer
 export const mainElement = document.querySelector('.main') // Main Content Container
 
 // Statistics Element Start
-export const healthValue = document.querySelector('.healthValue')
-export const hungerValue = document.querySelector('.hungerValue')
-export const happinessValue = document.querySelector('.happinessValue')
-export const cashValue = document.querySelector('.cashValue')
-export const hourValue = document.querySelector('.hourValue')
-export const minuteValue = document.querySelector('.minuteValue')
+export const healthValue = document.querySelector('#healthValue')
+export const hungerValue = document.querySelector('#hungerValue')
+export const happinessValue = document.querySelector('#happinessValue')
+export const intelligenceValue = document.querySelector('#intelligenceValue')
+export const strengthValue = document.querySelector('#strengthValue')
+export const spiritualityValue = document.querySelector('#spiritualityValue')
+export const cashValue = document.querySelector('#cashValue')
+export const hourValue = document.querySelector('#hourValue')
+export const minuteValue = document.querySelector('#minuteValue')
 // Statistics Element End
 
 // Main Content Container Elements Start

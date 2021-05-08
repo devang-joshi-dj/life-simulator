@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.happiness, +15)
 			config.updateValue(config.cash, -10)
 			config.updateTime(1)
+			config.updateValue(config.spirituality, +6)
 		} else {
 			alert("You don't have enough money")
 		}
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.happiness, +15)
 			config.updateValue(config.cash, -20)
 			config.updateTime(2)
+			config.updateValue(config.spirituality, +8)
 		} else {
 			alert("You don't have enough money")
 		}
@@ -32,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.happiness, +20)
 			config.updateValue(config.cash, -30)
 			config.updateTime(1)
+			config.updateValue(config.spirituality, +10)
 		} else {
 			alert("You don't have enough money")
 		}
