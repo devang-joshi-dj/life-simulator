@@ -38,9 +38,9 @@ export let health = elements.healthValue
 export let hunger = elements.hungerValue
 export let happiness = elements.happinessValue
 
-export let hungerZero = 0;
-export let happinessZero = 0;
-export let healthZero = 0;
+export let hungerFlag = 0;
+export let happinessFlag = 0;
+export let healthFlag = 0;
 
 export let intelligence = elements.intelligenceValue
 export let strength = elements.strengthValue
@@ -70,52 +70,58 @@ export const updateValue = (element, value) => {
 
 	if (element == hunger) {
 		if (element.innerHTML == 100) {
-			hungerZero++;
-			console.log(hungerZero)
-			if (hungerZero > 3) {
+			hungerFlag++;
+			if (hungerFlag > 3) {
 				alert('You are dead due to hunger. GAME OVER')
 				setValues()
+				element.style.color = 'black'
 			}
 			else {
 				alert('Please eat something')
+				element.style.color = 'red'
 			}
 		}
 		else {
-			hungerZero = 0
+			hungerFlag = 0
+			element.style.color = 'black'
 		}
 	}
 
 	if (element == happiness) {
 		if (element.innerHTML == 0) {
-			happinessZero++;
-			console.log(happinessZero)
-			if (happinessZero > 3) {
+			happinessFlag++;
+			if (happinessFlag > 3) {
 				alert('You are dead due to depression. GAME OVER')
 				setValues()
+				element.style.color = 'black'
 			}
 			else {
 				alert('You are depressed')
+				element.style.color = 'red'
 			}
 		}
 		else {
-			happinessZero = 0
+			happinessFlag = 0
+			element.style.color = 'black'
 		}
 	}
 
 	if (element == health) {
 		if (element.innerHTML == 0) {
-			healthZero++;
-			console.log(healthZero)
-			if (healthZero > 3) {
+			healthFlag++;
+			if (healthFlag > 3) {
 				alert('You are dead due to health. GAME OVER')
 				setValues()
+				element.style.color = 'black'
 			}
 			else {
 				alert('Your health is very low')
+				element.style.color = 'red'
 			}
 		}
 		else {
-			healthZero = 0
+			healthFlag = 0
+			element.style.color = 'black'
 		}
 	}
 }

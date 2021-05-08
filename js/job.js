@@ -4,6 +4,7 @@ import * as config from './config.js'
 document.addEventListener("DOMContentLoaded", () => {
 
 	let promotionStatus = 0
+	let requiredIntelligence = 50
 	let promotionLimit = 10
 	let oneHourSalary = 20
 	let threeHourSalary = 40
@@ -162,18 +163,24 @@ document.addEventListener("DOMContentLoaded", () => {
 	elements.jobApplyPromotion.addEventListener("click", () => {
 		applyPromotion()
 		if (promotionStatus <= promotionLimit) {
-			const randomNumber = Math.floor(Math.random() * 10)
-			if (randomNumber == 1 || randomNumber == 5 || randomNumber == 9) {
-				oneHourSalary = oneHourSalary + 20
-				threeHourSalary = threeHourSalary + 20
-				fiveHourSalary = fiveHourSalary + 20
-				nineHourSalary = nineHourSalary + 20
+			if (requiredIntelligence <= Number(config.intelligence.innerHTML)) {
+				const randomNumber = Math.floor(Math.random() * 10)
+				if (randomNumber == 1 || randomNumber == 5 || randomNumber == 9) {
+					oneHourSalary = oneHourSalary + 20
+					threeHourSalary = threeHourSalary + 20
+					fiveHourSalary = fiveHourSalary + 20
+					nineHourSalary = nineHourSalary + 20
 
-				config.updateValue(config.happiness, +5)
-				alert("You got the Promotion")
-			} else {
-				config.updateValue(config.happiness, -5)
-				alert("You didn't got Promotion")
+					config.updateValue(config.happiness, +5)
+					requiredIntelligence += 50
+					alert("You got the Promotion")
+				} else {
+					config.updateValue(config.happiness, -5)
+					alert("You didn't got Promotion")
+				}
+			}
+			else {
+				alert("You need required intelligence to get promoted: " + requiredIntelligence)
 			}
 		} else {
 			alert("You have reached the highest position already. Cannot be promoted anymore")
