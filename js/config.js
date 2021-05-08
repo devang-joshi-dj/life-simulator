@@ -60,11 +60,6 @@ export const updateTime = (hour = 0, minute = 0) => {
 	elements.hourValue.innerHTML = Number(elements.hourValue.innerHTML) + hour
 	elements.minuteValue.innerHTML = Number(elements.minuteValue.innerHTML) + minute
 
-	if (elements.hourValue.innerHTML > 24) {
-		const extrahour = Number(elements.hourValue.innerHTML) - 24
-		elements.hourValue.innerHTML = 0 + extrahour
-	}
-
 	if (elements.minuteValue.innerHTML == 60) {
 		elements.minuteValue.innerHTML = 0
 		elements.hourValue.innerHTML = Number(elements.hourValue.innerHTML) + 1
@@ -76,6 +71,11 @@ export const updateTime = (hour = 0, minute = 0) => {
 			const extrahour = Number(elements.hourValue.innerHTML) - 24
 			elements.hourValue.innerHTML = 0 + extrahour
 		}
+	}
+
+	if (elements.hourValue.innerHTML > 24) {
+		const extrahour = Number(elements.hourValue.innerHTML) - 24
+		elements.hourValue.innerHTML = 0 + extrahour
 	}
 }
 
