@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const takeAdmission = () => {
 		if (config.cash.innerHTML > 10) {
-			config.updateValue(config.hunger, -5)
+			config.updateValue(config.hunger, +5)
 			config.updateValue(config.happiness, +5)
 			config.updateValue(config.cash, -10)
 			config.updateTime(0, 20)
@@ -27,21 +27,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const exerciseOneHour = () => {
 		config.updateValue(config.health, +5)
-		config.updateValue(config.hunger, -5)
+		config.updateValue(config.hunger, +5)
 		config.updateValue(config.happiness, +5)
 		config.updateTime(1)
 	}
 
 	const exerciseTwoHours = () => {
 		config.updateValue(config.health, +6)
-		config.updateValue(config.hunger, -6)
+		config.updateValue(config.hunger, +6)
 		config.updateValue(config.happiness, +5)
 		config.updateTime(2)
 	}
 
 	const exerciseThreeHours = () => {
 		config.updateValue(config.health, +7)
-		config.updateValue(config.hunger, -7)
+		config.updateValue(config.hunger, +7)
 		config.updateValue(config.happiness, +5)
 		config.updateTime(3);
 	}
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const dietPlan = () => {
 		if (config.cash.innerHTML > 5) {
 			config.updateValue(config.health, +4)
-			config.updateValue(config.hunger, +4)
+			config.updateValue(config.hunger, -4)
 			config.updateValue(config.happiness, +2)
 			config.updateValue(config.cash, -5)
 			config.updateTime(0, 10)
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	const talkTrainer = () => {
-		config.updateValue(config.hunger, -5)
+		config.updateValue(config.hunger, +5)
 		config.updateValue(config.happiness, +5)
 		config.updateTime(0, 30)
 	}

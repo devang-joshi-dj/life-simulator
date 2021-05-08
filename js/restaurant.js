@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const fastFood = () => {
 		if (config.cash.innerHTML > 17) {
 			config.updateValue(config.health, -10)
-			config.updateValue(config.hunger, +10)
+			config.updateValue(config.hunger, -10)
 			config.updateValue(config.happiness, +15)
 			config.updateValue(config.cash, -17)
 			config.updateTime(1)
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const seaFood = () => {
 		if (config.cash.innerHTML > 22) {
 			config.updateValue(config.health, +5)
-			config.updateValue(config.hunger, +10)
+			config.updateValue(config.hunger, -10)
 			config.updateValue(config.happiness, +20)
 			config.updateValue(config.cash, -22)
 			config.updateTime(1)
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const salad = () => {
 		if (config.cash.innerHTML > 12) {
 			config.updateValue(config.health, +10)
-			config.updateValue(config.hunger, +10)
+			config.updateValue(config.hunger, -10)
 			config.updateValue(config.happiness, +20)
 			config.updateValue(config.cash, -12)
 			config.updateTime(1)
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const southIndian = () => {
 		if (config.cash.innerHTML > 17) {
 			config.updateValue(config.health, +7)
-			config.updateValue(config.hunger, +10)
+			config.updateValue(config.hunger, -10)
 			config.updateValue(config.happiness, +20)
 			config.updateValue(config.cash, -17)
 			config.updateTime(1)
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const northIndian = () => {
 		if (config.cash.innerHTML > 17) {
 			config.updateValue(config.health, +10)
-			config.updateValue(config.hunger, +10)
+			config.updateValue(config.hunger, -10)
 			config.updateValue(config.happiness, +20)
 			config.updateValue(config.cash, -17)
 			config.updateTime(1)
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const italianFood = () => {
 		if (config.cash.innerHTML > 12) {
 			config.updateValue(config.health, +0)
-			config.updateValue(config.hunger, +0)
+			config.updateValue(config.hunger, -10)
 			config.updateValue(config.happiness, +0)
 			config.updateValue(config.cash, -12)
 			config.updateTime(1)
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const chineseFood = () => {
 		if (config.cash.innerHTML > 17) {
 			config.updateValue(config.health, -20)
-			config.updateValue(config.hunger, +10)
+			config.updateValue(config.hunger, -10)
 			config.updateValue(config.happiness, +20)
 			config.updateValue(config.cash, -17)
 			config.updateTime(1)

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const shopping = () => {
 		if (config.cash.innerHTML > 30) {
-			config.updateValue(config.hunger, -3)
+			config.updateValue(config.hunger, +3)
 			config.updateValue(config.happiness, +3)
 			config.updateValue(config.cash, -30)
 			config.updateTime(2)
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const watchMovies = () => {
 		if (config.cash.innerHTML > 30) {
-			config.updateValue(config.hunger, -5)
+			config.updateValue(config.hunger, +5)
 			config.updateValue(config.happiness, +10)
 			config.updateValue(config.cash, -30)
 			config.updateTime(3)
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const gamingZone = () => {
 		if (config.cash.innerHTML > 30) {
-			config.updateValue(config.hunger, -5)
+			config.updateValue(config.hunger, +5)
 			config.updateValue(config.happiness, +10)
 			config.updateValue(config.cash, -30)
 			config.updateTime(1)
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const foodCourt = () => {
 		if (config.cash.innerHTML > 25) {
 			config.updateValue(config.health, -8)
-			config.updateValue(config.hunger, +10)
+			config.updateValue(config.hunger, -10)
 			config.updateValue(config.happiness, +10)
 			config.updateValue(config.cash, -25)
 			config.updateTime(1)

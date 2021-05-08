@@ -41,19 +41,19 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	const attendClasses = () => {
-		config.updateValue(config.hunger, -2)
+		config.updateValue(config.hunger, +2)
 		config.updateValue(config.happiness, +4)
 		config.updateTime(1);
 	}
 
 	const groupStudy = () => {
-		config.updateValue(config.hunger, -3)
+		config.updateValue(config.hunger, +3)
 		config.updateValue(config.happiness, +3)
 		config.updateTime(1);
 	}
 
 	const clubMeeting = () => {
-		config.updateValue(config.hunger, -3)
+		config.updateValue(config.hunger, +3)
 		config.updateValue(config.happiness, +3)
 		config.updateTime(0, 30);
 	}
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const eatCanteen = () => {
 		if (config.cash.innerHTML > 4) {
 			config.updateValue(config.health, -4)
-			config.updateValue(config.hunger, +4)
+			config.updateValue(config.hunger, -4)
 			config.updateValue(config.happiness, +4)
 			config.updateValue(config.cash, -4)
 			config.updateTime(0, 20);
@@ -71,13 +71,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	const playGames = () => {
-		config.updateValue(config.hunger, -4)
+		config.updateValue(config.hunger, +4)
 		config.updateValue(config.happiness, +4)
 		config.updateTime(1);
 	}
 
 	const studyLibrary = () => {
-		config.updateValue(config.hunger, -3)
+		config.updateValue(config.hunger, +3)
 		config.updateValue(config.happiness, +3)
 		config.updateTime(1);
 	}

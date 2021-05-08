@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const pray = () => {
 		if (config.cash.innerHTML > 10) {
 			config.updateValue(config.health, +10)
-			config.updateValue(config.hunger, -5)
+			config.updateValue(config.hunger, +5)
 			config.updateValue(config.happiness, +15)
 			config.updateValue(config.cash, -10)
 			config.updateTime(1)
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const serve = () => {
 		if (config.cash.innerHTML > 20) {
-			config.updateValue(config.hunger, -8)
+			config.updateValue(config.hunger, +8)
 			config.updateValue(config.happiness, +15)
 			config.updateValue(config.cash, -20)
 			config.updateTime(2)
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const charity = () => {
 		if (config.cash.innerHTML > 30) {
-			config.updateValue(config.hunger, -8)
+			config.updateValue(config.hunger, +8)
 			config.updateValue(config.happiness, +20)
 			config.updateValue(config.cash, -30)
 			config.updateTime(1)
