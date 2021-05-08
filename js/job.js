@@ -1,7 +1,7 @@
 import * as elements from './elements.js'
 import * as config from './config.js'
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 	let promotionStatus = 0
 	let requiredIntelligence = 50
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateTime(1)
 		}
 		else {
-			alert("You don't have enough time")
+			alert(`You don't have enough time`)
 		}
 	}
 
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateTime(3)
 		}
 		else {
-			alert("You don't have enough time")
+			alert(`You don't have enough time`)
 		}
 	}
 
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateTime(5)
 		}
 		else {
-			alert("You don't have enough time")
+			alert(`You don't have enough time`)
 		}
 	}
 
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateTime(9)
 		}
 		else {
-			alert("You don't have enough time")
+			alert(`You don't have enough time`)
 		}
 	}
 
@@ -122,9 +122,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	})
 
-	elements.jobApplyForWork.addEventListener("click", () => {
+	elements.jobApplyForWork.addEventListener('click', () => {
 		jobApplyForWork()
-		alert("You got the Job")
+		alert(`You got the Job`)
 		applyForWorkFlag1 = false
 		applyForWorkFlag2 = true
 		elements.jobApplyForWork.disabled = true
@@ -136,31 +136,31 @@ document.addEventListener("DOMContentLoaded", () => {
 		elements.jobAttendMeeting.disabled = false
 		elements.jobApplyPromotion.disabled = false
 	})
-	elements.jobWorkOneHour.addEventListener("click", () => {
+	elements.jobWorkOneHour.addEventListener('click', () => {
 		workOneHour()
 		promotionFlag = false
 	})
-	elements.jobWorkThreeHours.addEventListener("click", () => {
+	elements.jobWorkThreeHours.addEventListener('click', () => {
 		workThreeHours()
 		promotionFlag = false
 	})
-	elements.jobWorkFiveHours.addEventListener("click", () => {
+	elements.jobWorkFiveHours.addEventListener('click', () => {
 		workFiveHours()
 		promotionFlag = false
 	})
-	elements.jobWorkNineHours.addEventListener("click", () => {
+	elements.jobWorkNineHours.addEventListener('click', () => {
 		workNineHours()
 		promotionFlag = false
 	})
-	elements.jobTakeBreak.addEventListener("click", () => {
+	elements.jobTakeBreak.addEventListener('click', () => {
 		takeBreak()
 		promotionFlag = false
 	})
-	elements.jobAttendMeeting.addEventListener("click", () => {
+	elements.jobAttendMeeting.addEventListener('click', () => {
 		attendMeeting()
 		promotionFlag = false
 	})
-	elements.jobApplyPromotion.addEventListener("click", () => {
+	elements.jobApplyPromotion.addEventListener('click', () => {
 		applyPromotion()
 		if (promotionStatus <= promotionLimit) {
 			if (requiredIntelligence <= Number(config.intelligence.innerHTML)) {
@@ -173,17 +173,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 					config.updateValue(config.happiness, +5)
 					requiredIntelligence += 50
-					alert("You got the Promotion")
+					alert(`You got the Promotion`)
 				} else {
 					config.updateValue(config.happiness, -5)
-					alert("You didn't got Promotion")
+					alert(`You didn't got Promotion`)
 				}
 			}
 			else {
-				alert("You need required intelligence to get promoted: " + requiredIntelligence)
+				alert(`You need required intelligence to get promoted: ${requiredIntelligence}`)
 			}
 		} else {
-			alert("You have reached the highest position already. Cannot be promoted anymore")
+			alert(`You have reached the highest position already. Cannot be promoted anymore`)
 		}
 		promotionFlag = true
 	})

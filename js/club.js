@@ -1,7 +1,7 @@
 import * as elements from './elements.js'
 import * as config from './config.js'
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 	const dance = () => {
 		config.updateValue(config.hunger, +5)
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -25)
 			config.updateTime(1)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	})
 
-	elements.clubDance.addEventListener("click", dance)
-	elements.clubDrinkEat.addEventListener("click", drinkEat)
-	elements.clubMeetPeople.addEventListener("click", meetPeople)
+	elements.clubDance.addEventListener('click', dance)
+	elements.clubDrinkEat.addEventListener('click', drinkEat)
+	elements.clubMeetPeople.addEventListener('click', meetPeople)
 })

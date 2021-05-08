@@ -1,7 +1,7 @@
 import * as elements from './elements.js'
 import * as config from './config.js'
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 	let admissionFlag1 = true
 	let admissionFlag2 = false
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -10)
 			config.updateTime(0, 20)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.strength, +4)
 		}
 		else {
-			alert("You don't have enough time")
+			alert(`You don't have enough time`)
 		}
 	}
 
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.strength, +8)
 		}
 		else {
-			alert("You don't have enough time")
+			alert(`You don't have enough time`)
 		}
 	}
 
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.strength, +12)
 		}
 		else {
-			alert("You don't have enough time")
+			alert(`You don't have enough time`)
 		}
 	}
 
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -5)
 			config.updateTime(0, 10)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	})
 
-	elements.gymTakeAdmission.addEventListener("click", () => {
+	elements.gymTakeAdmission.addEventListener('click', () => {
 		takeAdmission()
 		admissionFlag1 = false
 		admissionFlag2 = true
@@ -112,13 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		elements.gymDietPlan.disabled = false
 		elements.gymTalkTrainer.disabled = false
 	})
-	elements.gymExerciseOneHour.addEventListener("click", exerciseOneHour)
-	elements.gymExerciseTwoHours.addEventListener("click", exerciseTwoHours)
-	elements.gymExerciseThreeHours.addEventListener("click", exerciseThreeHours)
-	elements.gymDietPlan.addEventListener("click", () => {
+	elements.gymExerciseOneHour.addEventListener('click', exerciseOneHour)
+	elements.gymExerciseTwoHours.addEventListener('click', exerciseTwoHours)
+	elements.gymExerciseThreeHours.addEventListener('click', exerciseThreeHours)
+	elements.gymDietPlan.addEventListener('click', () => {
 		dietPlan()
 		dietPlanFlag = false
 		elements.gymDietPlan.disabled = true
 	})
-	elements.gymTalkTrainer.addEventListener("click", talkTrainer)
+	elements.gymTalkTrainer.addEventListener('click', talkTrainer)
 })

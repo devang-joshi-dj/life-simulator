@@ -1,7 +1,7 @@
 import * as elements from './elements.js'
 import * as config from './config.js'
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 	const shopping = () => {
 		if (config.cash.innerHTML > 30) {
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -30)
 			config.updateTime(2)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -30)
 			config.updateTime(3)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -30)
 			config.updateTime(1)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -25)
 			config.updateTime(1)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -70,9 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.disableElement(elements.mallFoodAndGroceries, 21, 10)
 	})
 
-	elements.mallShopping.addEventListener("click", shopping)
-	elements.mallWatchMovies.addEventListener("click", watchMovies)
-	elements.mallGamingZone.addEventListener("click", gamingZone)
-	elements.mallFoodCourt.addEventListener("click", foodCourt)
-	elements.mallFoodAndGroceries.addEventListener("click", foodAndGroceries)
+	elements.mallShopping.addEventListener('click', shopping)
+	elements.mallWatchMovies.addEventListener('click', watchMovies)
+	elements.mallGamingZone.addEventListener('click', gamingZone)
+	elements.mallFoodCourt.addEventListener('click', foodCourt)
+	elements.mallFoodAndGroceries.addEventListener('click', foodAndGroceries)
 })

@@ -1,7 +1,7 @@
 import * as elements from './elements.js'
 import * as config from './config.js'
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 	const pray = () => {
 		if (config.cash.innerHTML > 10) {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateTime(1)
 			config.updateValue(config.spirituality, +6)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateTime(2)
 			config.updateValue(config.spirituality, +8)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateTime(1)
 			config.updateValue(config.spirituality, +10)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.disableElement(elements.worshipCharity, 21, 7)
 	})
 
-	elements.worshipPray.addEventListener("click", pray)
-	elements.worshipServe.addEventListener("click", serve)
-	elements.worshipCharity.addEventListener("click", charity)
+	elements.worshipPray.addEventListener('click', pray)
+	elements.worshipServe.addEventListener('click', serve)
+	elements.worshipCharity.addEventListener('click', charity)
 })

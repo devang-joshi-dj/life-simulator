@@ -1,7 +1,7 @@
 import * as elements from './elements.js'
 import * as config from './config.js'
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 	let cleanRoomFlag = false
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.disableElement(elements.homeCleanRoom, 0, 7)
 
 		if (config.foodAndGrocery.innerHTML <= 0 || isNaN(config.foodAndGrocery.innerHTML)) {
-			config.foodAndGrocery.innerHTML = "<span style='color:red'>Buy From Mall</span>"
+			config.foodAndGrocery.innerHTML = `<span style='color:red'>Buy From Mall</span>`
 			elements.homeMeal.disabled = true
 		}
 		else {
@@ -48,17 +48,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	})
 
-	elements.homeMeal.addEventListener("click", () => {
+	elements.homeMeal.addEventListener('click', () => {
 		config.updateValue(config.foodAndGrocery, -1)
 		homeMeal()
 		cleanRoomFlag = false
 	})
-	elements.homeRest.addEventListener("click", () => {
+	elements.homeRest.addEventListener('click', () => {
 		homeRest()
 		cleanRoomFlag = false
 	})
-	elements.homeMeetFamily.addEventListener("click", homeMeetfamily)
-	elements.homeCleanRoom.addEventListener("click", () => {
+	elements.homeMeetFamily.addEventListener('click', homeMeetfamily)
+	elements.homeCleanRoom.addEventListener('click', () => {
 		homeCleanRoom()
 		cleanRoomFlag = true
 	})

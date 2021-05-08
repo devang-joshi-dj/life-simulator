@@ -1,7 +1,7 @@
 import * as elements from './elements.js'
 import * as config from './config.js'
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 	let admissionFlag1 = false
 	let feesFlag1 = false
@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (config.cash.innerHTML > 500) {
 			config.updateValue(config.cash, -500)
 			config.updateTime(1);
-			alert("You got the admission")
+			alert(`You got the admission`)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -500)
 			config.updateTime(0, 30);
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -4)
 			config.updateTime(0, 20);
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	})
 
-	elements.universityAdmission.addEventListener("click", () => {
+	elements.universityAdmission.addEventListener('click', () => {
 		admission()
 		admissionFlag1 = true
 		admissionFlag2 = false
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		elements.universityPlayGames.disabled = true
 		elements.universityStudyLibrary.disabled = true
 	})
-	elements.universityPayFees.addEventListener("click", () => {
+	elements.universityPayFees.addEventListener('click', () => {
 		feesFlag1 = true
 		feesFlag2 = false
 		payFees()
@@ -124,10 +124,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		elements.universityPlayGames.disabled = false
 		elements.universityStudyLibrary.disabled = false
 	})
-	elements.universityAttendClasses.addEventListener("click", attendClasses)
-	elements.universityGroupStudy.addEventListener("click", groupStudy)
-	elements.universityClubMeeting.addEventListener("click", clubMeeting)
-	elements.universityEatCanteen.addEventListener("click", eatCanteen)
-	elements.universityPlayGames.addEventListener("click", playGames)
-	elements.universityStudyLibrary.addEventListener("click", studyLibrary)
+	elements.universityAttendClasses.addEventListener('click', attendClasses)
+	elements.universityGroupStudy.addEventListener('click', groupStudy)
+	elements.universityClubMeeting.addEventListener('click', clubMeeting)
+	elements.universityEatCanteen.addEventListener('click', eatCanteen)
+	elements.universityPlayGames.addEventListener('click', playGames)
+	elements.universityStudyLibrary.addEventListener('click', studyLibrary)
 })

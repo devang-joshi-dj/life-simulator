@@ -1,6 +1,6 @@
 import * as elements from './elements.js'
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 	setValues()
 })
 
@@ -72,12 +72,12 @@ export const updateValue = (element, value) => {
 		if (element.innerHTML == 100) {
 			hungerFlag++;
 			if (hungerFlag > 3) {
-				alert('You are dead due to hunger. GAME OVER')
+				alert(`You are dead due to hunger. GAME OVER`)
 				setValues()
 				element.style.color = 'black'
 			}
 			else {
-				alert('Please eat something')
+				alert(`Please eat something`)
 				element.style.color = 'red'
 			}
 		}
@@ -91,12 +91,12 @@ export const updateValue = (element, value) => {
 		if (element.innerHTML == 0) {
 			happinessFlag++;
 			if (happinessFlag > 3) {
-				alert('You are dead due to depression. GAME OVER')
+				alert(`You are dead due to depression. GAME OVER`)
 				setValues()
 				element.style.color = 'black'
 			}
 			else {
-				alert('You are depressed')
+				alert(`You are depressed`)
 				element.style.color = 'red'
 			}
 		}
@@ -110,12 +110,12 @@ export const updateValue = (element, value) => {
 		if (element.innerHTML == 0) {
 			healthFlag++;
 			if (healthFlag > 3) {
-				alert('You are dead due to health. GAME OVER')
+				alert(`You are dead due to health. GAME OVER`)
 				setValues()
 				element.style.color = 'black'
 			}
 			else {
-				alert('Your health is very low')
+				alert(`Your health is very low`)
 				element.style.color = 'red'
 			}
 		}
@@ -172,7 +172,7 @@ export const disableElement = (element, start, end) => {
 
 }
 
-document.addEventListener("click", () => {
+document.addEventListener('click', () => {
 	// function to properly handle zero in time before single digit time
 	if (elements.hourValue.innerHTML == 0) {
 		elements.hourValue.innerHTML = '00'

@@ -1,7 +1,7 @@
 import * as elements from './elements.js'
 import * as config from './config.js'
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 	const fastFood = () => {
 		if (config.cash.innerHTML > 17) {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -17)
 			config.updateTime(1)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -22)
 			config.updateTime(1)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -12)
 			config.updateTime(1)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -17)
 			config.updateTime(1)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -17)
 			config.updateTime(1)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -12)
 			config.updateTime(1)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			config.updateValue(config.cash, -17)
 			config.updateTime(1)
 		} else {
-			alert("You don't have enough money")
+			alert(`You don't have enough money`)
 		}
 	}
 
@@ -97,11 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		config.disableElement(elements.restaurantEatChineseFood, 7, 16)
 	})
 
-	elements.restaurantEatFastFood.addEventListener("click", fastFood)
-	elements.restaurantEatSeaFood.addEventListener("click", seaFood)
-	elements.restaurantEatSalad.addEventListener("click", salad)
-	elements.restaurantEatSouthIndian.addEventListener("click", southIndian)
-	elements.restaurantEatNorthIndian.addEventListener("click", northIndian)
-	elements.restaurantEatItalianFood.addEventListener("click", italianFood)
-	elements.restaurantEatChineseFood.addEventListener("click", chineseFood)
+	elements.restaurantEatFastFood.addEventListener('click', fastFood)
+	elements.restaurantEatSeaFood.addEventListener('click', seaFood)
+	elements.restaurantEatSalad.addEventListener('click', salad)
+	elements.restaurantEatSouthIndian.addEventListener('click', southIndian)
+	elements.restaurantEatNorthIndian.addEventListener('click', northIndian)
+	elements.restaurantEatItalianFood.addEventListener('click', italianFood)
+	elements.restaurantEatChineseFood.addEventListener('click', chineseFood)
 })

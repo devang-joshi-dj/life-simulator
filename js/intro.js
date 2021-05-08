@@ -7,7 +7,7 @@ xmlhttp.onreadystatechange = function () {
 
 		const randomPlayer = json.players[Math.floor(Math.random() * 10)]
 
-		const title = (randomPlayer["Gender"] == "Male") ? 'Mr.' : 'Mrs.'
+		const title = (randomPlayer['Gender'] == 'Male') ? 'Mr.' : 'Mrs.'
 
 		elements.introTextElement.innerHTML = `
 		<h1><center>ID</center></h1>
@@ -23,7 +23,7 @@ xmlhttp.onreadystatechange = function () {
 		`
 	}
 }
-xmlhttp.open("GET", "../assets/player.json", true)
+xmlhttp.open('GET', '../assets/player.json', true)
 xmlhttp.send()
 
 
