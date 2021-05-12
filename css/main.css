@@ -48,6 +48,12 @@ html, body {
 	outline: none;
 }
 
+.howToPlayContainer>h1 {
+	position: absolute;
+	top: 50px;
+	font-size: 4em;
+}
+
 /* Container for How to Play End */
 
 /* Container for Intro Start */
