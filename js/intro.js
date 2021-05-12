@@ -28,6 +28,10 @@ xmlhttp.send()
 
 
 window.onload = () => {
+	elements.howToPlayButton.addEventListener('click', () => {
+		elements.howToPlayContainer.style.display = 'none'
+	})
+
 	elements.introButton.addEventListener('click', () => {
 		elements.introContainer.style.display = 'none'
 		elements.containerElement.style.display = 'flex'

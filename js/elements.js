@@ -1,4 +1,6 @@
 // All Elements of Introduction
+export const howToPlayContainer = document.querySelector('.howToPlayContainer')
+export const howToPlayButton = document.querySelector('#howToPlayButton')
 export const introContainer = document.querySelector('.introContainer')
 export const introElement = document.querySelector('.intro')
 export const introTextElement = document.querySelector('.introText')
