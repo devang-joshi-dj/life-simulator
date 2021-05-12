@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	let promotionStatus = 0
 	let requiredIntelligence = 50
 	let promotionLimit = 10
-	let oneHourSalary = 20
-	let threeHourSalary = 40
-	let fiveHourSalary = 60
-	let nineHourSalary = 80
+	let oneHourSalary = 10
+	let threeHourSalary = 30
+	let fiveHourSalary = 50
+	let nineHourSalary = 90
 
 	let promotionFlag = false
 	let applyForWorkFlag1 = true
@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		const timeDiff = 20 - config.hour.innerHTML
 		if (timeDiff >= 1) {
 			config.updateValue(config.health, -2)
-			config.updateValue(config.hunger, +5)
-			config.updateValue(config.happiness, +5)
+			config.updateValue(config.hunger, +9)
+			config.updateValue(config.happiness, -5)
 			config.updateValue(config.cash, oneHourSalary)
 			config.updateTime(1)
 		}
@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		const timeDiff = 20 - config.hour.innerHTML
 		if (timeDiff >= 3) {
 			config.updateValue(config.health, -5)
-			config.updateValue(config.hunger, +9)
-			config.updateValue(config.happiness, +9)
+			config.updateValue(config.hunger, +27)
+			config.updateValue(config.happiness, -9)
 			config.updateValue(config.cash, threeHourSalary)
 			config.updateTime(3)
 		}
@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		const timeDiff = 20 - config.hour.innerHTML
 		if (timeDiff >= 5) {
 			config.updateValue(config.health, -9)
-			config.updateValue(config.hunger, +17)
-			config.updateValue(config.happiness, +17)
+			config.updateValue(config.hunger, +45)
+			config.updateValue(config.happiness, -17)
 			config.updateValue(config.cash, fiveHourSalary)
 			config.updateTime(5)
 		}
@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		const timeDiff = 20 - config.hour.innerHTML
 		if (timeDiff >= 9) {
 			config.updateValue(config.health, -17)
-			config.updateValue(config.hunger, +33)
-			config.updateValue(config.happiness, +33)
+			config.updateValue(config.hunger, +81)
+			config.updateValue(config.happiness, -33)
 			config.updateValue(config.cash, nineHourSalary)
 			config.updateTime(9)
 		}
@@ -87,13 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const takeBreak = () => {
 		config.updateValue(config.health, +5)
-		config.updateValue(config.hunger, -5)
+		config.updateValue(config.hunger, -10)
 		config.updateValue(config.happiness, +5)
 		config.updateTime(1)
 	}
 
 	const attendMeeting = () => {
-		config.updateValue(config.hunger, +5)
+		config.updateValue(config.hunger, +7)
 		config.updateValue(config.happiness, +5)
 		config.updateTime(1)
 	}
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					requiredIntelligence += 50
 					alert(`You got the Promotion`)
 				} else {
-					config.updateValue(config.happiness, -5)
+					config.updateValue(config.happiness, -8)
 					alert(`You didn't got Promotion`)
 				}
 			}
