@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const homeRest = () => {
 		config.updateValue(config.health, +2)
 		config.updateValue(config.happiness, +2)
+		config.updateValue(config.hunger, +2)
 		config.updateTime(1);
 	}
 
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	const homeCleanRoom = () => {
-		config.updateValue(config.hunger, +2)
+		config.updateValue(config.hunger, +7)
 		config.updateValue(config.happiness, +2)
 		config.updateTime(1);
 	}

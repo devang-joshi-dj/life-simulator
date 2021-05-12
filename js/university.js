@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const payFees = () => {
 		if (config.cash.innerHTML > 500) {
-			config.updateValue(config.cash, -500)
+			config.updateValue(config.cash, -700)
 			config.updateTime(0, 30);
 		} else {
 			alert(`You don't have enough money`)
@@ -39,45 +39,45 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	const attendClasses = () => {
-		config.updateValue(config.hunger, +2)
+		config.updateValue(config.hunger, +5)
 		config.updateValue(config.happiness, +4)
 		config.updateTime(1);
 		config.updateValue(config.intelligence, +5)
 	}
 
 	const groupStudy = () => {
-		config.updateValue(config.hunger, +3)
+		config.updateValue(config.hunger, +5)
 		config.updateValue(config.happiness, +3)
 		config.updateTime(1);
-		config.updateValue(config.intelligence, +6)
+		config.updateValue(config.intelligence, +7)
 	}
 
 	const clubMeeting = () => {
-		config.updateValue(config.hunger, +3)
+		config.updateValue(config.hunger, +4)
 		config.updateValue(config.happiness, +3)
 		config.updateTime(0, 30);
 	}
 
 	const eatCanteen = () => {
 		if (config.cash.innerHTML > 4) {
-			config.updateValue(config.health, -4)
+			config.updateValue(config.health, -7)
 			config.updateValue(config.hunger, -4)
 			config.updateValue(config.happiness, +4)
-			config.updateValue(config.cash, -4)
-			config.updateTime(0, 20);
+			config.updateValue(config.cash, -2)
+			config.updateTime(0, 30);
 		} else {
 			alert(`You don't have enough money`)
 		}
 	}
 
 	const playGames = () => {
-		config.updateValue(config.hunger, +4)
+		config.updateValue(config.hunger, +10)
 		config.updateValue(config.happiness, +4)
 		config.updateTime(1);
 	}
 
 	const studyLibrary = () => {
-		config.updateValue(config.hunger, +3)
+		config.updateValue(config.hunger, +7)
 		config.updateValue(config.happiness, +3)
 		config.updateTime(1);
 		config.updateValue(config.intelligence, +8)

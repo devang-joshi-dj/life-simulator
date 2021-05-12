@@ -4,7 +4,7 @@ import * as config from './config.js'
 document.addEventListener('DOMContentLoaded', () => {
 
 	const fastFood = () => {
-		if (config.cash.innerHTML > 17) {
+		if (config.cash.innerHTML > 20) {
 			config.updateValue(config.health, -10)
 			config.updateValue(config.hunger, -10)
 			config.updateValue(config.happiness, +15)
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	const seaFood = () => {
-		if (config.cash.innerHTML > 22) {
+		if (config.cash.innerHTML > 25) {
 			config.updateValue(config.health, +5)
 			config.updateValue(config.hunger, -10)
 			config.updateValue(config.happiness, +20)
