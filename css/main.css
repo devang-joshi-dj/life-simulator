@@ -19,7 +19,7 @@ html, body {
 .howToPlayContainer {
 	width: 100%;
 	height: 100vh;
-	background-color: rgb(200, 212, 93);
+	background-image: linear-gradient(to bottom, #3F8CC0, #3F4CC0, #3FC0B3);
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -30,12 +30,13 @@ html, body {
 .content {
 	width: 40%;
 	padding: 10px;
-	border-radius: 10px;
+	border-radius: 50px;
+	font-size: 1.4em;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: rgb(145, 184, 130);
+	background-color: rgb(182, 194, 204);
 }
 
 #howToPlayButton {
@@ -68,7 +69,6 @@ html, body {
 
 .intro {
 	width: 40%;
-	height: 200;
 	padding: 10px;
 	border-radius: 50px;
 	display: flex;
@@ -92,9 +92,10 @@ html, body {
 }
 
 #introButton {
-	padding: 10px;
+	border-radius: 10px;
+	padding: 5px;
 	width: 100px;
-	background-color: #393e46;
+	background-color: #5b6f91;
 	color: #fff;
 	cursor: pointer;
 	outline: none;
@@ -141,7 +142,7 @@ html, body {
 	margin: 0 5px;
 }
 
-.time {
+.days, .time {
 	float: right;
 }
 

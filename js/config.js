@@ -11,9 +11,13 @@ const initialCash = 1000
 const initialIntelligence = 0
 const initialStrength = 0
 const initialSpirituality = 0
+const initialDaysValue = 0
 const initialHour = 7
 const initialMinute = 0
 const initialFoodAndGrocery = 10
+
+const daysLength = 100
+let dayComplete = true
 
 const setValues = () => {
 	// function for setting all values
@@ -24,6 +28,7 @@ const setValues = () => {
 	setValue(intelligence, initialIntelligence)
 	setValue(strength, initialStrength)
 	setValue(spirituality, initialSpirituality)
+	setValue(days, initialDaysValue)
 	setValue(hour, initialHour)
 	setValue(minute, initialMinute)
 	setValue(foodAndGrocery, initialFoodAndGrocery)
@@ -45,6 +50,8 @@ export let healthFlag = 0;
 export let intelligence = elements.intelligenceValue
 export let strength = elements.strengthValue
 export let spirituality = elements.spiritualityValue
+
+export let days = elements.daysValue
 
 export let cash = elements.cashValue
 export let hour = elements.hourValue
@@ -72,8 +79,7 @@ export const updateValue = (element, value) => {
 		if (element.innerHTML == 100) {
 			hungerFlag++;
 			if (hungerFlag > 3) {
-				alert(`You are dead due to hunger. GAME OVER`)
-				setValues()
+				gameOver(`You are dead due to hunger. GAME OVER`)
 				element.style.color = 'black'
 			}
 			else {
@@ -91,8 +97,7 @@ export const updateValue = (element, value) => {
 		if (element.innerHTML == 0) {
 			happinessFlag++;
 			if (happinessFlag > 3) {
-				alert(`You are dead due to depression. GAME OVER`)
-				setValues()
+				gameOver(`You are dead due to depression. GAME OVER`)
 				element.style.color = 'black'
 			}
 			else {
@@ -110,8 +115,7 @@ export const updateValue = (element, value) => {
 		if (element.innerHTML == 0) {
 			healthFlag++;
 			if (healthFlag > 3) {
-				alert(`You are dead due to health. GAME OVER`)
-				setValues()
+				gameOver(`You are dead due to health. GAME OVER`)
 				element.style.color = 'black'
 			}
 			else {
@@ -126,34 +130,43 @@ export const updateValue = (element, value) => {
 	}
 }
 
-export const updateTime = (hour = 0, minute = 0) => {
+export const updateTime = (hours = 0, minutes = 0) => {
 	// function for updating time
-	elements.hourValue.innerHTML = Number(elements.hourValue.innerHTML) + hour
-	elements.minuteValue.innerHTML = Number(elements.minuteValue.innerHTML) + minute
+	hour.innerHTML = Number(hour.innerHTML) + hours
+	minute.innerHTML = Number(minute.innerHTML) + minutes
 
-	if (elements.minuteValue.innerHTML == 60) {
-		elements.minuteValue.innerHTML = 0
-		elements.hourValue.innerHTML = Number(elements.hourValue.innerHTML) + 1
-	} else if (elements.minuteValue.innerHTML > 60) {
-		const extraMinute = Number(elements.minuteValue.innerHTML) - 60
-		elements.minuteValue.innerHTML = extraMinute
-		elements.hourValue.innerHTML = Number(elements.hourValue.innerHTML) + 1
-		if (elements.hourValue.innerHTML > 24) {
-			const extrahour = Number(elements.hourValue.innerHTML) - 24
-			elements.hourValue.innerHTML = 0 + extrahour
+	if (minute.innerHTML == 60) {
+		minute.innerHTML = 0
+		hour.innerHTML = Number(hour.innerHTML) + 1
+	} else if (minute.innerHTML > 60) {
+		const extraMinute = Number(minute.innerHTML) - 60
+		minute.innerHTML = extraMinute
+		hour.innerHTML = Number(hour.innerHTML) + 1
+		if (hour.innerHTML > 24) {
+			const extrahour = Number(hour.innerHTML) - 24
+			hour.innerHTML = 0 + extrahour
 		}
 	}
 
-	if (elements.hourValue.innerHTML > 24) {
-		const extrahour = Number(elements.hourValue.innerHTML) - 24
-		elements.hourValue.innerHTML = 0 + extrahour
+	if (hour.innerHTML == 24) {
+		const extrahour = Number(hour.innerHTML) - 24
+		hour.innerHTML = 0 + extrahour
+	}
+
+	if (hour.innerHTML == initialHour && dayComplete == false) {
+		days.innerHTML = Number(days.innerHTML) + 1
+		dayComplete = true
+	}
+
+	if (hour.innerHTML > initialHour) {
+		dayComplete = false
 	}
 }
 
 export const disableElement = (element, start, end) => {
 	// function for disabling specific elements according to the provided time
 	if (start > end) {
-		if (elements.hourValue.innerHTML >= start || elements.hourValue.innerHTML < end) {
+		if (hour.innerHTML >= start || hour.innerHTML < end) {
 			element.disabled = true
 		}
 		else {
@@ -162,7 +175,7 @@ export const disableElement = (element, start, end) => {
 	}
 
 	if (start < end) {
-		if (elements.hourValue.innerHTML >= start && elements.hourValue.innerHTML < end) {
+		if (hour.innerHTML >= start && hour.innerHTML < end) {
 			element.disabled = true
 		}
 		else {
@@ -174,17 +187,26 @@ export const disableElement = (element, start, end) => {
 
 document.addEventListener('click', () => {
 	// function to properly handle zero in time before single digit time
-	if (elements.hourValue.innerHTML == 0) {
-		elements.hourValue.innerHTML = '00'
+	if (hour.innerHTML == 0) {
+		hour.innerHTML = '00'
 	}
-	if (Number(elements.hourValue.innerHTML) >= 1 && Number(elements.hourValue.innerHTML) <= 9) {
+	if (Number(hour.innerHTML) >= 1 && Number(elements.hourValue.innerHTML) <= 9) {
 		elements.hourValue.innerHTML = '0' + Number(elements.hourValue.innerHTML)
 	}
 
-	if (Number(elements.minuteValue.innerHTML) == 0) {
-		elements.minuteValue.innerHTML = '00'
+	if (Number(minute.innerHTML) == 0) {
+		minute.innerHTML = '00'
 	}
-	if (Number(elements.minuteValue.innerHTML) >= 1 && Number(elements.minuteValue.innerHTML) <= 9) {
-		elements.minuteValue.innerHTML = '0' + Number(elements.minuteValue.innerHTML)
+	if (Number(minute.innerHTML) >= 1 && Number(minute.innerHTML) <= 9) {
+		minute.innerHTML = '0' + Number(minute.innerHTML)
+	}
+
+	if (days.innerHTML == daysLength) {
+		gameOver(`Your days are completed. Game Over`)
 	}
 })
+
+const gameOver = (message) => {
+	alert(message)
+	setValues()
+}
