@@ -22,31 +22,31 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (config.cash.innerHTML > 70) {
 			config.updateValue(config.hunger, -5)
 			config.updateValue(config.happiness, +5)
-			config.updateValue(config.cash, -140)
-			config.updateTime(0,45)
+			config.updateValue(config.cash, -70)
+			config.updateTime(0, 45)
 		} else {
 			alert(`You don't have enough money`)
 		}
 	}
 
 	const depositMoney = () => {
-		if (config.cash.innerHTML > 0) {
+		if (config.cash.innerHTML > 50) {
 			config.updateValue(config.hunger, -5)
 			config.updateValue(config.happiness, +5)
 			config.updateValue(config.cash, -50)
 			config.updateValue(config.balance, +50)
-			config.updateTime(0,20)
+			config.updateTime(0, 20)
 		} else {
 			alert(`You don't have enough money`)
 		}
 	}
 
 	const withdrawMoney = () => {
-		if (config.balance.innerHTML > 0) {
+		if (config.balance.innerHTML > 50) {
 			config.updateValue(config.hunger, -5)
 			config.updateValue(config.cash, +50)
 			config.updateValue(config.balance, -50)
-			config.updateTime(0,20)
+			config.updateTime(0, 20)
 		} else {
 			alert(`You don't have enough balance`)
 		}
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	const payLoan = () => {
-		if (config.loan.innerHTML > 0) {
+		if (config.loan.innerHTML > 1000) {
 			config.updateValue(config.hunger, -4)
 			config.updateValue(config.cash, -1000)
 			config.updateValue(config.loan, -1000)
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const bill = Number(config.bills.innerHTML) - Number(config.bills.innerHTML) - Number(config.bills.innerHTML)
 		config.updateValue(config.cash, bill)
 		config.setValue(config.bills, 0)
-		config.updateTime(1,30)
+		config.updateTime(1, 30)
 	}
 
 	const talkTeller = () => {

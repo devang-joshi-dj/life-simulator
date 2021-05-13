@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	elements.gymTalkTrainer.disabled = true
 
 	const takeAdmission = () => {
-		if (config.cash.innerHTML > 14) {
+		if (config.cash.innerHTML > 15) {
 			config.updateValue(config.hunger, +5)
 			config.updateValue(config.happiness, +5)
 			config.updateValue(config.cash, -15)

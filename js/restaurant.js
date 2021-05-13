@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			config.updateValue(config.hunger, -7)
 			config.updateValue(config.happiness, +11)
 			config.updateValue(config.cash, -7)
-			config.updateTime(0,30)
+			config.updateTime(0, 30)
 		} else {
 			alert(`You don't have enough money`)
 		}
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	document.addEventListener('click', () => {
 		config.disableElement(elements.restaurantEatFastFood, 21, 16)
-		config.disableElement(elements.restaurantEatSeaFood, 23,7)
+		config.disableElement(elements.restaurantEatSeaFood, 23, 7)
 		config.disableElement(elements.restaurantEatSalad, 23, 7)
 		config.disableElement(elements.restaurantEatSouthIndian, 23, 7)
 		config.disableElement(elements.restaurantEatNorthIndian, 23, 7)
