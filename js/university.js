@@ -85,16 +85,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	document.addEventListener('click', () => {
 		if (admissionFlag2)
-			config.disableElement(elements.universityAdmission, 18, 9)
+			config.disableElement(elements.universityAdmission, 18, 8)
 		if (admissionFlag1 && feesFlag2)
-			config.disableElement(elements.universityPayFees, 18, 9)
+			config.disableElement(elements.universityPayFees, 18, 8)
 		if (feesFlag1) {
-			config.disableElement(elements.universityAttendClasses, 18, 9)
-			config.disableElement(elements.universityGroupStudy, 18, 9)
-			config.disableElement(elements.universityClubMeeting, 18, 9)
-			config.disableElement(elements.universityEatCanteen, 18, 9)
-			config.disableElement(elements.universityPlayGames, 18, 9)
-			config.disableElement(elements.universityStudyLibrary, 18, 9)
+			config.disableElement(elements.universityAttendClasses, 18, 8)
+			config.disableElement(elements.universityGroupStudy, 18, 8)
+			config.disableElement(elements.universityClubMeeting, 18, 8)
+			config.disableElement(elements.universityEatCanteen, 18, 8)
+			config.disableElement(elements.universityPlayGames, 18, 8)
+			config.disableElement(elements.universityStudyLibrary, 18, 8)
 		}
 	})
 

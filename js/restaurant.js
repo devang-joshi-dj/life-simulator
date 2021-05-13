@@ -4,12 +4,12 @@ import * as config from './config.js'
 document.addEventListener('DOMContentLoaded', () => {
 
 	const fastFood = () => {
-		if (config.cash.innerHTML > 20) {
+		if (config.cash.innerHTML > 7) {
 			config.updateValue(config.health, -10)
-			config.updateValue(config.hunger, -10)
-			config.updateValue(config.happiness, +15)
-			config.updateValue(config.cash, -17)
-			config.updateTime(1)
+			config.updateValue(config.hunger, -7)
+			config.updateValue(config.happiness, +11)
+			config.updateValue(config.cash, -7)
+			config.updateTime(0,30)
 		} else {
 			alert(`You don't have enough money`)
 		}
@@ -88,13 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	document.addEventListener('click', () => {
-		config.disableElement(elements.restaurantEatFastFood, 7, 16)
-		config.disableElement(elements.restaurantEatSeaFood, 7, 16)
-		config.disableElement(elements.restaurantEatSalad, 7, 16)
-		config.disableElement(elements.restaurantEatSouthIndian, 7, 16)
-		config.disableElement(elements.restaurantEatNorthIndian, 7, 16)
-		config.disableElement(elements.restaurantEatItalianFood, 7, 16)
-		config.disableElement(elements.restaurantEatChineseFood, 7, 16)
+		config.disableElement(elements.restaurantEatFastFood, 21, 16)
+		config.disableElement(elements.restaurantEatSeaFood, 23,7)
+		config.disableElement(elements.restaurantEatSalad, 23, 7)
+		config.disableElement(elements.restaurantEatSouthIndian, 23, 7)
+		config.disableElement(elements.restaurantEatNorthIndian, 23, 7)
+		config.disableElement(elements.restaurantEatItalianFood, 23, 7)
+		config.disableElement(elements.restaurantEatChineseFood, 23, 7)
 	})
 
 	elements.restaurantEatFastFood.addEventListener('click', fastFood)

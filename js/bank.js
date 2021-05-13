@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	elements.bankTalkTeller.disabled = true
 
 	const openAccount = () => {
-		if (config.cash.innerHTML > 50) {
-			config.updateValue(config.hunger, -3)
+		if (config.cash.innerHTML > 70) {
+			config.updateValue(config.hunger, -5)
 			config.updateValue(config.happiness, +5)
-			config.updateValue(config.cash, -50)
-			config.updateTime(1)
+			config.updateValue(config.cash, -140)
+			config.updateTime(0,45)
 		} else {
 			alert(`You don't have enough money`)
 		}
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			config.updateValue(config.happiness, +5)
 			config.updateValue(config.cash, -50)
 			config.updateValue(config.balance, +50)
-			config.updateTime(1)
+			config.updateTime(0,20)
 		} else {
 			alert(`You don't have enough money`)
 		}
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			config.updateValue(config.hunger, -5)
 			config.updateValue(config.cash, +50)
 			config.updateValue(config.balance, -50)
-			config.updateTime(1)
+			config.updateTime(0,20)
 		} else {
 			alert(`You don't have enough balance`)
 		}
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const bill = Number(config.bills.innerHTML) - Number(config.bills.innerHTML) - Number(config.bills.innerHTML)
 		config.updateValue(config.cash, bill)
 		config.setValue(config.bills, 0)
-		config.updateTime(1)
+		config.updateTime(1,30)
 	}
 
 	const talkTeller = () => {

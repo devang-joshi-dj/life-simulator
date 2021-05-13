@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const homeMeal = () => {
 		config.updateValue(config.health, +5)
-		config.updateValue(config.hunger, -5)
+		config.updateValue(config.hunger, -10)
 		config.updateValue(config.happiness, +4)
 		config.updateTime(0, 20)
 	}
