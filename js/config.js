@@ -69,11 +69,13 @@ export const updateValue = (element, value) => {
 	// function for updating a value to an element
 	element.innerHTML = Number(element.innerHTML) + value
 
-	if (element.innerHTML > 100 && (element == health || element == hunger || element == happiness)) {
+	if (element.innerHTML > 100 &&
+		(element == health || element == hunger || element == happiness)) {
 		element.innerHTML = 100
 	}
 
-	if (element.innerHTML < 0 && (element == health || element == hunger || element == happiness || element == cash)) {
+	if (element.innerHTML < 0 &&
+		(element == health || element == hunger || element == happiness || element == cash)) {
 		element.innerHTML = 0
 	}
 
@@ -82,7 +84,6 @@ export const updateValue = (element, value) => {
 			hungerFlag++;
 			if (hungerFlag > 3) {
 				gameOver(`You are dead due to hunger. GAME OVER`)
-				element.style.color = 'black'
 			}
 			else {
 				alert(`Please eat something`)
@@ -100,7 +101,6 @@ export const updateValue = (element, value) => {
 			happinessFlag++;
 			if (happinessFlag > 3) {
 				gameOver(`You are dead due to depression. GAME OVER`)
-				element.style.color = 'black'
 			}
 			else {
 				alert(`You are depressed`)
@@ -118,7 +118,6 @@ export const updateValue = (element, value) => {
 			healthFlag++;
 			if (healthFlag > 3) {
 				gameOver(`You are dead due to health. GAME OVER`)
-				element.style.color = 'black'
 			}
 			else {
 				alert(`Your health is very low`)

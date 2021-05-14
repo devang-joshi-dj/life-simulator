@@ -40,6 +40,10 @@ html, body {
 	background-color: rgb(182, 194, 204);
 }
 
+.howToPlayContainer>.content>ol>li {
+	text-align: justify;
+}
+
 #howToPlayButton {
 	border-radius: 10px;
 	padding: 5px;
