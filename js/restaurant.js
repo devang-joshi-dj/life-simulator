@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	const seaFood = () => {
-		if (config.cash.innerHTML > 25) {
+		if (config.cash.innerHTML > 22) {
 			config.updateValue(config.health, +5)
 			config.updateValue(config.hunger, -10)
 			config.updateValue(config.happiness, +20)

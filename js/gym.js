@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let admissionFlag1 = true
 	let admissionFlag2 = false
 	let dietPlanFlag = true
+	let admissionMoneyFlag = false
 
 	const timeDiff = 20 - config.hour.innerHTML
 
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const takeAdmission = () => {
 		if (config.cash.innerHTML > 15) {
+			admissionMoneyFlag = true
 			config.updateValue(config.hunger, +5)
 			config.updateValue(config.happiness, +5)
 			config.updateValue(config.cash, -15)
@@ -90,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.addEventListener('click', () => {
 		if (admissionFlag1)
 			config.disableElement(elements.gymTakeAdmission, 20, 6)
-		if (admissionFlag2) {
+		if (admissionFlag2 && admissionMoneyFlag) {
 			config.disableElement(elements.gymExerciseOneHour, 20, 6)
 			config.disableElement(elements.gymExerciseTwoHours, 20, 6)
 			config.disableElement(elements.gymExerciseThreeHours, 20, 6)
@@ -105,12 +107,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		takeAdmission()
 		admissionFlag1 = false
 		admissionFlag2 = true
-		elements.gymTakeAdmission.disabled = true
-		elements.gymExerciseOneHour.disabled = false
-		elements.gymExerciseTwoHours.disabled = false
-		elements.gymExerciseThreeHours.disabled = false
-		elements.gymDietPlan.disabled = false
-		elements.gymTalkTrainer.disabled = false
+		if (admissionMoneyFlag) {
+			elements.gymTakeAdmission.disabled = true
+			elements.gymExerciseOneHour.disabled = false
+			elements.gymExerciseTwoHours.disabled = false
+			elements.gymExerciseThreeHours.disabled = false
+			elements.gymDietPlan.disabled = false
+			elements.gymTalkTrainer.disabled = false
+		}
 	})
 	elements.gymExerciseOneHour.addEventListener('click', exerciseOneHour)
 	elements.gymExerciseTwoHours.addEventListener('click', exerciseTwoHours)

@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	let feesFlag1 = false
 	let admissionFlag2 = true
 	let feesFlag2 = true
+	let admissionMoneyFlag1 = false
+	let admissionMoneyFlag2 = false
 
 	elements.universityPayFees.disabled = true
 	elements.universityAttendClasses.disabled = true
@@ -17,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	elements.universityStudyLibrary.disabled = true
 
 	const admission = () => {
-		config.updateValue(config.happiness, +2)
-
-		if (config.cash.innerHTML > 500) {
+		if (config.cash.innerHTML >= 500) {
+			admissionMoneyFlag1 = true
+			config.updateValue(config.happiness, +2)
 			config.updateValue(config.cash, -500)
 			config.updateTime(1);
 			alert(`You got the admission`)
@@ -30,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	const payFees = () => {
-		if (config.cash.innerHTML > 500) {
+		if (config.cash.innerHTML >= 700) {
+			admissionMoneyFlag2 = true
 			config.updateValue(config.cash, -700)
 			config.updateTime(0, 30);
 		} else {
@@ -86,9 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.addEventListener('click', () => {
 		if (admissionFlag2)
 			config.disableElement(elements.universityAdmission, 18, 8)
-		if (admissionFlag1 && feesFlag2)
+		if (admissionFlag1 && feesFlag2 && admissionMoneyFlag1)
 			config.disableElement(elements.universityPayFees, 18, 8)
-		if (feesFlag1) {
+		if (feesFlag1 && admissionMoneyFlag2) {
 			config.disableElement(elements.universityAttendClasses, 18, 8)
 			config.disableElement(elements.universityGroupStudy, 18, 8)
 			config.disableElement(elements.universityClubMeeting, 18, 8)
@@ -102,27 +105,31 @@ document.addEventListener('DOMContentLoaded', () => {
 		admission()
 		admissionFlag1 = true
 		admissionFlag2 = false
-		elements.universityAdmission.disabled = true
-		elements.universityPayFees.disabled = false
-		elements.universityAttendClasses.disabled = true
-		elements.universityGroupStudy.disabled = true
-		elements.universityClubMeeting.disabled = true
-		elements.universityEatCanteen.disabled = true
-		elements.universityPlayGames.disabled = true
-		elements.universityStudyLibrary.disabled = true
+		if (admissionMoneyFlag1) {
+			elements.universityAdmission.disabled = true
+			elements.universityPayFees.disabled = false
+			elements.universityAttendClasses.disabled = true
+			elements.universityGroupStudy.disabled = true
+			elements.universityClubMeeting.disabled = true
+			elements.universityEatCanteen.disabled = true
+			elements.universityPlayGames.disabled = true
+			elements.universityStudyLibrary.disabled = true
+		}
 	})
 	elements.universityPayFees.addEventListener('click', () => {
+		payFees()
 		feesFlag1 = true
 		feesFlag2 = false
-		payFees()
-		elements.universityAdmission.disabled = true
-		elements.universityPayFees.disabled = true
-		elements.universityAttendClasses.disabled = false
-		elements.universityGroupStudy.disabled = false
-		elements.universityClubMeeting.disabled = false
-		elements.universityEatCanteen.disabled = false
-		elements.universityPlayGames.disabled = false
-		elements.universityStudyLibrary.disabled = false
+		if (admissionMoneyFlag2) {
+			elements.universityAdmission.disabled = true
+			elements.universityPayFees.disabled = true
+			elements.universityAttendClasses.disabled = false
+			elements.universityGroupStudy.disabled = false
+			elements.universityClubMeeting.disabled = false
+			elements.universityEatCanteen.disabled = false
+			elements.universityPlayGames.disabled = false
+			elements.universityStudyLibrary.disabled = false
+		}
 	})
 	elements.universityAttendClasses.addEventListener('click', attendClasses)
 	elements.universityGroupStudy.addEventListener('click', groupStudy)

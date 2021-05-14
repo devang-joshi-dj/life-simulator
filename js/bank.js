@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let openAccountFlag1 = true
 	let openAccountFlag2 = false
+	let openAccountMoneyFlag = false
 
 	elements.bankOpenAccount.disabled = false
 	elements.bankDepositMoney.disabled = true
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const openAccount = () => {
 		if (config.cash.innerHTML > 70) {
+			openAccountMoneyFlag = true
 			config.updateValue(config.hunger, -5)
 			config.updateValue(config.happiness, +5)
 			config.updateValue(config.cash, -70)
@@ -96,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		if (openAccountFlag1)
 			config.disableElement(elements.bankOpenAccount, 17, 10)
-		if (openAccountFlag2) {
+		if (openAccountFlag2 && openAccountMoneyFlag) {
 			config.disableElement(elements.bankDepositMoney, 17, 10)
 			config.disableElement(elements.bankWithdrawMoney, 17, 10)
 			config.disableElement(elements.bankPayLoan, 17, 10)
@@ -109,13 +111,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		openAccount()
 		openAccountFlag1 = false
 		openAccountFlag2 = true
-		elements.bankOpenAccount.disabled = true
-		elements.bankDepositMoney.disabled = false
-		elements.bankWithdrawMoney.disabled = false
-		elements.bankTakeLoan.disabled = false
-		elements.bankPayLoan.disabled = false
-		elements.bankPayBills.disabled = false
-		elements.bankTalkTeller.disabled = false
+		if (openAccountMoneyFlag) {
+			elements.bankOpenAccount.disabled = true
+			elements.bankDepositMoney.disabled = false
+			elements.bankWithdrawMoney.disabled = false
+			elements.bankTakeLoan.disabled = false
+			elements.bankPayLoan.disabled = false
+			elements.bankPayBills.disabled = false
+			elements.bankTalkTeller.disabled = false
+		}
 	})
 	elements.bankDepositMoney.addEventListener('click', depositMoney)
 	elements.bankWithdrawMoney.addEventListener('click', withdrawMoney)
