@@ -16,8 +16,9 @@ const initialHour = 7
 const initialMinute = 0
 const initialFoodAndGrocery = 10
 
-const daysLength = 100
+const daysLength = 1
 let dayComplete = true
+let gameOverFlag
 
 const setValues = () => {
 	// function for setting all values
@@ -32,6 +33,7 @@ const setValues = () => {
 	setValue(hour, initialHour)
 	setValue(minute, initialMinute)
 	setValue(foodAndGrocery, initialFoodAndGrocery)
+	gameOverFlag = true
 }
 
 export const setValue = (element, value) => {
@@ -207,6 +209,50 @@ document.addEventListener('click', () => {
 })
 
 const gameOver = (message) => {
-	alert(message)
-	setValues()
+	if (gameOverFlag) {
+		gameOverFlag = false
+		elements.gameOverContainer.style.display = 'flex'
+		elements.reason.innerHTML = message
+		elements.finalStats.innerHTML = `
+	<div>
+		<span>Health:</span>
+		<span>${health.innerHTML}</span>
+	</div>
+	<div>
+		<span>Hunger:</span>
+		<span>${hunger.innerHTML}</span>
+	</div>
+	<div>
+		<span>Happiness:</span>
+		<span>${happiness.innerHTML}</span>
+	</div>
+	<div>
+		<span>Intelligence:</span>
+		<span>${intelligence.innerHTML}</span>
+	</div>
+	<div>
+		<span>Strength:</span>
+		<span>${strength.innerHTML}</span>
+	</div>
+	<div>
+		<span>Spirituality:</span>
+		<span>${spirituality.innerHTML}</span>
+	</div>
+	<div>
+		<span>Cash:</span>
+		<span>${cash.innerHTML}</span>
+	</div>
+	<div>
+		<span>Days Lived:</span>
+		<span>${days.innerHTML}</span>
+	</div>
+	`}
 }
+
+gameOverButton.addEventListener('click', () => {
+	elements.gameOverContainer.style.display = 'none'
+	setValues()
+	health.style.color = 'black'
+	hunger.style.color = 'black'
+	happiness.style.color = 'black'
+})

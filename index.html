@@ -52,7 +52,9 @@
   </head>
 
   <body>
+    <!-- Intro Container Start -->
     <div class="introContainer">
+      <!-- How to Play Container Start -->
       <div class="howToPlayContainer">
         <h1>The Life Simulator Game</h1>
         <div class="content">
@@ -61,24 +63,26 @@
             <li>Click on the desired place you want to visit.</li>
             <li>Click on the desired activities.</li>
             <li>
-              Every action you take will affect your health, happiness, Hunger,
+              Every action you take will affect your health, happiness, hunger,
               or cash.
             </li>
             <li>In his game, every place's access will vary on time.</li>
             <li>
-              Just make sure your Health , Happiness level is more than 20 and
-              Hunger level is less than 50
+              Just make sure your health , happiness level is more than 20 and
+              hunger level is less than 50
             </li>
           </ol>
           <input id="howToPlayButton" type="submit" value="OK" />
         </div>
       </div>
+      <!-- How to Play Container End -->
 
       <div class="intro">
         <p class="introText"></p>
         <button id="introButton">OK</button>
       </div>
     </div>
+    <!-- Intro Container End -->
 
     <!-- Main Container Start -->
     <div class="container">
@@ -360,5 +364,16 @@
       <!-- Places to go for Footer Section End -->
     </div>
     <!-- Main Container End -->
+
+    <!-- Game Over Container Start -->
+    <div class="gameOverContainer">
+      <div class="content">
+        <div id="reason"></div>
+        <h2>Your Final Life Stats</h2>
+        <div id="finalStats"></div>
+        <button id="gameOverButton">Restart</button>
+      </div>
+    </div>
+    <!-- Game Over Container End -->
   </body>
 </html>

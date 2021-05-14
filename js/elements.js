@@ -51,16 +51,16 @@ export const restaurantElement = document.querySelector('.restaurant')
 export const spaElement = document.querySelector('.spa')
 // Buttons of Header And Footer End
 
-// info of Home
+// Info of Home
 export const foodAndGrocery = document.querySelector('#foodAndGrocery')
 
-//buttons of Home
+// Buttons of Home
 export const homeMeal = document.querySelector('#homeMeal')
 export const homeRest = document.querySelector('#homeRest')
 export const homeMeetFamily = document.querySelector('#homeMeetFamily')
 export const homeCleanRoom = document.querySelector('#homeCleanRoom')
 
-// buttons of University
+// Buttons of University
 export const universityAdmission = document.querySelector('#universityAdmission')
 export const universityPayFees = document.querySelector('#universityPayFees')
 export const universityAttendClasses = document.querySelector('#universityAttendClasses')
@@ -70,7 +70,7 @@ export const universityEatCanteen = document.querySelector('#universityEatCantee
 export const universityPlayGames = document.querySelector('#universityPlayGames')
 export const universityStudyLibrary = document.querySelector('#universityStudyLibrary')
 
-// buttons of Job
+// Buttons of Job
 export const jobApplyForWork = document.querySelector('#jobApplyForWork')
 export const jobWorkOneHour = document.querySelector('#jobWorkOneHour')
 export const jobWorkThreeHours = document.querySelector('#jobWorkThreeHours')
@@ -80,12 +80,12 @@ export const jobTakeBreak = document.querySelector('#jobTakeBreak')
 export const jobAttendMeeting = document.querySelector('#jobAttendMeeting')
 export const jobApplyPromotion = document.querySelector('#jobApplyPromotion')
 
-// info of Bank
+// Info of Bank
 export const balance = document.querySelector('#balance')
 export const loan = document.querySelector('#loan')
 export const bills = document.querySelector('#bills')
 
-// buttons of Bank
+// Buttons of Bank
 export const bankOpenAccount = document.querySelector('#bankOpenAccount')
 export const bankDepositMoney = document.querySelector('#bankDepositMoney')
 export const bankWithdrawMoney = document.querySelector('#bankWithdrawMoney')
@@ -94,7 +94,7 @@ export const bankPayLoan = document.querySelector('#bankPayLoan')
 export const bankPayBills = document.querySelector('#bankPayBills')
 export const bankTalkTeller = document.querySelector('#bankTalkTeller')
 
-// buttons of Gym
+// Buttons of Gym
 export const gymTakeAdmission = document.querySelector('#gymTakeAdmission')
 export const gymExerciseOneHour = document.querySelector('#gymExerciseOneHour')
 export const gymExerciseTwoHours = document.querySelector('#gymExerciseTwoHours')
@@ -102,24 +102,24 @@ export const gymExerciseThreeHours = document.querySelector('#gymExerciseThreeHo
 export const gymDietPlan = document.querySelector('#gymDietPlan')
 export const gymTalkTrainer = document.querySelector('#gymTalkTrainer')
 
-// buttons of Mall
+// Buttons of Mall
 export const mallShopping = document.querySelector('#mallShopping')
 export const mallWatchMovies = document.querySelector('#mallWatchMovies')
 export const mallGamingZone = document.querySelector('#mallGamingZone')
 export const mallFoodCourt = document.querySelector('#mallFoodCourt')
 export const mallFoodAndGroceries = document.querySelector('#mallFoodAndGroceries')
 
-// buttons of Worship
+// Buttons of Worship
 export const worshipPray = document.querySelector('#worshipPray')
 export const worshipServe = document.querySelector('#worshipServe')
 export const worshipCharity = document.querySelector('#worshipCharity')
 
-// buttons of Club
+// Buttons of Club
 export const clubDance = document.querySelector('#clubDance')
 export const clubDrinkEat = document.querySelector('#clubDrinkEat')
 export const clubMeetPeople = document.querySelector('#clubMeetPeople')
 
-// buttons of Restaurant
+// Buttons of Restaurant
 export const restaurantEatFastFood = document.querySelector('#restaurantEatFastFood')
 export const restaurantEatSeaFood = document.querySelector('#restaurantEatSeaFood')
 export const restaurantEatSalad = document.querySelector('#restaurantEatSalad')
@@ -128,6 +128,12 @@ export const restaurantEatNorthIndian = document.querySelector('#restaurantEatNo
 export const restaurantEatItalianFood = document.querySelector('#restaurantEatItalianFood')
 export const restaurantEatChineseFood = document.querySelector('#restaurantEatChineseFood')
 
-// buttons of Spa
+// Buttons of Spa
 export const spaMassage = document.querySelector('#spaMassage')
 export const spaManicurePedicure = document.querySelector('#spaManicurePedicure')
+
+// Elements of Game Over
+export const gameOverContainer = document.querySelector('.gameOverContainer')
+export const reason = document.querySelector('#reason')
+export const finalStats = document.querySelector('#finalStats')
+export const gameOverButton = document.querySelector('#gameOverButton')

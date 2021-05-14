@@ -27,11 +27,12 @@ html, body {
 	align-items: center;
 }
 
-.content {
+.howToPlayContainer>.content {
 	width: 40%;
+	height: 380px;
 	padding: 10px;
 	border-radius: 50px;
-	font-size: 1.4em;
+	font-size: 1.2em;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -55,6 +56,10 @@ html, body {
 	font-size: 4em;
 }
 
+.howToPlayContainer>div>h2 {
+	margin: 0;
+}
+
 /* Container for How to Play End */
 
 /* Container for Intro Start */
@@ -69,6 +74,7 @@ html, body {
 
 .intro {
 	width: 40%;
+	height: 380px;
 	padding: 10px;
 	border-radius: 50px;
 	display: flex;
@@ -344,3 +350,63 @@ div.btnGroup button:active {
 /* Places to go for Footer Section End */
 
 /* Container for Content End */
+
+/* Game Over Container Start */
+
+.gameOverContainer {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.gameOverContainer>.content {
+	width: 40%;
+	padding: 10px;
+	border-radius: 50px;
+	font-size: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(206, 71, 71);
+}
+
+.gameOverContainer>.content>h2 {
+	margin: 0;
+}
+
+.gameOverContainer>.content>#finalStats {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.gameOverContainer>.content>#finalStats>div>span:first-child {
+	float: left;
+	margin-right: 5px;
+}
+
+.gameOverContainer>.content>#finalStats>div>span:last-child {
+	float: right;
+	margin-left: 5px;
+}
+
+#gameOverButton {
+	border-radius: 10px;
+	padding: 5px;
+	width: 80px;
+	background-color: #5b6f91;
+	color: #fff;
+	cursor: pointer;
+	outline: none;
+}
+
+/* Game Over Container End */
