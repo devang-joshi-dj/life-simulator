@@ -29,10 +29,12 @@ xmlhttp.send()
 
 window.onload = () => {
 	elements.howToPlayButton.addEventListener('click', () => {
+		// event listener for how to play button
 		elements.howToPlayContainer.style.display = 'none'
 	})
 
 	elements.introButton.addEventListener('click', () => {
+		// event listener for introID button
 		elements.introContainer.style.display = 'none'
 		elements.containerElement.style.display = 'flex'
 		elements.homeElement.click()

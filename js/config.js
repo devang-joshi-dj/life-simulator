@@ -208,6 +208,7 @@ document.addEventListener('click', () => {
 })
 
 const gameOver = (message) => {
+	// function for gameOver and showing final stats of the player
 	if (gameOverFlag) {
 		gameOverFlag = false
 		elements.gameOverContainer.style.display = 'flex'
@@ -249,6 +250,7 @@ const gameOver = (message) => {
 }
 
 gameOverButton.addEventListener('click', () => {
+	// event listener for gameOver button to reset everything back to normal
 	elements.gameOverContainer.style.display = 'none'
 	setValues()
 	health.style.color = 'black'

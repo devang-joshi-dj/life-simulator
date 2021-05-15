@@ -9,6 +9,18 @@
 
 @media screen and (max-width: 1385px) {
 	.statistics div {
+		font-size: 1.8em;
+	}
+}
+
+@media screen and (max-width: 1272px) {
+	.statistics div {
+		font-size: 1.7em;
+	}
+}
+
+@media screen and (max-width: 1210px) {
+	.statistics div {
 		margin: 0;
 		float: none;
 		display: block;
@@ -36,13 +48,13 @@
 	}
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 635px) {
 	.container {
 		--defaultFontSize: 1.4em;
 	}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 610px) {
 	html, body {
 		width: 100%;
 	}
