@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const watchMovies = () => {
 		if (config.cash.innerHTML > 30) {
-			config.updateValue(config.hunger, +5)
+			config.updateValue(config.hunger, +7)
 			config.updateValue(config.happiness, +10)
 			config.updateValue(config.cash, -30)
 			config.updateTime(3)
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const gamingZone = () => {
 		if (config.cash.innerHTML > 30) {
-			config.updateValue(config.hunger, +5)
+			config.updateValue(config.hunger, +7)
 			config.updateValue(config.happiness, +10)
 			config.updateValue(config.cash, -30)
 			config.updateTime(1)
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const foodAndGroceries = () => {
 		if (config.cash.innerHTML >= 10) {
 			config.updateValue(config.cash, -10)
-
+                        config.updateValue(config.hunger, +5)
 			if (isNaN(config.foodAndGrocery.innerHTML)) {
 				config.setValue(config.foodAndGrocery, +10)
 			} else {
