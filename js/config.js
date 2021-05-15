@@ -16,7 +16,7 @@ const initialHour = 7
 const initialMinute = 0
 const initialFoodAndGrocery = 10
 
-const daysLength = 1
+const daysLength = 100
 let dayComplete = true
 let gameOverFlag
 
