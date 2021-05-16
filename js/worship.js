@@ -17,22 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	const serve = () => {
-		if (config.cash.innerHTML > 20) {
+		if (config.cash.innerHTML > 25) {
 			config.updateValue(config.hunger, +8)
 			config.updateValue(config.happiness, +15)
-			config.updateValue(config.cash, -20)
+			config.updateValue(config.cash, -25)
 			config.updateTime(2)
-			config.updateValue(config.spirituality, +8)
+			config.updateValue(config.spirituality, +10)
 		} else {
 			alert(`You don't have enough money`)
 		}
 	}
 
 	const charity = () => {
-		if (config.cash.innerHTML > 30) {
-			config.updateValue(config.hunger, +8)
+		if (config.cash.innerHTML > 35) {
+			config.updateValue(config.hunger, +10)
 			config.updateValue(config.happiness, +20)
-			config.updateValue(config.cash, -30)
+			config.updateValue(config.cash, -35)
 			config.updateTime(1)
 			config.updateValue(config.spirituality, +10)
 		} else {
