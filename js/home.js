@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const homeRest = () => {
 		config.updateValue(config.health, +2)
 		config.updateValue(config.happiness, +2)
-		config.updateValue(config.hunger, +2)
+		config.updateValue(config.hunger, +5)
 		config.updateTime(1);
 	}
 
