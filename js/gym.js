@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const takeAdmission = () => {
 		if (config.cash.innerHTML > 15) {
 			admissionMoneyFlag = true
-			config.updateValue(config.hunger, +5)
+			config.updateValue(config.hunger, +2)
 			config.updateValue(config.happiness, +5)
 			config.updateValue(config.cash, -15)
 			config.updateTime(0, 30)
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const dietPlan = () => {
 		if (config.cash.innerHTML > 6) {
 			// config.updateValue(config.health, +4)
-			config.updateValue(config.hunger, -4)
+			config.updateValue(config.hunger, -2)
 			config.updateValue(config.happiness, +3)
 			config.updateValue(config.cash, -6)
 			config.updateTime(0, 15)
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	const talkTrainer = () => {
-		config.updateValue(config.hunger, +5)
+		config.updateValue(config.hunger, +2)
 		config.updateValue(config.happiness, +5)
 		config.updateTime(0, 30)
 	}
