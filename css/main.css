@@ -28,7 +28,7 @@ html, body {
 }
 
 .howToPlayContainer>.content {
-	width: 40%;
+	width: 520px;
 	height: 380px;
 	padding: 10px;
 	border-radius: 50px;
@@ -77,7 +77,7 @@ html, body {
 }
 
 .intro {
-	width: 40%;
+	width: 520px;
 	height: 380px;
 	padding: 10px;
 	border-radius: 50px;

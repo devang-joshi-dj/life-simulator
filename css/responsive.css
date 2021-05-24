@@ -29,9 +29,9 @@
 }
 
 @media screen and (max-width: 790px) {
-	.intro {
-		width: 70%;
-		margin-left: 15%;
+	.howToPlayContainer>h1 {
+		top: 40px;
+		font-size: 3em;
 	}
 	.container {
 		--defaultFontSize: 1.5em;
@@ -39,10 +39,6 @@
 }
 
 @media screen and (max-width: 710px) {
-	.intro {
-		width: 100%;
-		margin-left: 0;
-	}
 	.time {
 		float: none;
 	}
@@ -63,5 +59,48 @@
 	}
 	.main div {
 		width: 600px;
+	}
+}
+
+@media screen and (max-width: 530px) {
+	.howToPlayContainer>h1 {
+		top: 30px;
+		font-size: 2.5em;
+	}
+	.howToPlayContainer>.content {
+		width: 100%;
+	}
+	.intro {
+		width: 100%;
+	}
+}
+
+@media screen and (max-height: 700px) {
+	.howToPlayContainer>h1 {
+		top: 0;
+	}
+}
+
+@media screen and (max-height: 590px) {
+	.howToPlayContainer>h1 {
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-height: 530px) {
+	.howToPlayContainer>h1 {
+		font-size: 2.5em;
+	}
+}
+
+@media screen and (max-width: 320px) and (max-height: 570px) {
+	.howToPlayContainer>h1 {
+		font-size: 2em;
+	}
+}
+
+@media screen and (max-width: 280px) and (max-height: 660px) {
+	.howToPlayContainer>h1 {
+		font-size: 2em;
 	}
 }
